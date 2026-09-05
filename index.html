@@ -1074,27 +1074,39 @@ if (!('IntersectionObserver' in window)) {
   });
 }
 
-/* ---------------- animated counters ---------------- */
+/* ---------------- animated counters ----------------
+   The final figures ("40+", "53") are the markup. The count-up only ever
+   overwrites them while the page is genuinely on screen, because rAF and
+   timers are both frozen in hidden or throttled tabs and a half-finished
+   count would leave a plainly wrong number on a page that sells itself on
+   forty years of history. */
 const co = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(!e.isIntersecting) return;
-    const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '';
-    const DUR = 1100;
+    const el = e.target;
+    co.unobserve(el);
+    if (document.visibilityState !== 'visible') return;   // keep the static value
+
+    const end = +el.dataset.count, suf = el.dataset.suffix || '', DUR = 1100;
     let t0 = null, done = false;
-    const finish = ()=>{ done = true; el.textContent = end + suf; };
+    const finish = ()=>{
+      if (done) return;
+      done = true;
+      el.textContent = end + suf;
+      document.removeEventListener('visibilitychange', onHide);
+    };
+    const onHide = ()=>{ if (document.visibilityState !== 'visible') finish(); };
     const step = ts => {
       if (done) return;
       if (!t0) t0 = ts;
       const p = Math.min((ts - t0) / DUR, 1);
+      if (p >= 1) return finish();
       el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
-      if (p < 1) requestAnimationFrame(step); else done = true;
+      requestAnimationFrame(step);
     };
+    document.addEventListener('visibilitychange', onHide);
+    setTimeout(finish, DUR + 500);
     requestAnimationFrame(step);
-    /* requestAnimationFrame is paused in hidden or throttled tabs, which
-       would otherwise strand the number part-way through the count and
-       leave a figure on screen that is simply wrong. Land it regardless. */
-    setTimeout(()=>{ if(!done) finish(); }, DUR + 400);
-    co.unobserve(el);
   });
 },{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
