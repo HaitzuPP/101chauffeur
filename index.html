@@ -50,6 +50,9 @@
   /* ---------- top bar ---------- */
   .topbar{background:#0d0d0f;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.05em;color:var(--muted-2);position:relative;z-index:70}
   .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:20px}
+  .tb-right{display:flex;align-items:center;gap:18px}
+  .tb-phone{color:var(--gold);font-weight:500;letter-spacing:.06em;white-space:nowrap;transition:color .2s}
+  .tb-phone:hover{color:#e0c489}
 
   /* ---------- header ---------- */
   header{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
@@ -69,6 +72,11 @@
   .lang button.on{background:var(--gold);color:#15130e;font-weight:600}
   .lang button:hover:not(.on){color:var(--text)}
   .menu-toggle{display:none;background:none;border:0;color:var(--text);font-size:22px;cursor:pointer;padding:6px}
+  .btn{display:inline-block;padding:12px 24px;font-size:13px;letter-spacing:.08em;font-weight:500;border:1px solid var(--gold);color:var(--gold);white-space:nowrap;transition:background .25s,color .25s,transform .25s}
+  .btn:hover{background:var(--gold);color:#15130e;transform:translateY(-2px)}
+  .btn-solid{background:var(--gold);color:#15130e}
+  .btn-solid:hover{background:#dcbd80;border-color:#dcbd80}
+  .btn-sm{padding:10px 18px;font-size:12.5px}
 
   /* ---------- hero ---------- */
   .hero{border-top:0;padding:0;min-height:min(92vh,900px);display:flex;align-items:center;position:relative;overflow:hidden;margin-top:-80px;padding-top:80px}
@@ -215,7 +223,8 @@
 
   /* ---------- footer ---------- */
   footer{background:var(--ink-2);border-top:1px solid var(--line);padding:74px 0 32px}
-  .f-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr;gap:52px;margin-bottom:52px}
+  .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;gap:44px;margin-bottom:52px}
+  .f-phone{font-size:17px;color:var(--gold)!important;letter-spacing:.03em}
   .f-grid h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin:0 0 18px;font-weight:500}
   html[data-lang="zh"] .f-grid h4{letter-spacing:.06em;text-transform:none}
   .f-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:11px;font-size:14px}
@@ -247,6 +256,10 @@
     .menu-toggle{display:block}
     .topbar .wrap{justify-content:center}
     .topbar .tb-left{display:none}
+    /* On a phone the number is the point of the bar; the authorisation line
+       is carried by the credentials band further down. */
+    .tb-auth{display:none}
+    .head-right .btn{display:none}
     /* "Chauffeured" is a longer wordmark than the header had room for at
        0.3em tracking once the language toggle and menu button are alongside. */
     .logo .num{font-size:29px}
@@ -284,7 +297,10 @@ document.documentElement.classList.add('js');
 <div class="topbar">
   <div class="wrap">
     <span class="tb-left" data-en="Sydney &middot; South Coast &middot; Port Stephens &middot; Hunter Valley &middot; Blue Mountains" data-zh="悉尼 · 南海岸 · 史蒂芬斯港 · 猎人谷 · 蓝山">Sydney &middot; South Coast &middot; Port Stephens &middot; Hunter Valley &middot; Blue Mountains</span>
-    <span data-en="Authorised Booking Service Provider &middot; NSW" data-zh="新南威尔士州政府授权预订服务提供商">Authorised Booking Service Provider &middot; NSW</span>
+    <span class="tb-right">
+      <a class="tb-phone" href="tel:+61415550599">0415 550 599</a>
+      <span class="tb-auth" data-en="Authorised Booking Service Provider &middot; NSW" data-zh="新南威尔士州政府授权预订服务提供商">Authorised Booking Service Provider &middot; NSW</span>
+    </span>
   </div>
 </div>
 
@@ -304,6 +320,7 @@ document.documentElement.classList.add('js');
         <button type="button" id="btn-en" class="on" onclick="setLang('en')">EN</button>
         <button type="button" id="btn-zh" onclick="setLang('zh')">中文</button>
       </div>
+      <a class="btn btn-solid btn-sm" href="tel:+61415550599">0415 550 599</a>
       <button class="menu-toggle" type="button" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     </div>
   </div>
@@ -390,7 +407,7 @@ document.documentElement.classList.add('js');
 
     <div class="cards">
       <div class="card rv">
-        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1544698202-afeeb997d98c?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1739841562979-681735feb4e3?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></div>
         <h3 data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</h3>
         <p data-en="We watch the flight, not the clock. Land ahead of schedule and the car is already waiting. Sit in a customs queue and the waiting time is ours to absorb, not yours to explain."
@@ -400,7 +417,7 @@ document.documentElement.classList.add('js');
       </div>
 
       <div class="card rv rv-d1">
-        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1662316208133-55e8e16f89fb?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1710343491609-0cbc6c14b92d?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
         <h3 data-en="Corporate Travel" data-zh="企业商务用车">Corporate Travel</h3>
         <p data-en="Regular executive movements handled as a standing arrangement, with the same chauffeur wherever we can manage it, so nobody has to brief a stranger on the way to a board meeting."
@@ -410,7 +427,7 @@ document.documentElement.classList.add('js');
       </div>
 
       <div class="card rv rv-d2">
-        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1540448051910-09cfadd5df61?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1606217239582-d9f72323bcd7?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7.5-4.7-9.3-9.2A5.1 5.1 0 0 1 12 6.6a5.1 5.1 0 0 1 9.3 5.2C19.5 16.3 12 21 12 21z"/></svg></div>
         <h3 data-en="Weddings" data-zh="婚礼用车">Weddings</h3>
         <p data-en="We drive the route beforehand and build in the slack nobody thinks of. On the day your only job is to get in the car. Ribbons, umbrellas and a spare tie live in the boot."
@@ -593,7 +610,7 @@ document.documentElement.classList.add('js');
 
     <div>
       <div class="why-visual rv rv-d1">
-        <figure class="tall"><img loading="lazy" decoding="async" alt="Chauffeur" src="https://images.unsplash.com/photo-1603122101829-e56305b0a5f7?auto=format&fit=crop&w=700&q=70"></figure>
+        <figure class="tall"><img loading="lazy" decoding="async" alt="Sydney skyline" src="https://images.unsplash.com/photo-1672210967188-3bf5e16d541d?auto=format&fit=crop&w=700&q=70"></figure>
         <figure class="sq"><img loading="lazy" decoding="async" alt="Cabin interior" src="https://images.unsplash.com/photo-1502014335594-c026800f24ee?auto=format&fit=crop&w=560&q=70"></figure>
         <figure class="sq"><img loading="lazy" decoding="async" alt="Sydney Harbour Bridge" src="https://images.unsplash.com/photo-1580723843692-137caf37ad17?auto=format&fit=crop&w=560&q=70"></figure>
       </div>
@@ -769,6 +786,13 @@ document.documentElement.classList.add('js');
           <li><a href="#destinations" data-en="Port Stephens" data-zh="史蒂芬斯港">Port Stephens</a></li>
           <li><a href="#destinations" data-en="Jervis Bay" data-zh="杰维斯湾">Jervis Bay</a></li>
           <li><a href="#areas" data-en="Southern Highlands" data-zh="南部高地">Southern Highlands</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Contact" data-zh="联系方式">Contact</h4>
+        <ul>
+          <li><a class="f-phone" href="tel:+61415550599">0415 550 599</a></li>
+          <li><span data-en="Every day, all hours" data-zh="全天候，每日服务">Every day, all hours</span></li>
         </ul>
       </div>
     </div>
