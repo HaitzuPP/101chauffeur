@@ -87,15 +87,20 @@
   .hero::after{content:"";position:absolute;inset:0;z-index:1;
     background:linear-gradient(90deg,rgba(8,8,9,.93) 0%,rgba(8,8,9,.72) 48%,rgba(8,8,9,.34) 100%),
                linear-gradient(0deg,rgba(8,8,9,.92) 0%,transparent 52%)}
-  .hero .wrap{position:relative;z-index:2;padding-top:110px;padding-bottom:120px}
-  .hero-copy{max-width:20ch}
+  /* .wrap is a flex child of .hero, so it needs an explicit width. Without
+     one it shrink-wraps to min-content and the headline breaks a character
+     at a time, which is especially brutal in Chinese. */
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-top:110px;padding-bottom:120px}
+  /* Sized in px, not ch: the ch unit is derived from the "0" glyph and is a
+     poor predictor of line length once the font stack switches to CJK. */
+  .hero-copy{max-width:860px}
   .hero h1 em{font-style:italic;color:var(--gold)}
   /* Chinese has no true italic; browsers fake it by slanting the glyphs,
      which reads as a rendering fault. Keep the colour, drop the slant. */
   html[data-lang="zh"] .hero h1{font-size:clamp(34px,5.4vw,64px);line-height:1.26}
   html[data-lang="zh"] .hero h1 em{font-style:normal}
   html[data-lang="zh"] h2{line-height:1.35}
-  html[data-lang="zh"] .hero-copy{max-width:16ch}
+  html[data-lang="zh"] .hero-copy{max-width:700px}
   .hero .lede{font-size:18.5px;line-height:1.75;margin:32px 0 0;max-width:54ch;color:#cfcecb}
   .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center}
   .scroll-hint span{display:block;width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:drop 2s infinite}
