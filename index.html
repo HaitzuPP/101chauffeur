@@ -39,9 +39,11 @@
   .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:0 0 18px}
   html[data-lang="zh"] .eyebrow{letter-spacing:.14em}
 
-  /* ---------- reveal ---------- */
-  .rv{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
-  .rv.in{opacity:1;transform:none}
+  /* ---------- reveal ----------
+     Hidden ONLY when JS is running (html.js). Without JS, or if the
+     IntersectionObserver never fires, everything stays visible. */
+  .js .rv{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
   .rv-d1{transition-delay:.09s}.rv-d2{transition-delay:.18s}.rv-d3{transition-delay:.27s}
   .rv-d4{transition-delay:.36s}.rv-d5{transition-delay:.45s}.rv-d6{transition-delay:.54s}
 
@@ -287,11 +289,16 @@
   }
   @media(prefers-reduced-motion:reduce){
     *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-    .rv{opacity:1;transform:none}
+    .js .rv{opacity:1;transform:none}
   }
 </style>
 </head>
 <body>
+<script>
+/* Opt in to the reveal animations only when scripting is available.
+   If this never runs, .rv content renders plainly instead of invisibly. */
+document.documentElement.classList.add('js');
+</script>
 
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
@@ -1038,10 +1045,32 @@ try {
 } catch(e){}
 
 /* ---------------- scroll reveal ---------------- */
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-},{rootMargin:'0px 0px -8% 0px',threshold:.08});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const RV = [...document.querySelectorAll('.rv')];
+function revealAll(){ RV.forEach(el=>el.classList.add('in')); }
+
+if (!('IntersectionObserver' in window)) {
+  revealAll();
+} else {
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  RV.forEach(el=>io.observe(el));
+
+  /* Failsafes. Nothing on this page may stay invisible because an
+     observer did not fire: hidden/prerendered tabs, throttled background
+     tabs and some crawlers never generate intersection records. */
+  const revealVisible = ()=>{
+    RV.forEach(el=>{
+      const r = el.getBoundingClientRect();
+      if (r.top < innerHeight * 1.15 && r.bottom > -200) el.classList.add('in');
+    });
+  };
+  window.addEventListener('load', ()=>setTimeout(revealVisible, 400));
+  setTimeout(()=>{ if(!document.querySelector('.rv.in')) revealAll(); }, 2500);
+  document.addEventListener('visibilitychange', ()=>{
+    if (document.visibilityState === 'visible') setTimeout(revealVisible, 200);
+  });
+}
 
 /* ---------------- animated counters ---------------- */
 const co = new IntersectionObserver((entries)=>{
