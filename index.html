@@ -190,8 +190,11 @@
   .wild{padding:0;border:0}
   .wild-inner{position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center}
   .wild-bg{position:absolute;inset:-14% 0;z-index:0;background-size:cover;background-position:center;will-change:transform}
-  .wild-inner::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,8,10,.94),rgba(8,8,10,.7) 55%,rgba(8,8,10,.45))}
-  .wild-inner .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:90px}
+  .wild-inner::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,8,10,.96) 0%,rgba(8,8,10,.92) 40%,rgba(8,8,10,.66) 72%,rgba(8,8,10,.42) 100%)}
+  /* .wrap is a flex child here, so it needs an explicit width; margin:0 auto
+     would otherwise shrink-wrap it and centre the copy out of alignment
+     with every other section on the page. */
+  .wild-inner .wrap{position:relative;z-index:2;width:100%;padding-top:90px;padding-bottom:90px}
   .wild-copy{max-width:560px}
   .wild-thumbs{display:flex;gap:14px;margin-top:32px}
   .wild-thumbs img{width:118px;height:88px;object-fit:cover;border:1px solid var(--line-2);filter:grayscale(.25);transition:filter .4s,transform .4s var(--ease)}
