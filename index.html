@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>101 Chauffeur | Sydney Chauffeur Hire, Airport & Corporate Transfers</title>
+<meta name="description" content="Sydney chauffeur hire with forty years behind the wheel. Airport transfers, corporate accounts, weddings, events, and private touring to the Blue Mountains, Hunter Valley and beyond. Fixed pricing, 24/7 booking, Mandarin-speaking chauffeurs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0a0b; --ink-2:#111114; --ink-3:#17171b;
+    --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.20);
+    --text:#f3f2f0; --muted:#a09f9c; --muted-2:#787774;
+    --gold:#c9a86a; --gold-dim:#93794a;
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --max:1220px;
+    --ease:cubic-bezier(.22,.75,.24,1);
+  }
+  html[data-lang="zh"]{
+    --sans:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    --serif:"Noto Sans SC","PingFang SC","Songti SC",serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  h1,h2,h3{margin:0;font-weight:400;letter-spacing:-.01em}
+  h1{font-family:var(--serif);font-size:clamp(40px,6.6vw,80px);line-height:1.02;font-weight:300}
+  h2{font-family:var(--serif);font-size:clamp(31px,4.3vw,50px);line-height:1.1;font-weight:300}
+  h3{font-size:19px;font-weight:500;letter-spacing:0}
+  p{margin:0 0 18px;color:var(--muted);max-width:62ch}
+  section{padding:110px 0;border-top:1px solid var(--line);position:relative}
+  .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:0 0 18px}
+  html[data-lang="zh"] .eyebrow{letter-spacing:.14em}
+
+  /* ---------- reveal ---------- */
+  .rv{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .rv-d1{transition-delay:.09s}.rv-d2{transition-delay:.18s}.rv-d3{transition-delay:.27s}
+  .rv-d4{transition-delay:.36s}.rv-d5{transition-delay:.45s}.rv-d6{transition-delay:.54s}
+
+  /* ---------- top bar ---------- */
+  .topbar{background:#0d0d0f;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.05em;color:var(--muted-2);position:relative;z-index:70}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:20px}
+  .topbar a:hover{color:var(--text)}
+  .tb-left,.tb-right{display:flex;gap:22px;align-items:center}
+  .dot{width:6px;height:6px;border-radius:50%;background:#54c07a;display:inline-block;margin-right:7px;animation:pulse 2.4s infinite}
+  @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(84,192,122,.5)}50%{opacity:.75;box-shadow:0 0 0 5px rgba(84,192,122,0)}}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+  header.stuck{background:rgba(10,10,11,.94);border-bottom-color:var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
+  .logo{display:flex;align-items:baseline;gap:9px;flex-shrink:0}
+  .logo .num{font-family:var(--serif);font-size:34px;font-weight:400;color:var(--gold);line-height:1}
+  .logo .word{font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+  nav{display:flex;gap:30px;font-size:13.5px}
+  nav a{color:var(--muted);position:relative;padding:4px 0;transition:color .2s}
+  nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease)}
+  nav a:hover{color:var(--text)}
+  nav a:hover::after{width:100%}
+  .head-right{display:flex;align-items:center;gap:15px;flex-shrink:0}
+  .lang{display:flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden}
+  .lang button{background:none;border:0;color:var(--muted);cursor:pointer;padding:7px 13px;font-family:inherit;font-size:12px;letter-spacing:.08em;transition:background .2s,color .2s}
+  .lang button.on{background:var(--gold);color:#15130e;font-weight:600}
+  .lang button:hover:not(.on){color:var(--text)}
+  .btn{display:inline-block;padding:13px 26px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;border:1px solid var(--gold);color:var(--gold);transition:background .25s,color .25s,transform .25s;white-space:nowrap}
+  html[data-lang="zh"] .btn{letter-spacing:.06em;text-transform:none}
+  .btn:hover{background:var(--gold);color:#15130e;transform:translateY(-2px)}
+  .btn-solid{background:var(--gold);color:#15130e}
+  .btn-solid:hover{background:#dcbd80;border-color:#dcbd80}
+  .btn-sm{padding:10px 20px;font-size:12px}
+  .menu-toggle{display:none;background:none;border:0;color:var(--text);font-size:22px;cursor:pointer;padding:6px}
+
+  /* ---------- hero ---------- */
+  .hero{border-top:0;padding:0;min-height:min(94vh,880px);display:flex;align-items:center;position:relative;overflow:hidden;margin-top:-80px;padding-top:80px}
+  .slides{position:absolute;inset:0;z-index:0}
+  .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideshow 21s infinite}
+  .slide:nth-child(1){animation-delay:0s}
+  .slide:nth-child(2){animation-delay:7s}
+  .slide:nth-child(3){animation-delay:14s}
+  @keyframes slideshow{
+    0%{opacity:0;transform:scale(1.04)}
+    6%{opacity:1}
+    30%{opacity:1}
+    36%{opacity:0}
+    100%{opacity:0;transform:scale(1.14)}
+  }
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(90deg,rgba(8,8,9,.94) 0%,rgba(8,8,9,.82) 42%,rgba(8,8,9,.42) 72%,rgba(8,8,9,.68) 100%),
+               linear-gradient(0deg,rgba(8,8,9,.92) 0%,transparent 46%)}
+  .hero .wrap{position:relative;z-index:2;padding-top:96px;padding-bottom:96px}
+  .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero .lede{font-size:18px;line-height:1.72;margin:26px 0 34px;max-width:50ch;color:#cfcecb}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+  .hero-stats{display:flex;gap:44px;flex-wrap:wrap;padding-top:30px;border-top:1px solid var(--line-2)}
+  .stat .n{font-family:var(--serif);font-size:40px;color:var(--gold);line-height:1}
+  .stat .l{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  html[data-lang="zh"] .stat .l{letter-spacing:.05em;text-transform:none}
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted-2);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scroll-hint span{display:block;width:1px;height:42px;background:linear-gradient(var(--gold),transparent);animation:drop 2s infinite}
+  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* quote card */
+  .quote-card{background:rgba(17,17,20,.93);backdrop-filter:blur(12px);border:1px solid var(--line-2);padding:34px;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+  .quote-card h3{margin-bottom:6px;font-family:var(--serif);font-size:27px;font-weight:300}
+  .quote-card .sub{font-size:13.5px;color:var(--muted-2);margin-bottom:24px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);margin-bottom:7px}
+  html[data-lang="zh"] .field label{letter-spacing:.06em;text-transform:none}
+  .field input,.field select{width:100%;background:#0b0b0d;border:1px solid var(--line-2);color:var(--text);padding:12px 14px;font-family:inherit;font-size:14px;border-radius:0;transition:border-color .2s}
+  .field input:focus,.field select:focus{outline:0;border-color:var(--gold)}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .quote-card .btn{width:100%;text-align:center;margin-top:8px;cursor:pointer;font-family:inherit}
+  .quote-note{font-size:12px;color:var(--muted-2);margin:14px 0 0;text-align:center}
+
+  /* ---------- marquee ---------- */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2);overflow:hidden;padding:17px 0}
+  .marquee-track{display:flex;gap:0;width:max-content;animation:scrollx 42s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+  .marquee-item{display:flex;align-items:center;gap:16px;padding:0 26px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);white-space:nowrap}
+  html[data-lang="zh"] .marquee-item{letter-spacing:.06em;text-transform:none}
+  .marquee-item i{width:4px;height:4px;background:var(--gold);border-radius:50%;flex:0 0 4px}
+
+  /* ---------- section head ---------- */
+  .sec-head{max-width:780px;margin-bottom:56px}
+  .sec-head p{margin-top:20px;font-size:17px;line-height:1.7}
+
+  /* ---------- services ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{position:relative;overflow:hidden;border:1px solid var(--line);min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;padding:32px 30px;isolation:isolate;transition:border-color .35s,transform .45s var(--ease)}
+  .card:hover{border-color:var(--gold-dim);transform:translateY(-6px)}
+  .card .bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;opacity:.34;transform:scale(1.02);transition:transform 1s var(--ease),opacity .5s}
+  .card:hover .bg{transform:scale(1.11);opacity:.5}
+  .card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(9,9,11,.97) 12%,rgba(9,9,11,.72) 52%,rgba(9,9,11,.42) 100%)}
+  .card .ic{color:var(--gold);margin-bottom:16px;height:26px}
+  .card h3{margin-bottom:11px}
+  .card p{font-size:14.5px;margin-bottom:14px;color:#b6b5b2}
+  .card .more{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dim);transition:color .2s,letter-spacing .3s}
+  html[data-lang="zh"] .card .more{letter-spacing:.05em;text-transform:none}
+  .card:hover .more{color:var(--gold);letter-spacing:.18em}
+
+  /* ---------- fleet ---------- */
+  .fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .veh{border:1px solid var(--line);background:var(--ink-2);overflow:hidden;transition:border-color .35s,transform .45s var(--ease)}
+  .veh:hover{border-color:var(--gold-dim);transform:translateY(-6px)}
+  .veh .shot{aspect-ratio:16/10;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}
+  .veh .shot img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease);filter:saturate(.85) contrast(1.04)}
+  .veh:hover .shot img{transform:scale(1.09)}
+  .veh .tag{position:absolute;top:14px;left:14px;background:rgba(9,9,11,.8);backdrop-filter:blur(6px);border:1px solid var(--line-2);padding:6px 12px;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  html[data-lang="zh"] .veh .tag{letter-spacing:.06em;text-transform:none}
+  .veh .body{padding:22px 24px 24px}
+  .veh h3{font-size:18px;margin-bottom:9px}
+  .veh .models{font-size:13.5px;color:var(--muted);margin-bottom:16px;line-height:1.55}
+  .veh .spec{font-size:12px;color:var(--muted-2);display:flex;gap:18px;padding-top:14px;border-top:1px solid var(--line);letter-spacing:.05em}
+
+  /* ---------- destinations bento ---------- */
+  .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+  .dest{position:relative;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end;isolation:isolate}
+  .dest img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.3s var(--ease);filter:saturate(.92)}
+  .dest:hover img{transform:scale(1.09)}
+  .dest::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,8,10,.93) 0%,rgba(8,8,10,.34) 55%,rgba(8,8,10,.1) 100%);transition:background .4s}
+  .dest:hover::before{background:linear-gradient(0deg,rgba(8,8,10,.95) 0%,rgba(8,8,10,.5) 60%,rgba(8,8,10,.2) 100%)}
+  .dest .d-body{padding:26px 26px 24px;width:100%}
+  .dest h3{font-family:var(--serif);font-size:25px;font-weight:400;margin-bottom:6px}
+  .dest .meta{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+  html[data-lang="zh"] .dest .meta{letter-spacing:.06em;text-transform:none}
+  .dest p{font-size:13.5px;margin:0;color:#b8b7b4;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .4s,margin .4s}
+  .dest:hover p{max-height:90px;opacity:1;margin-top:6px}
+  .d-wide{grid-column:span 2}
+  .d-tall{grid-row:span 2}
+
+  /* ---------- wildlife band ---------- */
+  .wild{padding:0;border:0}
+  .wild-inner{position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center}
+  .wild-bg{position:absolute;inset:-14% 0;z-index:0;background-size:cover;background-position:center;will-change:transform}
+  .wild-inner::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(8,8,10,.94),rgba(8,8,10,.7) 55%,rgba(8,8,10,.45))}
+  .wild-inner .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:90px}
+  .wild-copy{max-width:560px}
+  .wild-thumbs{display:flex;gap:14px;margin-top:32px}
+  .wild-thumbs img{width:118px;height:88px;object-fit:cover;border:1px solid var(--line-2);filter:grayscale(.25);transition:filter .4s,transform .4s var(--ease)}
+  .wild-thumbs img:hover{filter:none;transform:translateY(-5px)}
+
+  /* ---------- why / split ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .tick-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+  .tick-list li{display:flex;gap:14px;font-size:15px;color:var(--muted);line-height:1.6}
+  .tick-list li::before{content:"";flex:0 0 6px;height:6px;background:var(--gold);margin-top:10px}
+  .why-visual{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .why-visual figure{margin:0;overflow:hidden;border:1px solid var(--line)}
+  .why-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+  .why-visual figure:hover img{transform:scale(1.07)}
+  .why-visual .tall{grid-row:span 2;aspect-ratio:3/5.1}
+  .why-visual .sq{aspect-ratio:1/1}
+  .reasons{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:14px}
+  .reason{background:var(--ink);padding:24px 26px;transition:background .3s}
+  .reason:hover{background:var(--ink-3)}
+  .reason h3{font-size:16px;margin-bottom:7px}
+  .reason p{font-size:14.5px;margin:0}
+
+  /* ---------- reviews ---------- */
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .review{border:1px solid var(--line);padding:30px 28px;background:var(--ink-2);transition:border-color .3s,transform .4s var(--ease)}
+  .review:hover{border-color:var(--gold-dim);transform:translateY(-5px)}
+  .stars{color:var(--gold);letter-spacing:3px;font-size:13px;margin-bottom:16px}
+  .review p{font-size:14.5px;color:var(--text);opacity:.9;margin-bottom:18px}
+  .review .who{font-size:13px;color:var(--muted-2)}
+
+  /* ---------- areas ---------- */
+  .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 40px}
+  .area{border-left:1px solid var(--line);padding-left:22px;transition:border-color .35s}
+  .area:hover{border-left-color:var(--gold)}
+  .area h3{font-size:16px;margin-bottom:10px}
+  .area p{font-size:14.5px;margin:0}
+
+  /* ---------- faq ---------- */
+  .faq{max-width:840px}
+  details{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;position:relative;font-size:16.5px;transition:color .2s}
+  summary:hover{color:var(--gold)}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:6px;top:19px;color:var(--gold);font-size:22px;font-weight:300}
+  details[open] summary::after{content:"\2212"}
+  details p{font-size:15px;padding:0 44px 24px 0;margin:0;max-width:none}
+
+  /* ---------- cta ---------- */
+  .cta{text-align:center;overflow:hidden;border-top:1px solid var(--line)}
+  .cta-bg{position:absolute;inset:-14% 0;z-index:0;background-size:cover;background-position:center 60%;will-change:transform}
+  .cta::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(900px 460px at 50% 45%,rgba(8,8,10,.82),rgba(8,8,10,.95))}
+  .cta .wrap{position:relative;z-index:2}
+  .cta h2{margin-bottom:20px}
+  .cta p{margin:0 auto 34px;font-size:17px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink-2);border-top:1px solid var(--line);padding:74px 0 32px}
+  .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;margin-bottom:52px}
+  .f-grid h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin:0 0 18px;font-weight:500}
+  html[data-lang="zh"] .f-grid h4{letter-spacing:.06em;text-transform:none}
+  .f-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:11px;font-size:14px}
+  .f-grid ul a{color:var(--muted);transition:color .2s,padding-left .2s}
+  .f-grid ul a:hover{color:var(--gold);padding-left:4px}
+  .f-about p{font-size:14px;max-width:38ch;margin-bottom:20px}
+  .f-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:var(--muted-2)}
+  .socials{display:flex;gap:18px}
+  .socials a:hover{color:var(--gold)}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:1040px){
+    .hero-grid{grid-template-columns:1fr;gap:48px}
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .fleet{grid-template-columns:repeat(2,1fr)}
+    .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+    .d-wide{grid-column:span 2}.d-tall{grid-row:span 1}
+    .split{grid-template-columns:1fr;gap:44px}
+    .areas{grid-template-columns:repeat(2,1fr)}
+    .reviews{grid-template-columns:1fr}
+    .f-grid{grid-template-columns:1fr 1fr;gap:36px}
+  }
+  @media(max-width:760px){
+    .wrap{padding:0 20px}
+    section{padding:74px 0}
+    nav{display:none;position:absolute;top:80px;left:0;right:0;background:#0d0d0f;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 20px 20px}
+    nav.open{display:flex}
+    nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+    .menu-toggle{display:block}
+    .head-right .btn{display:none}
+    .tb-left{display:none}
+    .cards,.fleet{grid-template-columns:1fr}
+    .bento{grid-template-columns:1fr;grid-auto-rows:230px}
+    .d-wide{grid-column:span 1}
+    .areas{grid-template-columns:1fr}
+    .hero{min-height:auto;margin-top:0;padding-top:0}
+    .hero .wrap{padding-top:70px;padding-bottom:70px}
+    .hero-stats{gap:26px}
+    .scroll-hint{display:none}
+    .why-visual .tall{grid-row:span 1;aspect-ratio:4/3}
+    .wild-thumbs img{width:88px;height:68px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    .rv{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span><i class="dot"></i><span data-en="Cars on the road right now" data-zh="车辆正在路上">Cars on the road right now</span></span>
+      <span data-en="Mandarin &amp; Cantonese speaking chauffeurs available" data-zh="提供普通话及粤语司机">Mandarin &amp; Cantonese speaking chauffeurs available</span>
+    </div>
+    <div class="tb-right">
+      <a href="tel:+61299551000">(02) 9955 1000</a>
+      <a href="https://wa.me/61404448804" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#account" data-en="Corporate Login" data-zh="企业客户登录">Corporate Login</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="num">101</span><span class="word">Chauffeur</span></a>
+    <nav id="nav">
+      <a href="#services" data-en="Services" data-zh="服务项目">Services</a>
+      <a href="#fleet" data-en="Fleet" data-zh="车队">Fleet</a>
+      <a href="#destinations" data-en="Destinations" data-zh="目的地">Destinations</a>
+      <a href="#why" data-en="Why Us" data-zh="为何选择我们">Why Us</a>
+      <a href="#areas" data-en="Coverage" data-zh="服务范围">Coverage</a>
+      <a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a>
+    </nav>
+    <div class="head-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-en" class="on" onclick="setLang('en')">EN</button>
+        <button type="button" id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+      <a class="btn btn-solid btn-sm" href="#book" data-en="Book a Car" data-zh="立即预订">Book a Car</a>
+      <button class="menu-toggle" type="button" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="slides" aria-hidden="true">
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=2000&q=72')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1544698202-afeeb997d98c?auto=format&fit=crop&w=2000&q=72')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1608273040158-1da7b4a040b8?auto=format&fit=crop&w=2000&q=72')"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow rv" data-en="Sydney Chauffeur Hire Since 1985" data-zh="悉尼豪华专车服务 · 始于1985年">Sydney Chauffeur Hire Since 1985</p>
+      <h1 class="rv rv-d1">
+        <span data-en="The car is already there" data-zh="车已在门口等候">The car is already there</span><br>
+        <em data-en="when you walk out." data-zh="您出门即可上车。">when you walk out.</em>
+      </h1>
+      <p class="lede rv rv-d2"
+         data-en="We have been driving Sydney for forty years. Long enough that most of our clients ask for a chauffeur by name, and long enough to know which lane out of the airport moves at 4pm on a Friday."
+         data-zh="我们已在悉尼服务四十年。时间久到许多客户会直接点名指定司机，也久到我们清楚周五下午四点从机场出发该走哪条车道。">
+        We have been driving Sydney for forty years. Long enough that most of our clients ask for a chauffeur by name, and long enough to know which lane out of the airport moves at 4pm on a Friday.
+      </p>
+      <div class="hero-cta rv rv-d3">
+        <a class="btn btn-solid" href="#book" data-en="Book Online" data-zh="在线预订">Book Online</a>
+        <a class="btn" href="tel:+61299551000" data-en="Call (02) 9955 1000" data-zh="致电 (02) 9955 1000">Call (02) 9955 1000</a>
+      </div>
+      <div class="hero-stats rv rv-d4">
+        <div class="stat"><div class="n" data-count="40" data-suffix="+">40+</div><div class="l" data-en="Years driving" data-zh="年行业经验">Years driving</div></div>
+        <div class="stat"><div class="n" data-count="53">53</div><div class="l" data-en="Seats, largest vehicle" data-zh="座 · 最大车型">Seats, largest vehicle</div></div>
+        <div class="stat"><div class="n">24/7</div><div class="l" data-en="A person answers" data-zh="真人接听">A person answers</div></div>
+        <div class="stat"><div class="n">4.9</div><div class="l" data-en="Google rating" data-zh="谷歌评分">Google rating</div></div>
+      </div>
+    </div>
+
+    <div class="quote-card rv rv-d2" id="book">
+      <h3 data-en="Tell us the trip" data-zh="告诉我们您的行程">Tell us the trip</h3>
+      <p class="sub" data-en="We reply with a fixed, all-in price. Usually within the hour." data-zh="我们将回复固定总价，通常一小时内答复。">We reply with a fixed, all-in price. Usually within the hour.</p>
+      <form onsubmit="event.preventDefault();quoteSent(this)">
+        <div class="field">
+          <label data-en="Pick-up" data-zh="上车地点">Pick-up</label>
+          <input type="text" required data-ph-en="Sydney Airport T1" data-ph-zh="悉尼机场 T1 航站楼" placeholder="Sydney Airport T1">
+        </div>
+        <div class="field">
+          <label data-en="Drop-off" data-zh="下车地点">Drop-off</label>
+          <input type="text" required data-ph-en="Four Seasons, George St" data-ph-zh="四季酒店，乔治街" placeholder="Four Seasons, George St">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label data-en="Date &amp; time" data-zh="日期与时间">Date &amp; time</label>
+            <input type="datetime-local" required>
+          </div>
+          <div class="field">
+            <label data-en="Passengers" data-zh="乘客人数">Passengers</label>
+            <select>
+              <option>1</option><option>2</option><option>3</option>
+              <option data-en="4 – 7" data-zh="4 – 7 人">4 – 7</option>
+              <option data-en="8 – 11" data-zh="8 – 11 人">8 – 11</option>
+              <option data-en="12 +" data-zh="12 人以上">12 +</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label data-en="Email or mobile" data-zh="邮箱或手机号">Email or mobile</label>
+          <input type="text" required data-ph-en="How should we reach you?" data-ph-zh="我们如何联系您？" placeholder="How should we reach you?">
+        </div>
+        <button class="btn btn-solid" type="submit" data-en="Get My Price" data-zh="获取报价">Get My Price</button>
+        <p class="quote-note" data-en="No deposit. No card details. No surge pricing, ever." data-zh="无需订金，无需信用卡信息，永不加价。">No deposit. No card details. No surge pricing, ever.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="scroll-hint"><span></span></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee"></div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv" data-en="What we drive you to" data-zh="我们为您提供">What we drive you to</p>
+      <h2 class="rv rv-d1" data-en="Nine ways people use us, and one standard across all of them." data-zh="九类服务，一套标准。">Nine ways people use us, and one standard across all of them.</h2>
+      <p class="rv rv-d2" data-en="Some clients book us twice a year for a flight. Others have a car at their door every Tuesday morning. The service does not change depending on which one you are."
+         data-zh="有些客户一年只为接送航班预订两次，有些客户每周二清晨都有车在门口等候。无论您属于哪一类，我们的服务标准始终如一。">
+        Some clients book us twice a year for a flight. Others have a car at their door every Tuesday morning. The service does not change depending on which one you are.
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card rv">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1544698202-afeeb997d98c?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></div>
+        <h3 data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</h3>
+        <p data-en="We watch your flight number, not your booking time. Land early and the car is already waiting. Get held up at customs and the first hour of waiting is on us."
+           data-zh="我们跟踪的是您的航班号，而非预订时间。提前落地，车已在候。若您在海关滞留，首个小时的等候时间由我们承担。">
+          We watch your flight number, not your booking time. Land early and the car is already waiting. Get held up at customs and the first hour of waiting is on us.
+        </p>
+        <span class="more" data-en="Airport pricing →" data-zh="查看机场价格 →">Airport pricing →</span>
+      </div>
+
+      <div class="card rv rv-d1">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1662316208133-55e8e16f89fb?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
+        <h3 data-en="Corporate Accounts" data-zh="企业客户账户">Corporate Accounts</h3>
+        <p data-en="One account, one monthly invoice, and where we can, the same chauffeur each time. Your assistant books in thirty seconds and stops chasing receipts."
+           data-zh="一个账户，每月一张发票，并尽可能安排同一位司机。您的助理三十秒即可完成预订，无需再追讨收据。">
+          One account, one monthly invoice, and where we can, the same chauffeur each time. Your assistant books in thirty seconds and stops chasing receipts.
+        </p>
+        <span class="more" data-en="Open an account →" data-zh="开设企业账户 →">Open an account →</span>
+      </div>
+
+      <div class="card rv rv-d2">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1540448051910-09cfadd5df61?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7.5-4.7-9.3-9.2A5.1 5.1 0 0 1 12 6.6a5.1 5.1 0 0 1 9.3 5.2C19.5 16.3 12 21 12 21z"/></svg></div>
+        <h3 data-en="Weddings" data-zh="婚礼用车">Weddings</h3>
+        <p data-en="We walk the route with you beforehand and build in the buffer nobody thinks of. On the day your only job is to get in the car. Ribbons and umbrellas live in the boot."
+           data-zh="我们会提前与您走一遍路线，并预留大多数人想不到的缓冲时间。当天您唯一要做的就是上车。后备箱里备有丝带与雨伞。">
+          We walk the route with you beforehand and build in the buffer nobody thinks of. On the day your only job is to get in the car. Ribbons and umbrellas live in the boot.
+        </p>
+        <span class="more" data-en="Wedding packages →" data-zh="婚礼套餐 →">Wedding packages →</span>
+      </div>
+
+      <div class="card rv">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1531033056439-63578c0d9f22?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 20h5v-2a3 3 0 0 0-4.4-2.7M7 20H2v-2a3 3 0 0 1 4.4-2.7M12 13a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm0 0c-3 0-5.5 2-5.5 4.5V20h11v-2.5C17.5 15 15 13 12 13z"/></svg></div>
+        <h3 data-en="Events &amp; Conferences" data-zh="活动与会议接送">Events &amp; Conferences</h3>
+        <p data-en="Forty delegates or four hundred, arriving in the right order at the right door. We run a live vehicle board on the day so your event manager sees every car at once."
+           data-zh="无论四十位还是四百位嘉宾，都能按正确顺序抵达正确入口。活动当天我们提供实时车辆调度面板，您的活动经理可一览所有车辆动态。">
+          Forty delegates or four hundred, arriving in the right order at the right door. We run a live vehicle board on the day so your event manager sees every car at once.
+        </p>
+        <span class="more" data-en="Talk to events →" data-zh="联系活动部门 →">Talk to events →</span>
+      </div>
+
+      <div class="card rv rv-d1">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></div>
+        <h3 data-en="Touring &amp; Day Trips" data-zh="包车观光与一日游">Touring &amp; Day Trips</h3>
+        <p data-en="Hunter Valley, the Blue Mountains, the Southern Highlands. Your chauffeur has driven these roads for years and will happily tell you which cellar door to skip."
+           data-zh="猎人谷、蓝山、南部高地。您的司机已在这些路线上行驶多年，也乐于告诉您哪家酒庄可以跳过。">
+          Hunter Valley, the Blue Mountains, the Southern Highlands. Your chauffeur has driven these roads for years and will happily tell you which cellar door to skip.
+        </p>
+        <span class="more" data-en="See day trips →" data-zh="查看一日游路线 →">See day trips →</span>
+      </div>
+
+      <div class="card rv rv-d2">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1596321687344-547d323f094a?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg></div>
+        <h3 data-en="VIP &amp; Security" data-zh="贵宾与安保护送">VIP &amp; Security</h3>
+        <p data-en="Discretion is the whole service. We will not tell you who else we drive, which is exactly why those people keep calling. Escorted movements arranged on request."
+           data-zh="保密本身就是这项服务的全部。我们不会透露还为谁服务，而这正是他们持续选择我们的原因。可按需安排护送车队。">
+          Discretion is the whole service. We will not tell you who else we drive, which is exactly why those people keep calling. Escorted movements arranged on request.
+        </p>
+        <span class="more" data-en="Discuss privately →" data-zh="私下洽谈 →">Discuss privately →</span>
+      </div>
+
+      <div class="card rv">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="6" width="20" height="11" rx="2"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/><path d="M2 11h20"/></svg></div>
+        <h3 data-en="Group Transport" data-zh="团体接送">Group Transport</h3>
+        <p data-en="Six people or fifty-three, in one vehicle, with room for the luggage that actually came with them. Sprinters, people movers and full coaches."
+           data-zh="六人或五十三人，一车成行，行李空间充足。奔驰 Sprinter、商务车与大巴，标准如一。">
+          Six people or fifty-three, in one vehicle, with room for the luggage that actually came with them. Sprinters, people movers and full coaches.
+        </p>
+        <span class="more" data-en="Group quote →" data-zh="团体报价 →">Group quote →</span>
+      </div>
+
+      <div class="card rv rv-d1">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1599357191343-2ef9dd03c119?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 11l18-7-7 18-2.5-8L3 11z"/></svg></div>
+        <h3 data-en="Private Jet &amp; Yacht Link" data-zh="私人飞机与游艇接驳">Private Jet &amp; Yacht Link</h3>
+        <p data-en="Kerbside at Sydney Jet Base, or dockside at Rose Bay. We coordinate directly with your operator so the car and the aircraft are ready at the same minute."
+           data-zh="悉尼私人航站楼路边接送，或玫瑰湾码头接驳。我们直接与您的运营方对接，确保车辆与飞机在同一分钟就位。">
+          Kerbside at Sydney Jet Base, or dockside at Rose Bay. We coordinate directly with your operator so the car and the aircraft are ready at the same minute.
+        </p>
+        <span class="more" data-en="Arrange a link-up →" data-zh="安排接驳 →">Arrange a link-up →</span>
+      </div>
+
+      <div class="card rv rv-d2">
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1584099662811-6744be099a74?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg></div>
+        <h3 data-en="Hourly &amp; As-Directed" data-zh="按小时包车">Hourly &amp; As-Directed</h3>
+        <p data-en="Keep the car and the chauffeur for the morning, the day, or the week. Change the plan as often as you like. The price was fixed before you got in."
+           data-zh="您可包用车辆与司机半天、全天或整周，行程随时调整。价格在您上车前就已确定。">
+          Keep the car and the chauffeur for the morning, the day, or the week. Change the plan as often as you like. The price was fixed before you got in.
+        </p>
+        <span class="more" data-en="Hourly rates →" data-zh="小时费率 →">Hourly rates →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLEET ============ -->
+<section id="fleet">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv" data-en="The fleet" data-zh="我们的车队">The fleet</p>
+      <h2 class="rv rv-d1" data-en="Cars we own, maintain and clean ourselves." data-zh="车辆由我们自有、自养、自清洁。">Cars we own, maintain and clean ourselves.</h2>
+      <p class="rv rv-d2" data-en="Nothing here is a subcontracted rideshare car with a badge on the window. Every vehicle is ours, serviced on schedule, detailed before each booking, and tracked live so you can see where it is."
+         data-zh="这里没有任何一辆是贴着标志的外包网约车。每辆车均为我们自有，按期保养，每次出车前彻底清洁，并配备实时定位，您随时可查看车辆位置。">
+        Nothing here is a subcontracted rideshare car with a badge on the window. Every vehicle is ours, serviced on schedule, detailed before each booking, and tracked live so you can see where it is.
+      </p>
+    </div>
+
+    <div class="fleet">
+      <div class="veh rv">
+        <div class="shot">
+          <img loading="lazy" decoding="async" alt="Corporate sedan" src="https://images.unsplash.com/photo-1596321687344-547d323f094a?auto=format&fit=crop&w=760&q=68">
+          <div class="tag" data-en="Corporate" data-zh="商务">Corporate</div>
+        </div>
+        <div class="body">
+          <h3 data-en="Corporate Sedan" data-zh="商务轿车">Corporate Sedan</h3>
+          <div class="models" data-en="Mercedes-Benz E-Class &middot; Lexus ES 300h &middot; Genesis G80" data-zh="奔驰 E 级 · 雷克萨斯 ES 300h · 捷尼赛思 G80">Mercedes-Benz E-Class &middot; Lexus ES 300h &middot; Genesis G80</div>
+          <div class="spec">
+            <span data-en="3 passengers" data-zh="3 位乘客">3 passengers</span>
+            <span data-en="2 bags" data-zh="2 件行李">2 bags</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="veh rv rv-d1">
+        <div class="shot">
+          <img loading="lazy" decoding="async" alt="Luxury European sedan" src="https://images.unsplash.com/photo-1609703048009-d3576872b32c?auto=format&fit=crop&w=760&q=68">
+          <div class="tag" data-en="Flagship" data-zh="旗舰">Flagship</div>
+        </div>
+        <div class="body">
+          <h3 data-en="Luxury European" data-zh="欧系豪华车">Luxury European</h3>
+          <div class="models" data-en="Mercedes-Benz S 450 L &middot; Audi A8 L &middot; BMW 7 Series L" data-zh="奔驰 S 450 L · 奥迪 A8 L · 宝马 7 系 L">Mercedes-Benz S 450 L &middot; Audi A8 L &middot; BMW 7 Series L</div>
+          <div class="spec">
+            <span data-en="3 passengers" data-zh="3 位乘客">3 passengers</span>
+            <span data-en="2 bags" data-zh="2 件行李">2 bags</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="veh rv rv-d2">
+        <div class="shot">
+          <img loading="lazy" decoding="async" alt="Luxury SUV" src="https://images.unsplash.com/photo-1767749995450-7b63ab7cd4fd?auto=format&fit=crop&w=760&q=68">
+          <div class="tag" data-en="SUV" data-zh="SUV">SUV</div>
+        </div>
+        <div class="body">
+          <h3 data-en="Luxury SUV" data-zh="豪华 SUV">Luxury SUV</h3>
+          <div class="models" data-en="Audi Q7 &middot; BMW X7 &middot; Lexus RX" data-zh="奥迪 Q7 · 宝马 X7 · 雷克萨斯 RX">Audi Q7 &middot; BMW X7 &middot; Lexus RX</div>
+          <div class="spec">
+            <span data-en="4 passengers" data-zh="4 位乘客">4 passengers</span>
+            <span data-en="4 bags" data-zh="4 件行李">4 bags</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="veh rv">
+        <div class="shot">
+          <img loading="lazy" decoding="async" alt="People mover interior" src="https://images.unsplash.com/photo-1656426672889-31d16c31f4de?auto=format&fit=crop&w=760&q=68">
+          <div class="tag" data-en="Groups" data-zh="团体">Groups</div>
+        </div>
+        <div class="body">
+          <h3 data-en="People Mover" data-zh="商务车">People Mover</h3>
+          <div class="models" data-en="Mercedes-Benz V-Class &middot; Mercedes-Benz Viano" data-zh="奔驰 V 级 · 奔驰 Viano">Mercedes-Benz V-Class &middot; Mercedes-Benz Viano</div>
+          <div class="spec">
+            <span data-en="7 passengers" data-zh="7 位乘客">7 passengers</span>
+            <span data-en="6 bags" data-zh="6 件行李">6 bags</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="veh rv rv-d1">
+        <div class="shot">
+          <img loading="lazy" decoding="async" alt="Sprinter van" src="https://images.unsplash.com/photo-1656426650699-a76ffe479608?auto=format&fit=crop&w=760&q=68">
+          <div class="tag" data-en="Extended" data-zh="加长">Extended</div>
+        </div>
+        <div class="body">
+          <h3 data-en="Luxury Sprinter" data-zh="豪华 Sprinter">Luxury Sprinter</h3>
+          <div class="models" data-en="Mercedes-Benz Sprinter, high-roof cabin" data-zh="奔驰 Sprinter，高顶车厢">Mercedes-Benz Sprinter, high-roof cabin</div>
+          <div class="spec">
+            <span data-en="11 passengers" data-zh="11 位乘客">11 passengers</span>
+            <span data-en="10 bags" data-zh="10 件行李">10 bags</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="veh rv rv-d2">
+        <div class="shot">
+          <img loading="lazy" decoding="async" alt="Coach" src="https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?auto=format&fit=crop&w=760&q=68">
+          <div class="tag" data-en="Conference" data-zh="会议">Conference</div>
+        </div>
+        <div class="body">
+          <h3 data-en="Coach" data-zh="大型巴士">Coach</h3>
+          <div class="models" data-en="22, 33 and 53-seat coaches with luggage hold" data-zh="22 座、33 座与 53 座巴士，配备行李舱">22, 33 and 53-seat coaches with luggage hold</div>
+          <div class="spec">
+            <span data-en="Up to 53 passengers" data-zh="最多 53 位乘客">Up to 53 passengers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESTINATIONS ============ -->
+<section id="destinations">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv" data-en="Beyond the harbour" data-zh="海港之外">Beyond the harbour</p>
+      <h2 class="rv rv-d1" data-en="Give us the whole day and we will show you the country." data-zh="给我们一整天，我们带您看遍这个国家。">Give us the whole day and we will show you the country.</h2>
+      <p class="rv rv-d2" data-en="Plenty of our work never touches the CBD. Vineyards, rainforest, red rock and reef, driven door to door with someone who knows the road and knows when to stop for a photograph."
+         data-zh="我们的许多行程从不经过市中心。葡萄园、雨林、红色巨岩与珊瑚礁，由熟悉路况、也懂得何时该停车拍照的司机门到门接送。">
+        Plenty of our work never touches the CBD. Vineyards, rainforest, red rock and reef, driven door to door with someone who knows the road and knows when to stop for a photograph.
+      </p>
+    </div>
+
+    <div class="bento">
+      <a class="dest d-wide d-tall rv" href="#book">
+        <img loading="lazy" decoding="async" alt="Great Barrier Reef" src="https://images.unsplash.com/photo-1587139223877-04cb899fa3e8?auto=format&fit=crop&w=1200&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="Queensland &middot; Cairns &amp; the Whitsundays" data-zh="昆士兰 · 凯恩斯与圣灵群岛">Queensland &middot; Cairns &amp; the Whitsundays</div>
+          <h3 data-en="Great Barrier Reef" data-zh="大堡礁">Great Barrier Reef</h3>
+          <p data-en="We handle the ground half. Airport to marina, marina to resort, and a chauffeur waiting when the boat comes back in."
+             data-zh="陆地这一段交给我们：机场到码头、码头到度假村，船靠岸时司机已在等候。">
+            We handle the ground half. Airport to marina, marina to resort, and a chauffeur waiting when the boat comes back in.
+          </p>
+        </div>
+      </a>
+
+      <a class="dest rv rv-d1" href="#book">
+        <img loading="lazy" decoding="async" alt="Uluru" src="https://images.unsplash.com/photo-1557214997-7eae7e0e7aaa?auto=format&fit=crop&w=800&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="Northern Territory" data-zh="北领地">Northern Territory</div>
+          <h3 data-en="Uluru" data-zh="乌鲁鲁">Uluru</h3>
+          <p data-en="Sunrise runs from Yulara, arranged with our Territory partners." data-zh="由我们的北领地合作方安排，从尤拉拉出发看日出。">Sunrise runs from Yulara, arranged with our Territory partners.</p>
+        </div>
+      </a>
+
+      <a class="dest rv rv-d2" href="#book">
+        <img loading="lazy" decoding="async" alt="Whitehaven Beach" src="https://images.unsplash.com/photo-1585107426459-20b898cc5fb9?auto=format&fit=crop&w=800&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="Whitsundays" data-zh="圣灵群岛">Whitsundays</div>
+          <h3 data-en="Whitehaven Beach" data-zh="白天堂海滩">Whitehaven Beach</h3>
+          <p data-en="Silica sand, seven kilometres of it. Transfers timed to the tide." data-zh="七公里长的硅砂海滩，接送时间依潮汐安排。">Silica sand, seven kilometres of it. Transfers timed to the tide.</p>
+        </div>
+      </a>
+
+      <a class="dest rv rv-d1" href="#book">
+        <img loading="lazy" decoding="async" alt="Blue Mountains Three Sisters" src="https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=800&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="90 minutes from the CBD" data-zh="距市中心 90 分钟">90 minutes from the CBD</div>
+          <h3 data-en="Blue Mountains" data-zh="蓝山">Blue Mountains</h3>
+          <p data-en="Katoomba, Leura and Jenolan Caves as an easy full day." data-zh="卡通巴、露拉与珍罗兰溶洞，轻松一日游。">Katoomba, Leura and Jenolan Caves as an easy full day.</p>
+        </div>
+      </a>
+
+      <a class="dest rv rv-d2" href="#book">
+        <img loading="lazy" decoding="async" alt="Hunter Valley vineyard" src="https://images.unsplash.com/photo-1664970925595-90402bf3fbcb?auto=format&fit=crop&w=800&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="Two hours north" data-zh="向北两小时">Two hours north</div>
+          <h3 data-en="Hunter Valley" data-zh="猎人谷">Hunter Valley</h3>
+          <p data-en="Four cellar doors, lunch booked, and nobody has to nominate a driver." data-zh="四家酒庄、已订好的午餐，且无人需要充当代驾。">Four cellar doors, lunch booked, and nobody has to nominate a driver.</p>
+        </div>
+      </a>
+
+      <a class="dest d-wide rv" href="#book">
+        <img loading="lazy" decoding="async" alt="Twelve Apostles" src="https://images.unsplash.com/photo-1578285058791-4110cc60f2cf?auto=format&fit=crop&w=1200&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="Victoria &middot; Great Ocean Road" data-zh="维多利亚州 · 大洋路">Victoria &middot; Great Ocean Road</div>
+          <h3 data-en="Twelve Apostles" data-zh="十二使徒岩">Twelve Apostles</h3>
+          <p data-en="A long day out of Melbourne, and one we would rather you spent looking out the window than watching the road."
+             data-zh="从墨尔本出发的一整天行程。我们更希望您把时间用来看风景，而不是盯着路面。">
+            A long day out of Melbourne, and one we would rather you spent looking out the window than watching the road.
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WILDLIFE BAND ============ -->
+<section class="wild">
+  <div class="wild-inner">
+    <div class="wild-bg parallax" data-speed="0.16" style="background-image:url('https://images.unsplash.com/photo-1526515579900-98518e7862cc?auto=format&fit=crop&w=1900&q=70')"></div>
+    <div class="wrap">
+      <div class="wild-copy">
+        <p class="eyebrow rv" data-en="The detour nobody regrets" data-zh="没人后悔的那段绕行">The detour nobody regrets</p>
+        <h2 class="rv rv-d1" data-en="Ask the driver to stop. We have the time built in." data-zh="尽管让司机停车，时间我们已经留好。">Ask the driver to stop. We have the time built in.</h2>
+        <p class="rv rv-d2" data-en="Visitors almost always want the same thing on their first day, and it is not a boardroom. Kangaroos in an open field near Bowral, koalas at Featherdale on the way back from the Blue Mountains, pelicans at The Entrance. Tell your chauffeur at the start and it goes into the run for the day."
+           data-zh="访客第一天想看的几乎都是同一样东西，而那绝不是会议室。鲍勒尔附近开阔草地上的袋鼠、从蓝山返程途中 Featherdale 的考拉、The Entrance 的鹈鹕。出发时告诉司机，我们就会把它排进当天行程。">
+          Visitors almost always want the same thing on their first day, and it is not a boardroom. Kangaroos in an open field near Bowral, koalas at Featherdale on the way back from the Blue Mountains, pelicans at The Entrance. Tell your chauffeur at the start and it goes into the run for the day.
+        </p>
+        <div class="wild-thumbs rv rv-d3">
+          <img loading="lazy" decoding="async" alt="Kangaroo" src="https://images.unsplash.com/photo-1600633719821-1a40e837843f?auto=format&fit=crop&w=340&q=68">
+          <img loading="lazy" decoding="async" alt="Koala" src="https://images.unsplash.com/photo-1591083896596-6b9f15f05a71?auto=format&fit=crop&w=340&q=68">
+          <img loading="lazy" decoding="async" alt="Kangaroo in the bush" src="https://images.unsplash.com/photo-1614398306313-aa5a4c465e9e?auto=format&fit=crop&w=340&q=68">
+          <img loading="lazy" decoding="async" alt="Koala in eucalyptus" src="https://images.unsplash.com/photo-1519562990232-845beca99938?auto=format&fit=crop&w=340&q=68">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section id="why">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow rv" data-en="Why people stay with us" data-zh="客户长期选择我们的原因">Why people stay with us</p>
+      <h2 class="rv rv-d1" data-en="Forty years is not a marketing line. It is why the car turns up." data-zh="四十年不是宣传口号，而是车辆准时抵达的原因。">Forty years is not a marketing line. It is why the car turns up.</h2>
+      <p class="rv rv-d2" data-en="Most of our work comes from people who used us once and then never went looking again. There is no clever trick behind that. We answer the phone, we know the roads, and we do not send a different driver every time."
+         data-zh="我们的大部分业务来自那些用过一次就不再另寻他家的客户。这背后没有什么技巧：我们接得起电话，熟悉道路，也不会每次都换司机。">
+        Most of our work comes from people who used us once and then never went looking again. There is no clever trick behind that. We answer the phone, we know the roads, and we do not send a different driver every time.
+      </p>
+      <ul class="tick-list rv rv-d3">
+        <li data-en="Fixed pricing quoted before you book. No surge, no meter, no adjustment afterwards." data-zh="预订前即报固定价格。不加价，不打表，事后不调整。">Fixed pricing quoted before you book. No surge, no meter, no adjustment afterwards.</li>
+        <li data-en="Live GPS on every vehicle, shared with you and your travel manager." data-zh="每辆车配备实时 GPS，向您及您的差旅经理开放。">Live GPS on every vehicle, shared with you and your travel manager.</li>
+        <li data-en="A real person on the phone at 2am, not a chat window and a ticket number." data-zh="凌晨两点也有真人接听电话，而不是聊天窗口和工单号。">A real person on the phone at 2am, not a chat window and a ticket number.</li>
+        <li data-en="Chauffeurs vetted, licensed, uniformed and reviewed on client feedback, not ratings." data-zh="司机经过背景审查、持证上岗、统一着装，考核依据客户反馈而非评分系统。">Chauffeurs vetted, licensed, uniformed and reviewed on client feedback, not ratings.</li>
+        <li data-en="Mandarin and Cantonese speaking chauffeurs available on request." data-zh="可应要求安排普通话及粤语司机。">Mandarin and Cantonese speaking chauffeurs available on request.</li>
+        <li data-en="Fully insured and accredited across NSW, with interstate coverage arranged." data-zh="在新南威尔士州持牌并全额投保，可安排跨州服务。">Fully insured and accredited across NSW, with interstate coverage arranged.</li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="why-visual rv rv-d1">
+        <figure class="tall"><img loading="lazy" decoding="async" alt="Chauffeur" src="https://images.unsplash.com/photo-1603122101829-e56305b0a5f7?auto=format&fit=crop&w=700&q=70"></figure>
+        <figure class="sq"><img loading="lazy" decoding="async" alt="Cabin interior" src="https://images.unsplash.com/photo-1502014335594-c026800f24ee?auto=format&fit=crop&w=560&q=70"></figure>
+        <figure class="sq"><img loading="lazy" decoding="async" alt="Sydney Harbour Bridge" src="https://images.unsplash.com/photo-1580723843692-137caf37ad17?auto=format&fit=crop&w=560&q=70"></figure>
+      </div>
+
+      <div class="reasons rv rv-d2">
+        <div class="reason">
+          <h3 data-en="We know where Sydney jams" data-zh="我们知道悉尼哪里会堵">We know where Sydney jams</h3>
+          <p data-en="The pinch on the Western Distributor, the crawl around King Street Wharf, the back way to Olympic Park. Four decades of local driving, and no routing app has it."
+             data-zh="西部快速路的瓶颈路段、国王街码头周边的缓行、通往奥林匹克公园的小路。四十年本地驾驶的积累，任何导航软件都不具备。">
+            The pinch on the Western Distributor, the crawl around King Street Wharf, the back way to Olympic Park. Four decades of local driving, and no routing app has it.
+          </p>
+        </div>
+        <div class="reason">
+          <h3 data-en="The same faces, year after year" data-zh="年复一年，还是熟悉的面孔">The same faces, year after year</h3>
+          <p data-en="Our chauffeurs stay. Clients who booked twenty years ago still get greeted by name, and that only happens when the person driving has not changed."
+             data-zh="我们的司机流动率极低。二十年前就与我们合作的客户，如今仍被直呼其名迎接。只有司机没换，这才可能。">
+            Our chauffeurs stay. Clients who booked twenty years ago still get greeted by name, and that only happens when the person driving has not changed.
+          </p>
+        </div>
+        <div class="reason">
+          <h3 data-en="Quiet when you need quiet" data-zh="需要安静时，绝对安静">Quiet when you need quiet</h3>
+          <p data-en="Some passengers want the local news and a coffee stop. Others want to take a call and not be spoken to. Our chauffeurs read that in the first minute and get it right."
+             data-zh="有些乘客想聊聊本地新闻、顺路买杯咖啡；有些则想安静地打完一通电话。我们的司机会在上车第一分钟内判断并做对。">
+            Some passengers want the local news and a coffee stop. Others want to take a call and not be spoken to. Our chauffeurs read that in the first minute and get it right.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv" data-en="In our clients' words" data-zh="客户评价">In our clients' words</p>
+      <h2 class="rv rv-d1" data-en="4.9 on Google, and the reason is usually the driver." data-zh="谷歌评分 4.9，原因通常在于司机。">4.9 on Google, and the reason is usually the driver.</h2>
+    </div>
+    <div class="reviews">
+      <div class="review rv">
+        <div class="stars">★★★★★</div>
+        <p data-en="&ldquo;We do not use the service often, maybe twice a year for twenty years. It is always the mark of a good business when they still know your name when you call.&rdquo;"
+           data-zh="「我们用得并不频繁，二十年来大约一年两次。打电话过去对方仍能叫出你的名字，这就是好公司的标志。」">
+          &ldquo;We do not use the service often, maybe twice a year for twenty years. It is always the mark of a good business when they still know your name when you call.&rdquo;
+        </p>
+        <div class="who" data-en="Malcolm G. &middot; Google review" data-zh="Malcolm G. · 谷歌评价">Malcolm G. &middot; Google review</div>
+      </div>
+      <div class="review rv rv-d1">
+        <div class="stars">★★★★★</div>
+        <p data-en="&ldquo;Waiting at the pick-up point at the scheduled time, spotless car, very reasonable pricing. The whole thing was simply handled.&rdquo;"
+           data-zh="「准时在约定地点等候，车辆一尘不染，价格非常合理。整件事处理得干脆利落。」">
+          &ldquo;Waiting at the pick-up point at the scheduled time, spotless car, very reasonable pricing. The whole thing was simply handled.&rdquo;
+        </p>
+        <div class="who" data-en="Vince S. &middot; Google review" data-zh="Vince S. · 谷歌评价">Vince S. &middot; Google review</div>
+      </div>
+      <div class="review rv rv-d2">
+        <div class="stars">★★★★★</div>
+        <p data-en="&ldquo;Booked for an important event. They asked what I actually needed rather than reading me a price list, and on the day everything was exactly as described.&rdquo;"
+           data-zh="「为一场重要活动预订。他们先问我到底需要什么，而不是照本宣科念价目表。当天的一切与承诺完全一致。」">
+          &ldquo;Booked for an important event. They asked what I actually needed rather than reading me a price list, and on the day everything was exactly as described.&rdquo;
+        </p>
+        <div class="who" data-en="Corporate client &middot; Sydney CBD" data-zh="企业客户 · 悉尼中央商务区">Corporate client &middot; Sydney CBD</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AREAS ============ -->
+<section id="areas">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv" data-en="Where we drive" data-zh="服务区域">Where we drive</p>
+      <h2 class="rv rv-d1" data-en="Greater Sydney, and a long way past it." data-zh="覆盖大悉尼地区，并可远行至更远处。">Greater Sydney, and a long way past it.</h2>
+      <p class="rv rv-d2" data-en="Door to door anywhere in the metropolitan area, and full-day touring across New South Wales. If your trip crosses a state line, tell us and we will arrange the far end too."
+         data-zh="大悉尼地区门到门接送，并提供覆盖新南威尔士州的全日包车。若行程跨州，请告知我们，另一端我们同样可以安排。">
+        Door to door anywhere in the metropolitan area, and full-day touring across New South Wales. If your trip crosses a state line, tell us and we will arrange the far end too.
+      </p>
+    </div>
+    <div class="areas">
+      <div class="area rv">
+        <h3 data-en="CBD &amp; Inner City" data-zh="中央商务区与内城">CBD &amp; Inner City</h3>
+        <p data-en="Circular Quay, The Rocks, Barangaroo, Darling Harbour, Wynyard and Town Hall. Hotel pickups along George, Pitt and the Harbourside precinct daily."
+           data-zh="环形码头、岩石区、巴兰加鲁、达令港、Wynyard 与市政厅。每日提供乔治街、皮特街及海港区各酒店的接送。">Circular Quay, The Rocks, Barangaroo, Darling Harbour, Wynyard and Town Hall. Hotel pickups along George, Pitt and the Harbourside precinct daily.</p>
+      </div>
+      <div class="area rv rv-d1">
+        <h3 data-en="Eastern Suburbs" data-zh="东区">Eastern Suburbs</h3>
+        <p data-en="Bondi, Bondi Junction, Double Bay, Paddington, Woollahra, Randwick and Surry Hills. Race days at Royal Randwick and match nights at Allianz Stadium are routine."
+           data-zh="邦迪、邦迪汇、双湾、帕丁顿、伍拉拉、兰德威克与萨里山。皇家兰德威克赛马日与安联球场比赛夜的接送是家常便饭。">Bondi, Bondi Junction, Double Bay, Paddington, Woollahra, Randwick and Surry Hills. Race days at Royal Randwick and match nights at Allianz Stadium are routine.</p>
+      </div>
+      <div class="area rv rv-d2">
+        <h3 data-en="North Shore" data-zh="北岸">North Shore</h3>
+        <p data-en="Chatswood, St Leonards, North Sydney, Lane Cove, Mosman and Neutral Bay. We work the Bridge and the Harbour Tunnel by the hour and pick whichever is moving."
+           data-zh="Chatswood、St Leonards、北悉尼、Lane Cove、Mosman 与 Neutral Bay。我们对海港大桥与海底隧道的通行状况了如指掌，随时择畅通者而行。">Chatswood, St Leonards, North Sydney, Lane Cove, Mosman and Neutral Bay. We work the Bridge and the Harbour Tunnel by the hour and pick whichever is moving.</p>
+      </div>
+      <div class="area rv">
+        <h3 data-en="Western Sydney" data-zh="西悉尼">Western Sydney</h3>
+        <p data-en="Parramatta, Blacktown, Penrith, the Hills District and the Olympic Peninsula. Group transfers to CommBank Stadium and conference shuttles along the M4 and M7."
+           data-zh="Parramatta、Blacktown、Penrith、Hills 区与奥林匹克半岛。提供 CommBank 体育场团体接送，以及 M4、M7 沿线的会议穿梭服务。">Parramatta, Blacktown, Penrith, the Hills District and the Olympic Peninsula. Group transfers to CommBank Stadium and conference shuttles along the M4 and M7.</p>
+      </div>
+      <div class="area rv rv-d1">
+        <h3 data-en="Airports &amp; Terminals" data-zh="机场与航站楼">Airports &amp; Terminals</h3>
+        <p data-en="Sydney T1, T2 and T3, the private jet base, and the Overseas Passenger Terminal for cruise arrivals. Meet-and-greet inside the terminal on request."
+           data-zh="悉尼 T1、T2、T3 航站楼、私人飞机基地，以及邮轮抵达的海外旅客码头。可应要求提供航站楼内举牌接机。">Sydney T1, T2 and T3, the private jet base, and the Overseas Passenger Terminal for cruise arrivals. Meet-and-greet inside the terminal on request.</p>
+      </div>
+      <div class="area rv rv-d2">
+        <h3 data-en="Interstate &amp; Beyond" data-zh="跨州及更远地区">Interstate &amp; Beyond</h3>
+        <p data-en="Melbourne, the Gold Coast, Cairns and the Whitsundays through chauffeur partners we have worked with for years. One booking, one contact, one invoice."
+           data-zh="通过多年合作的专车伙伴，服务延伸至墨尔本、黄金海岸、凯恩斯与圣灵群岛。一次预订，一个联系人，一张发票。">Melbourne, the Gold Coast, Cairns and the Whitsundays through chauffeur partners we have worked with for years. One booking, one contact, one invoice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv" data-en="Before you book" data-zh="预订前须知">Before you book</p>
+      <h2 class="rv rv-d1" data-en="The questions we get asked most." data-zh="客户最常问的问题。">The questions we get asked most.</h2>
+    </div>
+    <div class="faq rv rv-d2">
+      <details open>
+        <summary data-en="Can I hire a chauffeur for just a couple of hours?" data-zh="可以只包车两三个小时吗？">Can I hire a chauffeur for just a couple of hours?</summary>
+        <p data-en="Yes. Two hours is a normal booking for us. We build the job around your schedule rather than pushing you into a minimum-day package, and the rate is fixed before you confirm."
+           data-zh="可以。两小时对我们而言是常规预订。我们会根据您的行程安排，而不会强制您购买最低全日套餐，费率在确认前即已固定。">Yes. Two hours is a normal booking for us. We build the job around your schedule rather than pushing you into a minimum-day package, and the rate is fixed before you confirm.</p>
+      </details>
+      <details>
+        <summary data-en="How far ahead should I book?" data-zh="需要提前多久预订？">How far ahead should I book?</summary>
+        <p data-en="Twenty-four to forty-eight hours secures the vehicle you want. For anything sooner, call us. We hold cars back for exactly this reason and we will usually find you one."
+           data-zh="提前 24 至 48 小时可确保您选定的车型。若时间更紧，请直接致电。我们正是为此保留了备用车辆，通常都能安排上。">Twenty-four to forty-eight hours secures the vehicle you want. For anything sooner, call us. We hold cars back for exactly this reason and we will usually find you one.</p>
+      </details>
+      <details>
+        <summary data-en="Is the price fixed, or does it move with traffic?" data-zh="价格是固定的，还是会随路况变动？">Is the price fixed, or does it move with traffic?</summary>
+        <p data-en="Fixed. You see the full cost before we confirm the booking. No surge, no meter, no adjustment when you get out. If we sit in traffic, that is our problem, not your invoice."
+           data-zh="固定价格。确认预订前您即可看到全部费用。不加价、不打表、下车后不调整。若遇堵车，那是我们的问题，不会体现在您的账单上。">Fixed. You see the full cost before we confirm the booking. No surge, no meter, no adjustment when you get out. If we sit in traffic, that is our problem, not your invoice.</p>
+      </details>
+      <details>
+        <summary data-en="Do you have a Mandarin or Cantonese speaking chauffeur?" data-zh="有讲普通话或粤语的司机吗？">Do you have a Mandarin or Cantonese speaking chauffeur?</summary>
+        <p data-en="Yes, and we recommend asking when you book so we can assign the right person. Our office also takes bookings and handles quotes in Chinese, by phone, email or WeChat."
+           data-zh="有。建议您在预订时提出，以便我们安排合适的司机。我们的办公室也可用中文接受预订和处理报价，支持电话、邮件或微信。">Yes, and we recommend asking when you book so we can assign the right person. Our office also takes bookings and handles quotes in Chinese, by phone, email or WeChat.</p>
+      </details>
+      <details>
+        <summary data-en="Can you take us out to the Blue Mountains or Hunter Valley for the day?" data-zh="可以包车去蓝山或猎人谷玩一天吗？">Can you take us out to the Blue Mountains or Hunter Valley for the day?</summary>
+        <p data-en="That is a large part of what we do. Day trips are priced as a full day rather than by the kilometre, so you can add a lookout, a winery or a wildlife stop without the cost moving."
+           data-zh="这正是我们的主要业务之一。一日游按全日计价而非按公里计费，因此您可以随时加入观景台、酒庄或看野生动物的行程，费用不变。">That is a large part of what we do. Day trips are priced as a full day rather than by the kilometre, so you can add a lookout, a winery or a wildlife stop without the cost moving.</p>
+      </details>
+      <details>
+        <summary data-en="Can you move a large group?" data-zh="可以接送大型团队吗？">Can you move a large group?</summary>
+        <p data-en="Up to fifty-three in a single coach, and any number above that across multiple vehicles running to one schedule. Conference and event transport is a large part of what we do."
+           data-zh="单辆大巴最多可载 53 人，超出部分可由多辆车按统一时刻表调度。会议与活动接送是我们业务的重要组成部分。">Up to fifty-three in a single coach, and any number above that across multiple vehicles running to one schedule. Conference and event transport is a large part of what we do.</p>
+      </details>
+      <details>
+        <summary data-en="What happens if my flight is delayed?" data-zh="如果我的航班延误怎么办？">What happens if my flight is delayed?</summary>
+        <p data-en="We track the flight, not the clock. The chauffeur is rescheduled automatically and the first hour of waiting after you land is included. You do not need to call us from the tarmac."
+           data-zh="我们跟踪的是航班而非时钟。司机会自动重新调度，落地后首个小时的等候时间包含在内。您无需在停机坪上给我们打电话。">We track the flight, not the clock. The chauffeur is rescheduled automatically and the first hour of waiting after you land is included. You do not need to call us from the tarmac.</p>
+      </details>
+      <details>
+        <summary data-en="Can we open a corporate account?" data-zh="可以开设企业账户吗？">Can we open a corporate account?</summary>
+        <p data-en="Yes. Consolidated monthly billing, cost-centre tagging, nominated bookers, and a single point of contact who knows your travel patterns. Setup takes a phone call."
+           data-zh="可以。提供合并月结账单、成本中心标记、指定预订人，以及一位熟悉您差旅习惯的专属联系人。一通电话即可开通。">Yes. Consolidated monthly billing, cost-centre tagging, nominated bookers, and a single point of contact who knows your travel patterns. Setup takes a phone call.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="contact">
+  <div class="cta-bg parallax" data-speed="0.13" style="background-image:url('https://images.unsplash.com/photo-1583125047841-9d15c45dabe5?auto=format&fit=crop&w=1900&q=70')"></div>
+  <div class="wrap">
+    <p class="eyebrow rv" data-en="Get in touch" data-zh="联系我们">Get in touch</p>
+    <h2 class="rv rv-d1" data-en="Tell us where you need to be." data-zh="告诉我们您要去哪里。">Tell us where you need to be.</h2>
+    <p class="rv rv-d2" data-en="Call, message, or send us the trip. Someone from our office will come back to you with a fixed price, usually inside the hour, and every hour of the day."
+       data-zh="致电、发送信息，或把行程发给我们。我们的同事会回复固定报价，通常一小时内答复，全天候受理。">
+      Call, message, or send us the trip. Someone from our office will come back to you with a fixed price, usually inside the hour, and every hour of the day.
+    </p>
+    <div class="cta-row rv rv-d3">
+      <a class="btn btn-solid" href="tel:+61299551000" data-en="Call (02) 9955 1000" data-zh="致电 (02) 9955 1000">Call (02) 9955 1000</a>
+      <a class="btn" href="https://wa.me/61404448804" target="_blank" rel="noopener" data-en="WhatsApp Us" data-zh="WhatsApp 联系">WhatsApp Us</a>
+      <a class="btn" href="#book" data-en="Request a Quote" data-zh="索取报价">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-about">
+        <a class="logo" href="#top" style="margin-bottom:20px"><span class="num">101</span><span class="word">Chauffeur</span></a>
+        <p data-en="Chauffeur hire across Sydney and New South Wales. Owned fleet, vetted chauffeurs, fixed pricing, and a phone that gets answered."
+           data-zh="服务于悉尼及新南威尔士州的豪华专车公司。自有车队，严选司机，固定价格，电话必接。">
+          Chauffeur hire across Sydney and New South Wales. Owned fleet, vetted chauffeurs, fixed pricing, and a phone that gets answered.
+        </p>
+        <a class="btn btn-sm" href="#book" data-en="Book a Car" data-zh="立即预订">Book a Car</a>
+      </div>
+      <div>
+        <h4 data-en="Services" data-zh="服务项目">Services</h4>
+        <ul>
+          <li><a href="#services" data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</a></li>
+          <li><a href="#services" data-en="Corporate Accounts" data-zh="企业客户账户">Corporate Accounts</a></li>
+          <li><a href="#services" data-en="Weddings" data-zh="婚礼用车">Weddings</a></li>
+          <li><a href="#services" data-en="Events &amp; Conferences" data-zh="活动与会议">Events &amp; Conferences</a></li>
+          <li><a href="#services" data-en="VIP &amp; Security" data-zh="贵宾与安保">VIP &amp; Security</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Destinations" data-zh="目的地">Destinations</h4>
+        <ul>
+          <li><a href="#destinations" data-en="Blue Mountains" data-zh="蓝山">Blue Mountains</a></li>
+          <li><a href="#destinations" data-en="Hunter Valley" data-zh="猎人谷">Hunter Valley</a></li>
+          <li><a href="#destinations" data-en="Great Barrier Reef" data-zh="大堡礁">Great Barrier Reef</a></li>
+          <li><a href="#destinations" data-en="Whitsundays" data-zh="圣灵群岛">Whitsundays</a></li>
+          <li><a href="#destinations" data-en="Great Ocean Road" data-zh="大洋路">Great Ocean Road</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Contact" data-zh="联系方式">Contact</h4>
+        <ul>
+          <li><a href="tel:+61299551000">(02) 9955 1000</a></li>
+          <li><a href="tel:+61404448804">+61 404 448 804</a></li>
+          <li><a href="https://wa.me/61404448804" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:bookings@101chauffeur.com">bookings@101chauffeur.com</a></li>
+          <li><a href="#book" data-en="24 hours, every day" data-zh="全天候 24 小时服务">24 hours, every day</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span data-en="&copy; 2026 101 Chauffeur. All rights reserved." data-zh="© 2026 101 Chauffeur 版权所有。">&copy; 2026 101 Chauffeur. All rights reserved.</span>
+      <div class="socials">
+        <a href="#" data-en="Privacy" data-zh="隐私政策">Privacy</a>
+        <a href="#" data-en="Terms" data-zh="条款">Terms</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------------- marquee ---------------- */
+const TICKER = [
+  {en:"Sydney Airport T1 · T2 · T3", zh:"悉尼机场 T1 · T2 · T3"},
+  {en:"Blue Mountains day trips", zh:"蓝山一日游"},
+  {en:"Hunter Valley cellar doors", zh:"猎人谷酒庄之旅"},
+  {en:"Corporate accounts", zh:"企业客户账户"},
+  {en:"Weddings", zh:"婚礼用车"},
+  {en:"Great Barrier Reef transfers", zh:"大堡礁接驳"},
+  {en:"Conference fleets to 53 seats", zh:"最高 53 座会议车队"},
+  {en:"Mandarin speaking chauffeurs", zh:"普通话司机"},
+  {en:"Live GPS on every vehicle", zh:"全车实时定位"},
+  {en:"Fixed pricing, no surge", zh:"固定价格，永不加价"}
+];
+function buildMarquee(){
+  const html = TICKER.map(t=>`<span class="marquee-item"><i></i><span data-en="${t.en}" data-zh="${t.zh}">${t.en}</span></span>`).join('');
+  document.getElementById('marquee').innerHTML = html + html;
+}
+buildMarquee();
+
+/* ---------------- language toggle ---------------- */
+function setLang(lang){
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    const v = el.getAttribute('data-' + lang);
+    if (v !== null) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-ph-en]').forEach(el=>{
+    const v = el.getAttribute('data-ph-' + lang);
+    if (v !== null) el.placeholder = v;
+  });
+
+  document.getElementById('btn-en').classList.toggle('on', lang === 'en');
+  document.getElementById('btn-zh').classList.toggle('on', lang === 'zh');
+
+  document.title = lang === 'zh'
+    ? '101 Chauffeur | 悉尼豪华专车 · 机场接送与商务用车'
+    : '101 Chauffeur | Sydney Chauffeur Hire, Airport & Corporate Transfers';
+
+  try { localStorage.setItem('lang101', lang); } catch(e){}
+}
+try {
+  const saved = localStorage.getItem('lang101');
+  if (saved === 'zh') setLang('zh');
+  else if (!saved && (navigator.language||'').toLowerCase().startsWith('zh')) setLang('zh');
+} catch(e){}
+
+/* ---------------- scroll reveal ---------------- */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* ---------------- animated counters ---------------- */
+const co = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '';
+    let t0 = null;
+    const step = ts => {
+      if(!t0) t0 = ts;
+      const p = Math.min((ts - t0) / 1100, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+    co.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+/* ---------------- parallax ---------------- */
+const px = [...document.querySelectorAll('.parallax')];
+let ticking = false;
+function parallax(){
+  const vh = window.innerHeight;
+  px.forEach(el=>{
+    const r = el.parentElement.getBoundingClientRect();
+    if (r.bottom < -200 || r.top > vh + 200) return;
+    const offset = (r.top + r.height/2 - vh/2) * -(+el.dataset.speed || .15);
+    el.style.transform = `translate3d(0,${offset.toFixed(1)}px,0)`;
+  });
+  ticking = false;
+}
+function onScroll(){
+  if(!ticking){ requestAnimationFrame(parallax); ticking = true; }
+  document.getElementById('hdr').classList.toggle('stuck', window.scrollY > 60);
+}
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', parallax);
+  parallax();
+} else {
+  window.addEventListener('scroll', ()=>{
+    document.getElementById('hdr').classList.toggle('stuck', window.scrollY > 60);
+  }, {passive:true});
+}
+
+/* ---------------- misc ---------------- */
+function quoteSent(form){
+  const zh = document.documentElement.getAttribute('data-lang') === 'zh';
+  const btn = form.querySelector('button[type=submit]');
+  btn.textContent = zh ? '已收到，我们即将联系您' : 'Sent. We will be in touch shortly';
+  btn.style.pointerEvents = 'none';
+}
+document.querySelectorAll('#nav a').forEach(a=>{
+  a.addEventListener('click', ()=> document.getElementById('nav').classList.remove('open'));
+});
+</script>
+</body>
+</html>
