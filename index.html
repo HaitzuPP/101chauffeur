@@ -228,6 +228,8 @@
 
   /* ---------- responsive ---------- */
   @media(max-width:1040px){
+    .creds-grid{grid-template-columns:1fr 1fr;gap:34px}
+    .cred-lead{grid-column:span 2}
     .cards{grid-template-columns:repeat(2,1fr)}
     .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
     .d-wide{grid-column:span 2}.d-tall{grid-row:span 1}
@@ -244,6 +246,10 @@
     .menu-toggle{display:block}
     .topbar .wrap{justify-content:center}
     .topbar .tb-left{display:none}
+    .creds{padding:44px 0}
+    .creds-grid{grid-template-columns:1fr;gap:30px}
+    .cred-lead{grid-column:span 1;padding-left:18px}
+    .cred-lead .badge{letter-spacing:.1em}
     .cards{grid-template-columns:1fr}
     .bento{grid-template-columns:1fr;grid-auto-rows:230px}
     .d-wide{grid-column:span 1}
