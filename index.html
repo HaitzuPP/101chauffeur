@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>101 Chauffeur | Sydney Chauffeur Hire, Airport & Corporate Transfers</title>
-<meta name="description" content="An authorised booking service provider under the NSW Point to Point Transport Commissioner. Private chauffeur hire across Sydney and New South Wales, including the South Coast and Kiama, Port Stephens, the Hunter Valley and the Blue Mountains. Mandarin and Cantonese speaking chauffeurs available.">
+<title>101 Chauffeured | Sydney Chauffeur Hire, Airport & Corporate Transfers</title>
+<meta name="description" content="101 Chauffeured, a trading name of 101Bikes Pty Ltd and an authorised booking service provider under the NSW Point to Point Transport Commissioner. Private chauffeur hire across Sydney and New South Wales, including the South Coast and Kiama, Port Stephens, the Hunter Valley and the Blue Mountains. Mandarin and Cantonese speaking chauffeurs available.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -222,7 +222,8 @@
   .f-grid ul a{color:var(--muted);transition:color .2s,padding-left .2s}
   .f-grid ul a:hover{color:var(--gold);padding-left:4px}
   .f-about p{font-size:14px;max-width:40ch;margin:0}
-  .f-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:var(--muted-2)}
+  .f-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;font-size:12.5px;color:var(--muted-2)}
+  .f-bottom .legal{max-width:70ch;line-height:1.7}
   .socials{display:flex;gap:18px}
   .socials a:hover{color:var(--gold)}
 
@@ -246,6 +247,10 @@
     .menu-toggle{display:block}
     .topbar .wrap{justify-content:center}
     .topbar .tb-left{display:none}
+    /* "Chauffeured" is a longer wordmark than the header had room for at
+       0.3em tracking once the language toggle and menu button are alongside. */
+    .logo .num{font-size:29px}
+    .logo .word{letter-spacing:.16em;font-size:11px}
     .creds{padding:44px 0}
     .creds-grid{grid-template-columns:1fr;gap:30px}
     .cred-lead{grid-column:span 1;padding-left:18px}
@@ -286,7 +291,7 @@ document.documentElement.classList.add('js');
 <!-- ============ HEADER ============ -->
 <header id="hdr">
   <div class="wrap">
-    <a class="logo" href="#top"><span class="num">101</span><span class="word">Chauffeur</span></a>
+    <a class="logo" href="#top"><span class="num">101</span><span class="word">Chauffeured</span></a>
     <nav id="nav">
       <a href="#services" data-en="Services" data-zh="服务项目">Services</a>
       <a href="#destinations" data-en="Destinations" data-zh="目的地">Destinations</a>
@@ -347,9 +352,9 @@ document.documentElement.classList.add('js');
         <span data-en="Authorised Booking Service Provider" data-zh="政府授权预订服务提供商">Authorised Booking Service Provider</span>
       </span>
       <h3 data-en="Authorised by the NSW Point to Point Transport Commissioner." data-zh="由新南威尔士州点对点运输专员授权。">Authorised by the NSW Point to Point Transport Commissioner.</h3>
-      <p data-en="Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under that authorisation."
-         data-zh="在新南威尔士州承接租赁车辆预订须事先获得政府授权，无授权而安排行程者将面临处罚。我们安排的每一趟行程都在该授权之下运作。">
-        Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under that authorisation.
+      <p data-en="Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under the authorisation held by 101Bikes Pty Ltd, ABN 15 663 484 268."
+         data-zh="在新南威尔士州承接租赁车辆预订须事先获得政府授权，无授权而安排行程者将面临处罚。我们安排的每一趟行程，均在 101Bikes Pty Ltd（ABN 15 663 484 268）持有的授权之下运作。">
+        Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under the authorisation held by 101Bikes Pty Ltd, ABN 15 663 484 268.
       </p>
     </div>
 
@@ -738,10 +743,10 @@ document.documentElement.classList.add('js');
   <div class="wrap">
     <div class="f-grid">
       <div class="f-about">
-        <a class="logo" href="#top" style="margin-bottom:20px"><span class="num">101</span><span class="word">Chauffeur</span></a>
-        <p data-en="Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. An authorised booking service provider under the NSW Point to Point Transport Commissioner."
-           data-zh="服务于悉尼及新南威尔士州的私人专车，南至南海岸，北至史蒂芬斯港。持有新南威尔士州点对点运输专员授权的预订服务提供商。">
-          Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. An authorised booking service provider under the NSW Point to Point Transport Commissioner.
+        <a class="logo" href="#top" style="margin-bottom:20px"><span class="num">101</span><span class="word">Chauffeured</span></a>
+        <p data-en="Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. 101 Chauffeured is a trading name of 101Bikes Pty Ltd, an authorised booking service provider under the NSW Point to Point Transport Commissioner."
+           data-zh="服务于悉尼及新南威尔士州的私人专车，南至南海岸，北至史蒂芬斯港。101 Chauffeured 为 101Bikes Pty Ltd 旗下商号，持有新南威尔士州点对点运输专员授权的预订服务提供商资格。">
+          Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. 101 Chauffeured is a trading name of 101Bikes Pty Ltd, an authorised booking service provider under the NSW Point to Point Transport Commissioner.
         </p>
       </div>
       <div>
@@ -768,7 +773,7 @@ document.documentElement.classList.add('js');
       </div>
     </div>
     <div class="f-bottom">
-      <span data-en="&copy; 101 Chauffeur. All rights reserved." data-zh="© 101 Chauffeur 版权所有。">&copy; 101 Chauffeur. All rights reserved.</span>
+      <span class="legal" data-en="&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved." data-zh="© 101 Chauffeured。101Bikes Pty Ltd 旗下商号 · 澳洲商业号码 (ABN) 15 663 484 268。版权所有。">&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved.</span>
       <div class="socials">
         <a href="#" data-en="Privacy" data-zh="隐私政策">Privacy</a>
         <a href="#" data-en="Terms" data-zh="条款">Terms</a>
@@ -812,8 +817,8 @@ function setLang(lang){
   document.getElementById('btn-zh').classList.toggle('on', lang === 'zh');
 
   document.title = lang === 'zh'
-    ? '101 Chauffeur | 悉尼豪华专车 · 机场接送与商务用车'
-    : '101 Chauffeur | Sydney Chauffeur Hire, Airport & Corporate Transfers';
+    ? '101 Chauffeured | 悉尼豪华专车 · 机场接送与商务用车'
+    : '101 Chauffeured | Sydney Chauffeur Hire, Airport & Corporate Transfers';
 
   try { localStorage.setItem('lang101', lang); } catch(e){}
 }
