@@ -1056,19 +1056,21 @@ if (!('IntersectionObserver' in window)) {
   },{rootMargin:'0px 0px -8% 0px',threshold:.08});
   RV.forEach(el=>io.observe(el));
 
-  /* Failsafes. Nothing on this page may stay invisible because an
-     observer did not fire: hidden/prerendered tabs, throttled background
-     tabs and some crawlers never generate intersection records. */
-  const revealVisible = ()=>{
-    RV.forEach(el=>{
-      const r = el.getBoundingClientRect();
-      if (r.top < innerHeight * 1.15 && r.bottom > -200) el.classList.add('in');
-    });
-  };
-  window.addEventListener('load', ()=>setTimeout(revealVisible, 400));
-  setTimeout(()=>{ if(!document.querySelector('.rv.in')) revealAll(); }, 2500);
+  /* Failsafe. Nothing on this page may stay invisible because an observer
+     did not fire: hidden or prerendered tabs, throttled background tabs and
+     some crawlers never generate intersection records.
+
+     The hero element is on screen for every real visitor at load, so the
+     observer reveals it within a frame or two. If it is still hidden after
+     three seconds the observer is not working, and the animation is dropped
+     in favour of simply showing the page. */
+  const sentinel = document.querySelector('.hero .rv');
+  setTimeout(()=>{
+    if (!sentinel || !sentinel.classList.contains('in')) revealAll();
+  }, 3000);
+
   document.addEventListener('visibilitychange', ()=>{
-    if (document.visibilityState === 'visible') setTimeout(revealVisible, 200);
+    if (document.visibilityState === 'visible' && sentinel && !sentinel.classList.contains('in')) revealAll();
   });
 }
 
