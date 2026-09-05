@@ -1079,14 +1079,21 @@ const co = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(!e.isIntersecting) return;
     const el = e.target, end = +el.dataset.count, suf = el.dataset.suffix || '';
-    let t0 = null;
+    const DUR = 1100;
+    let t0 = null, done = false;
+    const finish = ()=>{ done = true; el.textContent = end + suf; };
     const step = ts => {
-      if(!t0) t0 = ts;
-      const p = Math.min((ts - t0) / 1100, 1);
+      if (done) return;
+      if (!t0) t0 = ts;
+      const p = Math.min((ts - t0) / DUR, 1);
       el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
-      if (p < 1) requestAnimationFrame(step);
+      if (p < 1) requestAnimationFrame(step); else done = true;
     };
     requestAnimationFrame(step);
+    /* requestAnimationFrame is paused in hidden or throttled tabs, which
+       would otherwise strand the number part-way through the count and
+       leave a figure on screen that is simply wrong. Land it regardless. */
+    setTimeout(()=>{ if(!done) finish(); }, DUR + 400);
     co.unobserve(el);
   });
 },{threshold:.5});
