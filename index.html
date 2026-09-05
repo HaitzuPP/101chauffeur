@@ -151,6 +151,12 @@
   .card:hover .bg{transform:scale(1.11);opacity:.5}
   .card::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(9,9,11,.97) 12%,rgba(9,9,11,.72) 52%,rgba(9,9,11,.42) 100%)}
   .card>:not(.bg){position:relative;z-index:2}
+  /* A high-key photograph (the wedding frame) sits far brighter than the rest
+     of the grid at the same opacity, so it gets damped rather than lightening
+     every other card to match. */
+  .card.bright .bg{opacity:.2}
+  .card.bright:hover .bg{opacity:.32}
+  .card.bright::before{background:linear-gradient(0deg,rgba(9,9,11,.97) 12%,rgba(9,9,11,.84) 55%,rgba(9,9,11,.66) 100%)}
   .card .ic{color:var(--gold);margin-bottom:16px;height:26px}
   .card h3{margin-bottom:11px}
   .card p{font-size:14.5px;margin:0;color:#b6b5b2}
@@ -426,7 +432,7 @@ document.documentElement.classList.add('js');
         </p>
       </div>
 
-      <div class="card rv rv-d2">
+      <div class="card bright rv rv-d2">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1606217239582-d9f72323bcd7?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7.5-4.7-9.3-9.2A5.1 5.1 0 0 1 12 6.6a5.1 5.1 0 0 1 9.3 5.2C19.5 16.3 12 21 12 21z"/></svg></div>
         <h3 data-en="Weddings" data-zh="婚礼用车">Weddings</h3>
