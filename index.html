@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>101 Chauffeur | Sydney Chauffeur Hire, Airport & Corporate Transfers</title>
-<meta name="description" content="Private chauffeur hire across Sydney and New South Wales. Airport transfers, corporate travel, weddings, events and full-day touring to the Blue Mountains, Hunter Valley and beyond. Mandarin and Cantonese speaking chauffeurs available.">
+<meta name="description" content="An authorised booking service provider under the NSW Point to Point Transport Commissioner. Private chauffeur hire across Sydney and New South Wales, including the South Coast and Kiama, Port Stephens, the Hunter Valley and the Blue Mountains. Mandarin and Cantonese speaking chauffeurs available.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -114,6 +114,19 @@
   .marquee-item{display:flex;align-items:center;gap:16px;padding:0 26px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);white-space:nowrap}
   html[data-lang="zh"] .marquee-item{letter-spacing:.06em;text-transform:none}
   .marquee-item i{width:4px;height:4px;background:var(--gold);border-radius:50%;flex:0 0 4px}
+
+  /* ---------- credentials ---------- */
+  .creds{background:var(--ink-2);border-bottom:1px solid var(--line);padding:52px 0}
+  .creds-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:44px;align-items:start}
+  .cred-lead{border-left:2px solid var(--gold);padding-left:24px}
+  .cred-lead .badge{display:inline-flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  html[data-lang="zh"] .cred-lead .badge{letter-spacing:.06em;text-transform:none}
+  .cred-lead .badge svg{flex:0 0 16px}
+  .cred-lead h3{font-family:var(--serif);font-size:26px;font-weight:300;margin-bottom:10px;letter-spacing:0}
+  .cred-lead p{font-size:14.5px;margin:0}
+  .cred{padding-top:6px}
+  .cred h4{font-size:14px;font-weight:500;margin:0 0 8px;color:var(--text)}
+  .cred p{font-size:14px;margin:0}
 
   /* ---------- section head ---------- */
   .sec-head{max-width:780px;margin-bottom:56px}
@@ -259,8 +272,8 @@ document.documentElement.classList.add('js');
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
   <div class="wrap">
-    <span class="tb-left" data-en="Sydney &middot; Melbourne &middot; Gold Coast &middot; Cairns" data-zh="悉尼 · 墨尔本 · 黄金海岸 · 凯恩斯">Sydney &middot; Melbourne &middot; Gold Coast &middot; Cairns</span>
-    <span data-en="Mandarin &amp; Cantonese speaking chauffeurs available" data-zh="提供普通话及粤语司机">Mandarin &amp; Cantonese speaking chauffeurs available</span>
+    <span class="tb-left" data-en="Sydney &middot; South Coast &middot; Port Stephens &middot; Hunter Valley &middot; Blue Mountains" data-zh="悉尼 · 南海岸 · 史蒂芬斯港 · 猎人谷 · 蓝山">Sydney &middot; South Coast &middot; Port Stephens &middot; Hunter Valley &middot; Blue Mountains</span>
+    <span data-en="Authorised Booking Service Provider &middot; NSW" data-zh="新南威尔士州政府授权预订服务提供商">Authorised Booking Service Provider &middot; NSW</span>
   </div>
 </div>
 
@@ -314,6 +327,42 @@ document.documentElement.classList.add('js');
 <!-- ============ MARQUEE ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track" id="marquee"></div>
+</div>
+
+<!-- ============ CREDENTIALS ============ -->
+<!-- NOTE FOR 101 CHAUFFEUR: add your authorisation number from the Point to
+     Point Transport Commissioner where marked below. It has been left out
+     deliberately rather than filled with a placeholder that could ship. -->
+<div class="creds">
+  <div class="wrap creds-grid">
+    <div class="cred-lead rv">
+      <span class="badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg>
+        <span data-en="Authorised Booking Service Provider" data-zh="政府授权预订服务提供商">Authorised Booking Service Provider</span>
+      </span>
+      <h3 data-en="Authorised by the NSW Point to Point Transport Commissioner." data-zh="由新南威尔士州点对点运输专员授权。">Authorised by the NSW Point to Point Transport Commissioner.</h3>
+      <p data-en="Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under that authorisation."
+         data-zh="在新南威尔士州承接租赁车辆预订须事先获得政府授权，无授权而安排行程者将面临处罚。我们安排的每一趟行程都在该授权之下运作。">
+        Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under that authorisation.
+      </p>
+    </div>
+
+    <div class="cred rv rv-d1">
+      <h4 data-en="An audited Safety Management System" data-zh="经审核的安全管理体系">An audited Safety Management System</h4>
+      <p data-en="Authorised providers carry responsibility for the safety of every journey they arrange, and the Commissioner's authorised officers audit that system rather than take it on trust."
+         data-zh="授权提供商须对其安排的每一趟行程的安全负责，专员署的授权稽查官会对该体系进行审核，而非仅凭承诺。">
+        Authorised providers carry responsibility for the safety of every journey they arrange, and the Commissioner's authorised officers audit that system rather than take it on trust.
+      </p>
+    </div>
+
+    <div class="cred rv rv-d2">
+      <h4 data-en="Your journey is never handed off" data-zh="您的行程绝不转手外包">Your journey is never handed off</h4>
+      <p data-en="The arrangement stays with an authorised provider from beginning to end. Nothing is quietly passed to an unregulated third party once the details are settled."
+         data-zh="从头到尾，行程安排始终由授权提供商负责。细节敲定后，绝不会被悄悄转交给未受监管的第三方。">
+        The arrangement stays with an authorised provider from beginning to end. Nothing is quietly passed to an unregulated third party once the details are settled.
+      </p>
+    </div>
+  </div>
 </div>
 
 <!-- ============ SERVICES ============ -->
@@ -373,9 +422,9 @@ document.documentElement.classList.add('js');
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></div>
         <h3 data-en="Touring &amp; Day Trips" data-zh="包车观光与一日游">Touring &amp; Day Trips</h3>
-        <p data-en="Hunter Valley, the Blue Mountains, the Southern Highlands. Your chauffeur has driven these roads for a very long time and will happily tell you which cellar door to skip."
-           data-zh="猎人谷、蓝山、南部高地。您的司机在这些路线上跑了很久，也乐于告诉您哪家酒庄可以跳过。">
-          Hunter Valley, the Blue Mountains, the Southern Highlands. Your chauffeur has driven these roads for a very long time and will happily tell you which cellar door to skip.
+        <p data-en="The Hunter Valley, the Blue Mountains, Kiama and the South Coast, Port Stephens. Your chauffeur has driven these roads for a very long time and will happily tell you which cellar door to skip."
+           data-zh="猎人谷、蓝山、基亚马与南海岸、史蒂芬斯港。您的司机在这些路线上跑了很久，也乐于告诉您哪家酒庄可以跳过。">
+          The Hunter Valley, the Blue Mountains, Kiama and the South Coast, Port Stephens. Your chauffeur has driven these roads for a very long time and will happily tell you which cellar door to skip.
         </p>
       </div>
 
@@ -427,54 +476,27 @@ document.documentElement.classList.add('js');
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv" data-en="Beyond the harbour" data-zh="海港之外">Beyond the harbour</p>
-      <h2 class="rv rv-d1" data-en="Give us the whole day and we will show you the country." data-zh="给我们一整天，我们带您看遍这个国家。">Give us the whole day and we will show you the country.</h2>
-      <p class="rv rv-d2" data-en="Plenty of our work never touches the CBD. Vineyards, rainforest, red rock and reef, driven door to door by someone who knows the road and knows when to pull over for a photograph."
-         data-zh="我们的许多行程从不经过市中心。葡萄园、雨林、红色巨岩与珊瑚礁，由熟悉路况、也懂得何时该靠边停车拍照的司机门到门接送。">
-        Plenty of our work never touches the CBD. Vineyards, rainforest, red rock and reef, driven door to door by someone who knows the road and knows when to pull over for a photograph.
+      <h2 class="rv rv-d1" data-en="Give us the whole day and we will show you the state." data-zh="给我们一整天，我们带您看遍这个州。">Give us the whole day and we will show you the state.</h2>
+      <p class="rv rv-d2" data-en="Plenty of our work never touches the CBD. Sandstone escarpment, vineyards, blowholes and white sand bays, all of it inside New South Wales and all of it driven door to door by someone who knows the road and knows when to pull over for a photograph."
+         data-zh="我们的许多行程从不经过市中心。砂岩断崖、葡萄园、海蚀喷水口与白沙海湾，全都在新南威尔士州境内，且全程由熟悉路况、也懂得何时该靠边停车拍照的司机门到门接送。">
+        Plenty of our work never touches the CBD. Sandstone escarpment, vineyards, blowholes and white sand bays, all of it inside New South Wales and all of it driven door to door by someone who knows the road and knows when to pull over for a photograph.
       </p>
     </div>
 
     <div class="bento">
       <article class="dest d-wide d-tall rv">
-        <img loading="lazy" decoding="async" alt="Great Barrier Reef" src="https://images.unsplash.com/photo-1587139223877-04cb899fa3e8?auto=format&fit=crop&w=1200&q=70">
+        <img loading="lazy" decoding="async" alt="Blue Mountains escarpment" src="https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=1200&q=70">
         <div class="d-body">
-          <div class="meta" data-en="Queensland &middot; Cairns &amp; the Whitsundays" data-zh="昆士兰 · 凯恩斯与圣灵群岛">Queensland &middot; Cairns &amp; the Whitsundays</div>
-          <h3 data-en="Great Barrier Reef" data-zh="大堡礁">Great Barrier Reef</h3>
-          <p data-en="We handle the ground half. Airport to marina, marina to resort, and a chauffeur waiting on the dock when the boat comes back in."
-             data-zh="陆地这一段交给我们：机场到码头、码头到度假村，船靠岸时司机已在岸边等候。">
-            We handle the ground half. Airport to marina, marina to resort, and a chauffeur waiting on the dock when the boat comes back in.
+          <div class="meta" data-en="West of the city" data-zh="城市以西">West of the city</div>
+          <h3 data-en="Blue Mountains" data-zh="蓝山">Blue Mountains</h3>
+          <p data-en="Katoomba, Leura and Jenolan Caves, comfortably done in a day, with the lookouts timed so you are not sharing them with three coach parties."
+             data-zh="卡通巴、露拉与珍罗兰溶洞，一日之内从容游完。观景台的时间也经过安排，不必与几车团客挤在一起。">
+            Katoomba, Leura and Jenolan Caves, comfortably done in a day, with the lookouts timed so you are not sharing them with three coach parties.
           </p>
         </div>
       </article>
 
       <article class="dest rv rv-d1">
-        <img loading="lazy" decoding="async" alt="Uluru" src="https://images.unsplash.com/photo-1557214997-7eae7e0e7aaa?auto=format&fit=crop&w=800&q=70">
-        <div class="d-body">
-          <div class="meta" data-en="Northern Territory" data-zh="北领地">Northern Territory</div>
-          <h3 data-en="Uluru" data-zh="乌鲁鲁">Uluru</h3>
-          <p data-en="Sunrise runs out of Yulara, arranged with chauffeur partners in the Territory." data-zh="从尤拉拉出发的日出行程，由我们在北领地的专车伙伴安排。">Sunrise runs out of Yulara, arranged with chauffeur partners in the Territory.</p>
-        </div>
-      </article>
-
-      <article class="dest rv rv-d2">
-        <img loading="lazy" decoding="async" alt="Whitehaven Beach" src="https://images.unsplash.com/photo-1585107426459-20b898cc5fb9?auto=format&fit=crop&w=800&q=70">
-        <div class="d-body">
-          <div class="meta" data-en="Whitsundays" data-zh="圣灵群岛">Whitsundays</div>
-          <h3 data-en="Whitehaven Beach" data-zh="白天堂海滩">Whitehaven Beach</h3>
-          <p data-en="Silica sand so fine it squeaks. Ground transfers timed to the tide." data-zh="细到会发出声响的硅砂。陆路接送依潮汐安排。">Silica sand so fine it squeaks. Ground transfers timed to the tide.</p>
-        </div>
-      </article>
-
-      <article class="dest rv rv-d1">
-        <img loading="lazy" decoding="async" alt="Blue Mountains Three Sisters" src="https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=800&q=70">
-        <div class="d-body">
-          <div class="meta" data-en="West of the city" data-zh="城市以西">West of the city</div>
-          <h3 data-en="Blue Mountains" data-zh="蓝山">Blue Mountains</h3>
-          <p data-en="Katoomba, Leura and Jenolan Caves, comfortably done in a day." data-zh="卡通巴、露拉与珍罗兰溶洞，一日之内从容游完。">Katoomba, Leura and Jenolan Caves, comfortably done in a day.</p>
-        </div>
-      </article>
-
-      <article class="dest rv rv-d2">
         <img loading="lazy" decoding="async" alt="Hunter Valley vineyard" src="https://images.unsplash.com/photo-1664970925595-90402bf3fbcb?auto=format&fit=crop&w=800&q=70">
         <div class="d-body">
           <div class="meta" data-en="North of the city" data-zh="城市以北">North of the city</div>
@@ -483,15 +505,30 @@ document.documentElement.classList.add('js');
         </div>
       </article>
 
-      <article class="dest d-wide rv">
-        <img loading="lazy" decoding="async" alt="Twelve Apostles" src="https://images.unsplash.com/photo-1578285058791-4110cc60f2cf?auto=format&fit=crop&w=1200&q=70">
+      <article class="dest rv rv-d2">
+        <img loading="lazy" decoding="async" alt="South Coast headland near Kiama" src="https://images.unsplash.com/photo-1735991565615-45a6ebefe36b?auto=format&fit=crop&w=800&q=70">
         <div class="d-body">
-          <div class="meta" data-en="Victoria &middot; Great Ocean Road" data-zh="维多利亚州 · 大洋路">Victoria &middot; Great Ocean Road</div>
-          <h3 data-en="Twelve Apostles" data-zh="十二使徒岩">Twelve Apostles</h3>
-          <p data-en="A long day out of Melbourne, and one we would rather you spent looking out the window than watching the road."
-             data-zh="从墨尔本出发的漫长一天。我们更希望您把时间用来看风景，而不是盯着路面。">
-            A long day out of Melbourne, and one we would rather you spent looking out the window than watching the road.
-          </p>
+          <div class="meta" data-en="South Coast" data-zh="南海岸">South Coast</div>
+          <h3 data-en="Kiama" data-zh="基亚马">Kiama</h3>
+          <p data-en="The blowhole, the lighthouse, and the green headlands running south. An easy run down the coast road." data-zh="海蚀喷水口、灯塔，以及一路向南的翠绿海岬。沿海岸公路轻松直达。">The blowhole, the lighthouse, and the green headlands running south. An easy run down the coast road.</p>
+        </div>
+      </article>
+
+      <article class="dest rv rv-d1">
+        <img loading="lazy" decoding="async" alt="Port Stephens bay and headland" src="https://images.unsplash.com/photo-1729936483375-e58027cfcdd2?auto=format&fit=crop&w=800&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="North of the Hunter" data-zh="猎人区以北">North of the Hunter</div>
+          <h3 data-en="Port Stephens" data-zh="史蒂芬斯港">Port Stephens</h3>
+          <p data-en="Nelson Bay, Tomaree Head and the dunes at Stockton. Dolphin boats leave from the marina and we are there when they get back." data-zh="纳尔逊湾、托马里角与斯托克顿沙丘。观豚船从码头出发，返航时我们已在岸边等候。">Nelson Bay, Tomaree Head and the dunes at Stockton. Dolphin boats leave from the marina and we are there when they get back.</p>
+        </div>
+      </article>
+
+      <article class="dest rv rv-d2">
+        <img loading="lazy" decoding="async" alt="Jervis Bay cove" src="https://images.unsplash.com/photo-1664763961211-b5b5fb7caa17?auto=format&fit=crop&w=800&q=70">
+        <div class="d-body">
+          <div class="meta" data-en="Shoalhaven" data-zh="肖尔黑文">Shoalhaven</div>
+          <h3 data-en="Jervis Bay" data-zh="杰维斯湾">Jervis Bay</h3>
+          <p data-en="Hyams Beach and the coves around Booderee, far enough south to be worth the whole day." data-zh="海姆斯海滩与布德里周边的小海湾，位置够南，值得用上一整天。">Hyams Beach and the coves around Booderee, far enough south to be worth the whole day.</p>
         </div>
       </article>
     </div>
@@ -536,7 +573,7 @@ document.documentElement.classList.add('js');
         <li data-en="Live GPS on every vehicle, shared with you and with whoever is coordinating the travel." data-zh="每辆车配备实时 GPS，向您及行程协调人开放。">Live GPS on every vehicle, shared with you and with whoever is coordinating the travel.</li>
         <li data-en="Chauffeurs vetted, licensed, uniformed and reviewed on passenger feedback, not star ratings." data-zh="司机经过背景审查、持证上岗、统一着装，考核依据乘客反馈而非星级评分。">Chauffeurs vetted, licensed, uniformed and reviewed on passenger feedback, not star ratings.</li>
         <li data-en="Mandarin and Cantonese speaking chauffeurs available." data-zh="可安排普通话及粤语司机。">Mandarin and Cantonese speaking chauffeurs available.</li>
-        <li data-en="Fully insured and accredited across New South Wales, with interstate travel arranged." data-zh="在新南威尔士州持牌并全额投保，可安排跨州行程。">Fully insured and accredited across New South Wales, with interstate travel arranged.</li>
+        <li data-en="An authorised booking service provider under the NSW Point to Point Transport Commissioner, fully insured across the state." data-zh="持有新南威尔士州点对点运输专员授权的预订服务提供商，全州范围内全额投保。">An authorised booking service provider under the NSW Point to Point Transport Commissioner, fully insured across the state.</li>
         <li data-en="Vehicles cleaned and inspected before every journey, not at the end of a shift." data-zh="车辆在每趟行程前清洁检查，而非在轮班结束时才处理。">Vehicles cleaned and inspected before every journey, not at the end of a shift.</li>
       </ul>
     </div>
@@ -581,9 +618,9 @@ document.documentElement.classList.add('js');
     <div class="sec-head">
       <p class="eyebrow rv" data-en="Where we drive" data-zh="服务区域">Where we drive</p>
       <h2 class="rv rv-d1" data-en="Greater Sydney, and a long way past it." data-zh="覆盖大悉尼地区，并可远行至更远处。">Greater Sydney, and a long way past it.</h2>
-      <p class="rv rv-d2" data-en="Door to door anywhere in the metropolitan area, and full-day touring across New South Wales. Where a journey crosses a state line, we arrange the far end through chauffeur partners we have worked with for a long time."
-         data-zh="大悉尼地区门到门接送，并提供覆盖新南威尔士州的全日包车。若行程跨州，另一端由我们长期合作的专车伙伴安排。">
-        Door to door anywhere in the metropolitan area, and full-day touring across New South Wales. Where a journey crosses a state line, we arrange the far end through chauffeur partners we have worked with for a long time.
+      <p class="rv rv-d2" data-en="Door to door anywhere in the metropolitan area, and full-day touring the length of New South Wales, from the South Coast up to Port Stephens. We work within the state, under our own authorisation, rather than handing a journey to someone we have never met."
+         data-zh="大悉尼地区门到门接送，并提供纵贯新南威尔士州的全日包车，南至南海岸，北至史蒂芬斯港。我们在本州范围内、以自有授权承接业务，绝不把行程转交给素未谋面的第三方。">
+        Door to door anywhere in the metropolitan area, and full-day touring the length of New South Wales, from the South Coast up to Port Stephens. We work within the state, under our own authorisation, rather than handing a journey to someone we have never met.
       </p>
     </div>
     <div class="areas">
@@ -613,9 +650,24 @@ document.documentElement.classList.add('js');
            data-zh="国内与国际航站楼、私人飞机基地，以及邮轮抵达的海外旅客码头。必要时可在航站楼内举牌迎接。">Domestic and international terminals, the private jet base, and the Overseas Passenger Terminal for cruise arrivals. Meet-and-greet inside the terminal where it helps.</p>
       </div>
       <div class="area rv rv-d2">
-        <h3 data-en="Interstate &amp; Beyond" data-zh="跨州及更远地区">Interstate &amp; Beyond</h3>
-        <p data-en="Melbourne, the Gold Coast, Cairns and the Whitsundays, handled through established chauffeur partners so a journey stays under one arrangement from end to end."
-           data-zh="墨尔本、黄金海岸、凯恩斯与圣灵群岛，由长期合作的专车伙伴承接，整段行程始终在同一套安排之下。">Melbourne, the Gold Coast, Cairns and the Whitsundays, handled through established chauffeur partners so a journey stays under one arrangement from end to end.</p>
+        <h3 data-en="South Coast &amp; Illawarra" data-zh="南海岸与伊拉瓦拉">South Coast &amp; Illawarra</h3>
+        <p data-en="Wollongong, the Sea Cliff Bridge, Kiama, Berry and Nowra, running south through the Shoalhaven to Jervis Bay and Hyams Beach."
+           data-zh="卧龙岗、海崖大桥、基亚马、贝里与瑙拉，一路向南穿过肖尔黑文，直抵杰维斯湾与海姆斯海滩。">Wollongong, the Sea Cliff Bridge, Kiama, Berry and Nowra, running south through the Shoalhaven to Jervis Bay and Hyams Beach.</p>
+      </div>
+      <div class="area rv">
+        <h3 data-en="Port Stephens &amp; the North" data-zh="史蒂芬斯港与北部地区">Port Stephens &amp; the North</h3>
+        <p data-en="Nelson Bay, Shoal Bay, Anna Bay and the Stockton dunes, along with Newcastle and the Hunter on the way through."
+           data-zh="纳尔逊湾、浅滩湾、安娜湾与斯托克顿沙丘，途经纽卡斯尔与猎人区。">Nelson Bay, Shoal Bay, Anna Bay and the Stockton dunes, along with Newcastle and the Hunter on the way through.</p>
+      </div>
+      <div class="area rv rv-d1">
+        <h3 data-en="Blue Mountains &amp; Southern Highlands" data-zh="蓝山与南部高地">Blue Mountains &amp; Southern Highlands</h3>
+        <p data-en="Katoomba, Leura and Jenolan to the west, Bowral, Moss Vale and Berrima to the south. Both are comfortable day trips from the city."
+           data-zh="西面的卡通巴、露拉与珍罗兰，南面的鲍勒尔、莫斯谷与贝里马。两条线路都可从市区当日往返，行程从容。">Katoomba, Leura and Jenolan to the west, Bowral, Moss Vale and Berrima to the south. Both are comfortable day trips from the city.</p>
+      </div>
+      <div class="area rv rv-d2">
+        <h3 data-en="Central Coast" data-zh="中央海岸">Central Coast</h3>
+        <p data-en="Gosford, Terrigal, Avoca and The Entrance, close enough for a half day and often paired with a run north to Port Stephens."
+           data-zh="戈斯福德、特里加尔、阿沃卡与 The Entrance，距离适中，可安排半日行程，常与北上史蒂芬斯港的路线搭配。">Gosford, Terrigal, Avoca and The Entrance, close enough for a half day and often paired with a run north to Port Stephens.</p>
       </div>
     </div>
   </div>
@@ -645,9 +697,14 @@ document.documentElement.classList.add('js');
            data-zh="有。建议提前说明偏好，以便为该行程安排合适的司机。整个安排过程均可使用中文完成。">Yes, and it is worth flagging the preference in advance so the right person is assigned to the journey. Arrangements can be handled in Chinese from end to end.</p>
       </details>
       <details>
-        <summary data-en="Can you go out to the Blue Mountains or Hunter Valley for a full day?" data-zh="可以包车去蓝山或猎人谷玩一整天吗？">Can you go out to the Blue Mountains or Hunter Valley for a full day?</summary>
-        <p data-en="That is a large part of what we do. Day trips are priced as a day rather than by the kilometre, so a lookout, a winery or a wildlife stop can be added along the way without the cost moving."
-           data-zh="这正是我们的主要业务之一。一日游按天计价而非按公里计费，因此沿途加入观景台、酒庄或看野生动物的行程，费用不变。">That is a large part of what we do. Day trips are priced as a day rather than by the kilometre, so a lookout, a winery or a wildlife stop can be added along the way without the cost moving.</p>
+        <summary data-en="Are you an authorised booking service provider?" data-zh="你们是否为政府授权的预订服务提供商？">Are you an authorised booking service provider?</summary>
+        <p data-en="Yes. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit."
+           data-zh="是的。在新南威尔士州承接租赁车辆预订，必须获得点对点运输专员的授权，未获授权者将面临处罚。授权同时要求运营方建立安全管理体系，并接受专员署授权稽查官的审核。">Yes. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit.</p>
+      </details>
+      <details>
+        <summary data-en="Can you go out to Kiama, Port Stephens or the Blue Mountains for a full day?" data-zh="可以包车去基亚马、史蒂芬斯港或蓝山玩一整天吗？">Can you go out to Kiama, Port Stephens or the Blue Mountains for a full day?</summary>
+        <p data-en="That is a large part of what we do. Day trips are priced as a day rather than by the kilometre, so a lookout, a cellar door or a wildlife stop can be added along the way without the cost moving."
+           data-zh="这正是我们的主要业务之一。一日游按天计价而非按公里计费，因此沿途加入观景台、酒庄或看野生动物的行程，费用不变。">That is a large part of what we do. Day trips are priced as a day rather than by the kilometre, so a lookout, a cellar door or a wildlife stop can be added along the way without the cost moving.</p>
       </details>
       <details>
         <summary data-en="Can a large group travel together?" data-zh="大型团队可以同车出行吗？">Can a large group travel together?</summary>
@@ -674,9 +731,9 @@ document.documentElement.classList.add('js');
     <div class="f-grid">
       <div class="f-about">
         <a class="logo" href="#top" style="margin-bottom:20px"><span class="num">101</span><span class="word">Chauffeur</span></a>
-        <p data-en="Private chauffeur hire across Sydney and New South Wales. Vetted chauffeurs, fixed pricing, and vehicles prepared before every journey."
-           data-zh="服务于悉尼及新南威尔士州的私人专车。严选司机，固定价格，每趟行程前车辆均已备妥。">
-          Private chauffeur hire across Sydney and New South Wales. Vetted chauffeurs, fixed pricing, and vehicles prepared before every journey.
+        <p data-en="Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. An authorised booking service provider under the NSW Point to Point Transport Commissioner."
+           data-zh="服务于悉尼及新南威尔士州的私人专车，南至南海岸，北至史蒂芬斯港。持有新南威尔士州点对点运输专员授权的预订服务提供商。">
+          Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. An authorised booking service provider under the NSW Point to Point Transport Commissioner.
         </p>
       </div>
       <div>
@@ -695,10 +752,10 @@ document.documentElement.classList.add('js');
         <ul>
           <li><a href="#destinations" data-en="Blue Mountains" data-zh="蓝山">Blue Mountains</a></li>
           <li><a href="#destinations" data-en="Hunter Valley" data-zh="猎人谷">Hunter Valley</a></li>
-          <li><a href="#destinations" data-en="Great Barrier Reef" data-zh="大堡礁">Great Barrier Reef</a></li>
-          <li><a href="#destinations" data-en="Whitsundays" data-zh="圣灵群岛">Whitsundays</a></li>
-          <li><a href="#destinations" data-en="Uluru" data-zh="乌鲁鲁">Uluru</a></li>
-          <li><a href="#destinations" data-en="Great Ocean Road" data-zh="大洋路">Great Ocean Road</a></li>
+          <li><a href="#destinations" data-en="Kiama &amp; the South Coast" data-zh="基亚马与南海岸">Kiama &amp; the South Coast</a></li>
+          <li><a href="#destinations" data-en="Port Stephens" data-zh="史蒂芬斯港">Port Stephens</a></li>
+          <li><a href="#destinations" data-en="Jervis Bay" data-zh="杰维斯湾">Jervis Bay</a></li>
+          <li><a href="#areas" data-en="Southern Highlands" data-zh="南部高地">Southern Highlands</a></li>
         </ul>
       </div>
     </div>
@@ -715,12 +772,14 @@ document.documentElement.classList.add('js');
 <script>
 /* ---------------- marquee ---------------- */
 const TICKER = [
+  {en:"Authorised Booking Service Provider", zh:"政府授权预订服务提供商"},
   {en:"Airport transfers", zh:"机场接送"},
   {en:"Blue Mountains day trips", zh:"蓝山一日游"},
   {en:"Hunter Valley cellar doors", zh:"猎人谷酒庄之旅"},
+  {en:"Kiama and the South Coast", zh:"基亚马与南海岸"},
   {en:"Corporate travel", zh:"企业商务用车"},
   {en:"Weddings", zh:"婚礼用车"},
-  {en:"Great Barrier Reef transfers", zh:"大堡礁接驳"},
+  {en:"Port Stephens and Nelson Bay", zh:"史蒂芬斯港与纳尔逊湾"},
   {en:"Conference and event movements", zh:"会议与活动接送"},
   {en:"Mandarin speaking chauffeurs", zh:"普通话司机"},
   {en:"Live GPS on every vehicle", zh:"全车实时定位"},
