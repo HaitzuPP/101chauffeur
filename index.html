@@ -278,9 +278,6 @@
      with every other section on the page. */
   .wild-inner .wrap{position:relative;z-index:2;width:100%;padding-top:var(--s-20);padding-bottom:var(--s-20)}
   .wild-copy{max-width:560px}
-  .wild-thumbs{display:flex;gap:var(--s-3);margin-top:var(--s-8);flex-wrap:wrap}
-  .wild-thumbs img{width:118px;height:88px;object-fit:cover;border:1px solid var(--line-2);filter:grayscale(.25);transition:filter .4s,transform .4s var(--ease)}
-  @media(hover:hover){.wild-thumbs img:hover{filter:none;transform:translateY(-5px)}}
 
   /* ---------- why / split ---------- */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-16);align-items:start}
@@ -291,7 +288,6 @@
   .why-visual figure{margin:0;overflow:hidden;border:1px solid var(--line)}
   .why-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
   @media(hover:hover){.why-visual figure:hover img{transform:scale(1.07)}}
-  .why-visual .tall{grid-row:span 2;aspect-ratio:3/5.1}
   .why-visual .sq{aspect-ratio:1/1}
   .reasons{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:var(--s-3)}
   .reason{background:var(--ink);padding:var(--s-6);transition:background .3s}
@@ -397,8 +393,6 @@
     .hero-copy{max-width:none}
     .hero-cta{margin-top:var(--s-8)}
     .scroll-hint{display:none}
-    .why-visual .tall{grid-row:span 1;aspect-ratio:4/3}
-    .wild-thumbs img{width:88px;height:68px}
     .f-grid{grid-template-columns:1fr}
     .acknowledge{padding:var(--s-6) var(--s-5);margin-bottom:var(--s-8)}
     .acknowledge p{font-size:14px}
@@ -738,12 +732,6 @@ document.documentElement.classList.add('js');
            data-zh="鲍勒尔附近开阔草地上的袋鼠、从蓝山返程途中 Featherdale 的考拉、The Entrance 的鹈鹕。出发时说一声，我们就会把它排进当天行程。">
           Kangaroos in an open field near Bowral, koalas at Featherdale on the way back from the Blue Mountains, pelicans at The Entrance. Mention it when you set off and it goes into the run for the day.
         </p>
-        <div class="wild-thumbs rv rv-d3">
-          <img loading="lazy" decoding="async" width="340" height="255" alt="Kangaroo in grassland" src="https://images.unsplash.com/photo-1600633719821-1a40e837843f?auto=format&fit=crop&w=340&q=68">
-          <img loading="lazy" decoding="async" width="340" height="255" alt="Koala resting in a tree" src="https://images.unsplash.com/photo-1591083896596-6b9f15f05a71?auto=format&fit=crop&w=340&q=68">
-          <img loading="lazy" decoding="async" width="340" height="255" alt="Kangaroo in bushland" src="https://images.unsplash.com/photo-1614398306313-aa5a4c465e9e?auto=format&fit=crop&w=340&q=68">
-          <img loading="lazy" decoding="async" width="340" height="255" alt="Koala in eucalyptus" src="https://images.unsplash.com/photo-1519562990232-845beca99938?auto=format&fit=crop&w=340&q=68">
-        </div>
       </div>
     </div>
   </div>
@@ -771,7 +759,6 @@ document.documentElement.classList.add('js');
 
     <div>
       <div class="why-visual rv rv-d1">
-        <figure class="tall"><img loading="lazy" decoding="async" width="700" height="1190" alt="Sydney city skyline across the harbour" src="https://images.unsplash.com/photo-1672210967188-3bf5e16d541d?auto=format&fit=crop&w=700&q=70"></figure>
         <figure class="sq"><img loading="lazy" decoding="async" width="560" height="560" alt="Rear cabin interior" src="https://images.unsplash.com/photo-1502014335594-c026800f24ee?auto=format&fit=crop&w=560&q=70"></figure>
         <figure class="sq"><img loading="lazy" decoding="async" width="560" height="560" alt="Sydney Harbour Bridge" src="https://images.unsplash.com/photo-1580723843692-137caf37ad17?auto=format&fit=crop&w=560&q=70"></figure>
       </div>
