@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>101 Chauffeured | Sydney Chauffeur Hire, Airport &amp; Corporate Transfers</title>
 <meta name="description" content="101 Chauffeured, a trading name of 101Bikes Pty Ltd and an authorised booking service provider (BSP-466037) under the NSW Point to Point Transport Commissioner. Private chauffeur hire across Sydney and New South Wales, including Kiama and the South Coast, Port Stephens, the Hunter Valley and the Blue Mountains. Mandarin and Cantonese speaking chauffeurs available.">
 <link rel="canonical" href="https://101chauffeured.com.au/">
@@ -32,7 +32,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=2000&q=72" fetchpriority="high">
+<link rel="preload" as="image" fetchpriority="high"
+      href="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1400&q=70"
+      imagesrcset="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=800&q=68 800w, https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1400&q=70 1400w, https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=2000&q=72 2000w"
+      imagesizes="100vw">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -140,12 +143,18 @@
 
   /* ---------- hero ---------- */
   .hero{border-top:0;padding:0;min-height:min(92vh,900px);display:flex;align-items:center;position:relative;overflow:hidden;margin-top:-80px;padding-top:80px;
-        background:#0a0a0b url('https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=2000&q=72') center/cover no-repeat}
+        background:#0a0a0b url('https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1400&q=70') center/cover no-repeat}
   .slides{position:absolute;inset:0;z-index:0}
   .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideshow 21s infinite}
   .slide:nth-child(1){animation-delay:0s}
   .slide:nth-child(2){animation-delay:7s}
   .slide:nth-child(3){animation-delay:14s}
+  /* Two extra 2000px photographs are a lot of bytes to spend on decoration
+     before a phone has painted anything. Small screens keep the first frame. */
+  @media(max-width:760px){
+    .slide:nth-child(2),.slide:nth-child(3){display:none}
+    .slide:nth-child(1){animation:none;opacity:1}
+  }
   @keyframes slideshow{
     0%{opacity:0;transform:scale(1.04)}
     6%{opacity:1}
@@ -193,7 +202,7 @@
   .cred-lead .badge{display:inline-flex;align-items:center;gap:9px;font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s-3)}
   html[data-lang="zh"] .cred-lead .badge{letter-spacing:.06em;text-transform:none}
   .cred-lead .badge svg{flex:0 0 16px}
-  .cred-lead h3{font-family:var(--serif);font-size:var(--t-display-sm);font-weight:300;margin-bottom:var(--s-3);letter-spacing:0}
+  .cred-lead h2{font-family:var(--serif);font-size:var(--t-display-sm);font-weight:300;margin-bottom:var(--s-3);letter-spacing:0;line-height:1.25}
   .cred-lead p{font-size:var(--t-base);margin:0}
   .cred h3{font-size:var(--t-md);font-weight:500;margin:0 0 var(--s-2);color:var(--text)}
   .cred p{font-size:14px;margin:0}
@@ -207,7 +216,7 @@
   /* Image, scrim and text are stacked with non-negative z-index only.
      Negative-index children sit behind their own parent's background and
      misbehave as soon as anything up the tree paints one. */
-  .card{position:relative;overflow:hidden;border:1px solid var(--line);min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--s-8) var(--s-8);transition:border-color .35s,transform .45s var(--ease)}
+  .card{position:relative;overflow:hidden;border:1px solid var(--line);min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--s-8);transition:border-color .35s,transform .45s var(--ease)}
   .card .bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.34;transform:scale(1.02);transition:transform 1s var(--ease),opacity .5s}
   .card::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(9,9,11,.97) 12%,rgba(9,9,11,.72) 52%,rgba(9,9,11,.42) 100%)}
   .card>:not(.bg){position:relative;z-index:2}
@@ -236,7 +245,7 @@
   /* Reef, sand and desert sky are all bright, so the scrim has to carry the
      label text on its own rather than relying on the photograph being dark. */
   .dest::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(8,8,10,.95) 0%,rgba(8,8,10,.82) 30%,rgba(8,8,10,.42) 62%,rgba(8,8,10,.12) 100%);transition:background .4s}
-  .dest .d-body{padding:var(--s-6) var(--s-6) var(--s-6);width:100%;position:relative;z-index:2}
+  .dest .d-body{padding:var(--s-6);width:100%;position:relative;z-index:2}
   .dest h3{font-family:var(--serif);font-size:var(--t-display-sm);font-weight:400;margin-bottom:var(--s-1)}
   .dest .meta{font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
   html[data-lang="zh"] .dest .meta{letter-spacing:.06em;text-transform:none}
@@ -245,10 +254,8 @@
      devices that actually have a pointer — otherwise this copy is unreachable
      on every phone and by keyboard. */
   @media(hover:hover){
-    .dest p{max-height:0;opacity:0;margin-top:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .4s,margin .4s}
     .dest:hover img{transform:scale(1.09)}
-    .dest:hover::before,.dest:focus-within::before{background:linear-gradient(0deg,rgba(8,8,10,.96) 0%,rgba(8,8,10,.86) 38%,rgba(8,8,10,.55) 70%,rgba(8,8,10,.25) 100%)}
-    .dest:hover p,.dest:focus-within p{max-height:120px;opacity:1;margin-top:var(--s-1)}
+    .dest:hover::before{background:linear-gradient(0deg,rgba(8,8,10,.96) 0%,rgba(8,8,10,.86) 38%,rgba(8,8,10,.55) 70%,rgba(8,8,10,.25) 100%)}
   }
   .d-wide{grid-column:span 2}
   .d-tall{grid-row:span 2}
@@ -287,7 +294,7 @@
   .why-visual .tall{grid-row:span 2;aspect-ratio:3/5.1}
   .why-visual .sq{aspect-ratio:1/1}
   .reasons{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:var(--s-3)}
-  .reason{background:var(--ink);padding:var(--s-6) var(--s-6);transition:background .3s}
+  .reason{background:var(--ink);padding:var(--s-6);transition:background .3s}
   @media(hover:hover){.reason:hover{background:var(--ink-3)}}
   .reason h3{font-size:var(--t-md);margin-bottom:7px}
   .reason p{font-size:var(--t-base);margin:0}
@@ -325,7 +332,7 @@
   .f-bottom .legal .lic{display:block;color:var(--muted)}
 
   /* ---------- acknowledgement of country ---------- */
-  .acknowledge{border:1px solid var(--line);border-left:2px solid var(--gold);background:var(--ink-3);padding:var(--s-8) var(--s-8);margin-bottom:var(--s-10)}
+  .acknowledge{border:1px solid var(--line);border-left:2px solid var(--gold);background:var(--ink-3);padding:var(--s-8);margin-bottom:var(--s-10)}
   .acknowledge h3{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 var(--s-3);font-weight:500}
   html[data-lang="zh"] .acknowledge h3{letter-spacing:.06em;text-transform:none}
   .acknowledge p{font-size:var(--t-base);line-height:1.8;color:var(--muted);max-width:104ch;margin:0}
@@ -460,7 +467,7 @@ document.documentElement.classList.add('js');
   </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1" style="outline:none">
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
@@ -472,18 +479,18 @@ document.documentElement.classList.add('js');
 
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow rv" data-en="Private Chauffeur Hire &middot; Sydney &amp; New South Wales" data-zh="私人专车服务 · 悉尼及新南威尔士州">Private Chauffeur Hire &middot; Sydney &amp; New South Wales</p>
-      <h1 class="rv rv-d1">
+      <p class="eyebrow" data-en="Private Chauffeur Hire &middot; Sydney &amp; New South Wales" data-zh="私人专车服务 · 悉尼及新南威尔士州">Private Chauffeur Hire &middot; Sydney &amp; New South Wales</p>
+      <h1>
         <span data-en="The car is already there" data-zh="车已在门口等候">The car is already there</span><br>
         <em data-en="when you walk out." data-zh="您出门即可上车。">when you walk out.</em>
       </h1>
-      <p class="lede rv rv-d2"
+      <p class="lede"
          data-en="Airport runs, corporate travel, weddings and full days out to Kiama, Port Stephens and the Hunter. Fixed prices agreed before you travel, and a chauffeur who knows the road."
          data-zh="机场接送、企业商务用车、婚礼用车，以及前往基亚马、史蒂芬斯港与猎人谷的全日包车。行前议定固定价格，司机熟悉每一条路。">
         Airport runs, corporate travel, weddings and full days out to Kiama, Port Stephens and the Hunter. Fixed prices agreed before you travel, and a chauffeur who knows the road.
       </p>
-      <div class="hero-cta rv rv-d3">
-        <a class="btn btn-solid btn-lg" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+      <div class="hero-cta">
+        <a class="btn btn-solid btn-lg" href="tel:+61415550599" data-en-label="Call 101 Chauffeured on 0415 550 599" data-zh-label="致电 101 Chauffeured：0415 550 599" aria-label="Call 101 Chauffeured on 0415 550 599">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
           <span data-en="Call 0415 550 599" data-zh="致电 0415 550 599">Call 0415 550 599</span>
         </a>
@@ -542,8 +549,8 @@ document.documentElement.classList.add('js');
       <h2 id="services-h" class="rv rv-d1" data-en="Different reasons to be in the car. One standard across all of them." data-zh="乘车理由各不相同，服务标准始终如一。">Different reasons to be in the car. One standard across all of them.</h2>
     </div>
 
-    <div class="cards">
-      <div class="card lead rv">
+    <div class="cards" id="airport-transfers">
+      <div class="card lead rv" id="corporate-travel">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1739841562979-681735feb4e3?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></div>
         <h3 data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</h3>
@@ -553,7 +560,7 @@ document.documentElement.classList.add('js');
         </p>
       </div>
 
-      <div class="card rv rv-d1">
+      <div class="card rv rv-d1" id="weddings">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1710343491609-0cbc6c14b92d?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
         <h3 data-en="Corporate Travel" data-zh="企业商务用车">Corporate Travel</h3>
@@ -563,7 +570,7 @@ document.documentElement.classList.add('js');
         </p>
       </div>
 
-      <div class="card bright rv rv-d2">
+      <div class="card bright rv rv-d2" id="events-conferences">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1606217239582-d9f72323bcd7?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.3-9.2A5.1 5.1 0 0 1 12 6.6a5.1 5.1 0 0 1 9.3 5.2C19.5 16.3 12 21 12 21z"/></svg></div>
         <h3 data-en="Weddings" data-zh="婚礼用车">Weddings</h3>
@@ -573,7 +580,7 @@ document.documentElement.classList.add('js');
         </p>
       </div>
 
-      <div class="card rv">
+      <div class="card rv" id="touring-day-trips">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1531033056439-63578c0d9f22?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M17 20h5v-2a3 3 0 0 0-4.4-2.7M7 20H2v-2a3 3 0 0 1 4.4-2.7M12 13a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm0 0c-3 0-5.5 2-5.5 4.5V20h11v-2.5C17.5 15 15 13 12 13z"/></svg></div>
         <h3 data-en="Events &amp; Conferences" data-zh="活动与会议接送">Events &amp; Conferences</h3>
@@ -583,7 +590,7 @@ document.documentElement.classList.add('js');
         </p>
       </div>
 
-      <div class="card rv rv-d1">
+      <div class="card rv rv-d1" id="vip-security">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1576086135878-bd7e7c812b41?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></div>
         <h3 data-en="Touring &amp; Day Trips" data-zh="包车观光与一日游">Touring &amp; Day Trips</h3>
@@ -593,17 +600,17 @@ document.documentElement.classList.add('js');
         </p>
       </div>
 
-      <div class="card rv rv-d2">
+      <div class="card rv rv-d2" id="group-transport">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1596321687344-547d323f094a?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg></div>
         <h3 data-en="VIP &amp; Security" data-zh="贵宾与安保护送">VIP &amp; Security</h3>
-        <p data-en="Discretion is the whole service. We will not tell you who else we drive, which is exactly why those passengers keep coming back. Escorted movements and close protection arranged where needed."
-           data-zh="保密本身就是这项服务的全部。我们不会透露还为谁服务，而这正是那些乘客持续选择我们的原因。可按需安排护送车队与贴身安保。">
+        <p data-en="Discretion is the whole service. We will not tell you who else we drive, which is exactly why those passengers keep coming back. Escorted movements and close protection are arranged through licensed security providers."
+           data-zh="保密本身就是这项服务的全部。我们不会透露还为谁服务，而这正是那些乘客持续选择我们的原因。护送车队与贴身安保由持牌安保机构安排。">
           Discretion is the whole service. We will not tell you who else we drive, which is exactly why those passengers keep coming back. Escorted movements and close protection arranged where needed.
         </p>
       </div>
 
-      <div class="card rv">
+      <div class="card rv" id="jet-yacht">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="2" y="6" width="20" height="11" rx="2"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/><path d="M2 11h20"/></svg></div>
         <h3 data-en="Group Transport" data-zh="团体接送">Group Transport</h3>
@@ -613,7 +620,7 @@ document.documentElement.classList.add('js');
         </p>
       </div>
 
-      <div class="card rv rv-d1">
+      <div class="card rv rv-d1" id="as-directed">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1599357191343-2ef9dd03c119?auto=format&fit=crop&w=800&q=65')"></div>
         <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 11l18-7-7 18-2.5-8L3 11z"/></svg></div>
         <h3 data-en="Private Jet &amp; Yacht Link" data-zh="私人飞机与游艇接驳">Private Jet &amp; Yacht Link</h3>
@@ -709,7 +716,7 @@ document.documentElement.classList.add('js');
          data-zh="一通电话即可敲定：路线、车型，以及上车前就已确定的固定价格。">One call settles it: the route, the vehicle, and a fixed price before anyone gets in the car.</p>
     </div>
     <div class="cb-action rv rv-d1">
-      <a class="btn btn-solid btn-lg" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+      <a class="btn btn-solid btn-lg" href="tel:+61415550599" data-en-label="Call 101 Chauffeured on 0415 550 599" data-zh-label="致电 101 Chauffeured：0415 550 599" aria-label="Call 101 Chauffeured on 0415 550 599">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
         <span data-en="Call 0415 550 599" data-zh="致电 0415 550 599">Call 0415 550 599</span>
       </a>
@@ -902,8 +909,8 @@ document.documentElement.classList.add('js');
       </details>
       <details>
         <summary data-en="How is privacy handled for high-profile passengers?" data-zh="如何为知名人士保障隐私？">How is privacy handled for high-profile passengers?</summary>
-        <p data-en="Passenger names and itineraries stay with us. Chauffeurs assigned to that work are trained for it specifically, and non-descript vehicles or escorted movements can be arranged where the situation calls for it."
-           data-zh="乘客姓名与行程绝不外泄。负责此类业务的司机均受过专项培训，必要时可安排低调车辆或护送车队。">Passenger names and itineraries stay with us. Chauffeurs assigned to that work are trained for it specifically, and non-descript vehicles or escorted movements can be arranged where the situation calls for it.</p>
+        <p data-en="Passenger names and itineraries stay with us. Chauffeurs assigned to that work are trained for it specifically, non-descript vehicles are available, and escorted movements are arranged through licensed security providers."
+           data-zh="乘客姓名与行程绝不外泄。负责此类业务的司机均受过专项培训，并可提供低调车辆；护送车队则由持牌安保机构安排。">Passenger names and itineraries stay with us. Chauffeurs assigned to that work are trained for it specifically, and non-descript vehicles or escorted movements can be arranged where the situation calls for it.</p>
       </details>
     </div>
   </div>
@@ -925,12 +932,12 @@ document.documentElement.classList.add('js');
       <div>
         <h3 data-en="Services" data-zh="服务项目">Services</h3>
         <ul>
-          <li><a href="#services" data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</a></li>
-          <li><a href="#services" data-en="Corporate Travel" data-zh="企业商务用车">Corporate Travel</a></li>
-          <li><a href="#services" data-en="Weddings" data-zh="婚礼用车">Weddings</a></li>
-          <li><a href="#services" data-en="Events &amp; Conferences" data-zh="活动与会议">Events &amp; Conferences</a></li>
-          <li><a href="#services" data-en="VIP &amp; Security" data-zh="贵宾与安保">VIP &amp; Security</a></li>
-          <li><a href="#services" data-en="Touring &amp; Day Trips" data-zh="包车观光">Touring &amp; Day Trips</a></li>
+          <li><a href="#airport-transfers" data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</a></li>
+          <li><a href="#corporate-travel" data-en="Corporate Travel" data-zh="企业商务用车">Corporate Travel</a></li>
+          <li><a href="#weddings" data-en="Weddings" data-zh="婚礼用车">Weddings</a></li>
+          <li><a href="#events-conferences" data-en="Events &amp; Conferences" data-zh="活动与会议">Events &amp; Conferences</a></li>
+          <li><a href="#vip-security" data-en="VIP &amp; Security" data-zh="贵宾与安保">VIP &amp; Security</a></li>
+          <li><a href="#touring-day-trips" data-en="Touring &amp; Day Trips" data-zh="包车观光">Touring &amp; Day Trips</a></li>
         </ul>
       </div>
       <div>
@@ -948,7 +955,7 @@ document.documentElement.classList.add('js');
         <h3 data-en="Contact" data-zh="联系方式">Contact</h3>
         <ul>
           <li>
-            <a class="f-phone" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+            <a class="f-phone" href="tel:+61415550599" data-en-label="Call 101 Chauffeured on 0415 550 599" data-zh-label="致电 101 Chauffeured：0415 550 599" aria-label="Call 101 Chauffeured on 0415 550 599">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
               0415 550 599
             </a>
@@ -983,7 +990,7 @@ document.documentElement.classList.add('js');
 
 <!-- Persistent call action for phones: the header CTA is hidden below 760px
      and the top bar scrolls away with the page. -->
-<a class="callbar" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+<a class="callbar" href="tel:+61415550599" data-en-label="Call 101 Chauffeured on 0415 550 599" data-zh-label="致电 101 Chauffeured：0415 550 599" aria-label="Call 101 Chauffeured on 0415 550 599">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
   <span data-en="Call 0415 550 599" data-zh="致电 0415 550 599">Call 0415 550 599</span>
 </a>
