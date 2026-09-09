@@ -114,7 +114,7 @@
   .topbar{background:var(--ink-bar);border-bottom:1px solid var(--line);font-size:var(--t-sm);letter-spacing:.05em;color:var(--muted-2);position:relative;z-index:70}
   .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:var(--s-5)}
   .tb-right{display:flex;align-items:center;gap:var(--s-5)}
-  .tb-phone{display:inline-flex;align-items:center;gap:var(--s-2);color:var(--gold);font-weight:500;letter-spacing:.06em;white-space:nowrap;transition:color .2s}
+  .tb-phone{display:inline-flex;align-items:center;min-height:40px;gap:var(--s-2);color:var(--gold);font-weight:500;letter-spacing:.06em;white-space:nowrap;transition:color .2s}
   @media(hover:hover){.tb-phone:hover{color:var(--gold-lit)}}
 
   /* ---------- header ---------- */
@@ -316,7 +316,7 @@
   .f-grid h3{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin:0 0 var(--s-5);font-weight:500}
   html[data-lang="zh"] .f-grid h3{letter-spacing:.06em;text-transform:none}
   .f-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:var(--s-1);font-size:14px}
-  .f-grid ul a,.f-grid ul span{display:inline-block;padding:var(--s-2) 0}
+  .f-grid ul a,.f-grid ul span{display:inline-flex;align-items:center;min-height:40px;padding:6px 0}
   .f-grid ul a{color:var(--muted);transition:color .2s,padding-left .2s}
   @media(hover:hover){.f-grid ul a:hover{color:var(--gold);padding-left:4px}}
   .f-about p{font-size:14px;max-width:40ch;margin:0}
