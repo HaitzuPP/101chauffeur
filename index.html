@@ -238,7 +238,15 @@
   .f-grid ul a:hover{color:var(--gold);padding-left:4px}
   .f-about p{font-size:14px;max-width:40ch;margin:0}
   .f-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;font-size:12.5px;color:var(--muted-2)}
-  .f-bottom .legal{max-width:70ch;line-height:1.7}
+  .f-bottom .legal{max-width:74ch;line-height:1.8}
+  .f-bottom .legal .lic{display:block;color:var(--muted)}
+
+  /* ---------- acknowledgement of country ---------- */
+  .acknowledge{border:1px solid var(--line);border-left:2px solid var(--gold);background:var(--ink-3);padding:30px 32px;margin-bottom:44px}
+  .acknowledge h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;font-weight:500}
+  html[data-lang="zh"] .acknowledge h4{letter-spacing:.06em;text-transform:none}
+  .acknowledge p{font-size:14.5px;line-height:1.8;color:var(--muted);max-width:104ch;margin:0}
+  .acknowledge p + p{margin-top:12px}
   .socials{display:flex;gap:18px}
   .socials a:hover{color:var(--gold)}
 
@@ -285,6 +293,8 @@
     .why-visual .tall{grid-row:span 1;aspect-ratio:4/3}
     .wild-thumbs img{width:88px;height:68px}
     .f-grid{grid-template-columns:1fr}
+    .acknowledge{padding:24px 22px;margin-bottom:36px}
+    .acknowledge p{font-size:14px}
   }
   @media(prefers-reduced-motion:reduce){
     *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
@@ -364,20 +374,17 @@ document.documentElement.classList.add('js');
 </div>
 
 <!-- ============ CREDENTIALS ============ -->
-<!-- NOTE FOR 101 CHAUFFEUR: add your authorisation number from the Point to
-     Point Transport Commissioner where marked below. It has been left out
-     deliberately rather than filled with a placeholder that could ship. -->
 <div class="creds">
   <div class="wrap creds-grid">
     <div class="cred-lead rv">
       <span class="badge">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg>
-        <span data-en="Authorised Booking Service Provider" data-zh="政府授权预订服务提供商">Authorised Booking Service Provider</span>
+        <span data-en="Authorised Booking Service Provider &middot; BSP-466037" data-zh="政府授权预订服务提供商 · BSP-466037">Authorised Booking Service Provider &middot; BSP-466037</span>
       </span>
       <h3 data-en="Authorised by the NSW Point to Point Transport Commissioner." data-zh="由新南威尔士州点对点运输专员授权。">Authorised by the NSW Point to Point Transport Commissioner.</h3>
-      <p data-en="Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under the authorisation held by 101Bikes Pty Ltd, ABN 15 663 484 268."
-         data-zh="在新南威尔士州承接租赁车辆预订须事先获得政府授权，无授权而安排行程者将面临处罚。我们安排的每一趟行程，均在 101Bikes Pty Ltd（ABN 15 663 484 268）持有的授权之下运作。">
-        Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under the authorisation held by 101Bikes Pty Ltd, ABN 15 663 484 268.
+      <p data-en="Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under authorisation BSP-466037, held by 101Bikes Pty Ltd and issued under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016."
+         data-zh="在新南威尔士州承接租赁车辆预订须事先获得政府授权，无授权而安排行程者将面临处罚。我们安排的每一趟行程，均在 101Bikes Pty Ltd 持有的 BSP-466037 授权之下运作，该授权依据《2016 年点对点运输（出租车与租赁车辆）法》签发。">
+        Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under authorisation BSP-466037, held by 101Bikes Pty Ltd and issued under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016.
       </p>
     </div>
 
@@ -734,8 +741,8 @@ document.documentElement.classList.add('js');
       </details>
       <details>
         <summary data-en="Are you an authorised booking service provider?" data-zh="你们是否为政府授权的预订服务提供商？">Are you an authorised booking service provider?</summary>
-        <p data-en="Yes. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit."
-           data-zh="是的。在新南威尔士州承接租赁车辆预订，必须获得点对点运输专员的授权，未获授权者将面临处罚。授权同时要求运营方建立安全管理体系，并接受专员署授权稽查官的审核。">Yes. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit.</p>
+        <p data-en="Yes, under authorisation number BSP-466037, held by 101Bikes Pty Ltd. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit."
+           data-zh="是的，授权编号为 BSP-466037，由 101Bikes Pty Ltd 持有。在新南威尔士州承接租赁车辆预订，必须获得点对点运输专员的授权，未获授权者将面临处罚。授权同时要求运营方建立安全管理体系，并接受专员署授权稽查官的审核。">Yes, under authorisation number BSP-466037, held by 101Bikes Pty Ltd. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit.</p>
       </details>
       <details>
         <summary data-en="Can you go out to Kiama, Port Stephens or the Blue Mountains for a full day?" data-zh="可以包车去基亚马、史蒂芬斯港或蓝山玩一整天吗？">Can you go out to Kiama, Port Stephens or the Blue Mountains for a full day?</summary>
@@ -802,8 +809,24 @@ document.documentElement.classList.add('js');
         </ul>
       </div>
     </div>
+    <!-- Acknowledgement of Country. Written for a business whose work is
+         travelling across Country rather than occupying a single site. -->
+    <div class="acknowledge">
+      <h4 data-en="Acknowledgement of Country" data-zh="原住民土地致敬声明">Acknowledgement of Country</h4>
+      <p data-en="101 Chauffeured acknowledges the Traditional Custodians of the lands and waters we travel across every day. Our roads run over the Country of the Gadigal of the Eora Nation, the Dharug and Gundungurra of the Blue Mountains, the Dharawal and Yuin of the Illawarra and South Coast, the Wonnarua and Awabakal of the Hunter, and the Worimi of Port Stephens."
+         data-zh="101 Chauffeured 谨向我们每日行经的土地与水域的传统守护者致敬。我们的路线途经伊欧拉族加迪加尔人的土地、蓝山地区达鲁格族与甘敦古拉族的土地、伊拉瓦拉与南海岸达拉瓦族与尤因族的土地、猎人区沃纳鲁阿族与阿瓦巴卡尔族的土地，以及史蒂芬斯港沃里米族的土地。">
+        101 Chauffeured acknowledges the Traditional Custodians of the lands and waters we travel across every day. Our roads run over the Country of the Gadigal of the Eora Nation, the Dharug and Gundungurra of the Blue Mountains, the Dharawal and Yuin of the Illawarra and South Coast, the Wonnarua and Awabakal of the Hunter, and the Worimi of Port Stephens.
+      </p>
+      <p data-en="We pay our respects to Elders past and present, and extend that respect to every Aboriginal and Torres Strait Islander person who travels with us. Sovereignty was never ceded, and this always was and always will be Aboriginal land."
+         data-zh="我们向过去与现在的长者致以敬意，并将这份敬意延及每一位与我们同行的原住民及托雷斯海峡岛民。主权从未被割让，这片土地过去是、将来也永远是原住民的土地。">
+        We pay our respects to Elders past and present, and extend that respect to every Aboriginal and Torres Strait Islander person who travels with us. Sovereignty was never ceded, and this always was and always will be Aboriginal land.
+      </p>
+    </div>
+
     <div class="f-bottom">
-      <span class="legal" data-en="&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved." data-zh="© 101 Chauffeured。101Bikes Pty Ltd 旗下商号 · 澳洲商业号码 (ABN) 15 663 484 268。版权所有。">&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved.</span>
+      <span class="legal"
+        data-en="&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved.<span class='lic'>Authorised Booking Service Provider BSP-466037, authorised by the NSW Point to Point Transport Commissioner under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016.</span>"
+        data-zh="© 101 Chauffeured。101Bikes Pty Ltd 旗下商号 · 澳洲商业号码 (ABN) 15 663 484 268。版权所有。<span class='lic'>政府授权预订服务提供商，授权编号 BSP-466037，由新南威尔士州点对点运输专员依据《2016 年点对点运输（出租车与租赁车辆）法》授予。</span>">&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved.<span class="lic">Authorised Booking Service Provider BSP-466037, authorised by the NSW Point to Point Transport Commissioner under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016.</span></span>
       <div class="socials">
         <a href="#" data-en="Privacy" data-zh="隐私政策">Privacy</a>
         <a href="#" data-en="Terms" data-zh="条款">Terms</a>
