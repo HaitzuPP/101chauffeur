@@ -3,18 +3,56 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>101 Chauffeured | Sydney Chauffeur Hire, Airport & Corporate Transfers</title>
-<meta name="description" content="101 Chauffeured, a trading name of 101Bikes Pty Ltd and an authorised booking service provider under the NSW Point to Point Transport Commissioner. Private chauffeur hire across Sydney and New South Wales, including the South Coast and Kiama, Port Stephens, the Hunter Valley and the Blue Mountains. Mandarin and Cantonese speaking chauffeurs available.">
+<title>101 Chauffeured | Sydney Chauffeur Hire, Airport &amp; Corporate Transfers</title>
+<meta name="description" content="101 Chauffeured, a trading name of 101Bikes Pty Ltd and an authorised booking service provider (BSP-466037) under the NSW Point to Point Transport Commissioner. Private chauffeur hire across Sydney and New South Wales, including Kiama and the South Coast, Port Stephens, the Hunter Valley and the Blue Mountains. Mandarin and Cantonese speaking chauffeurs available.">
+<link rel="canonical" href="https://101chauffeured.com.au/">
+<meta name="theme-color" content="#0a0a0b">
+<meta name="format-detection" content="telephone=yes">
+
+<!-- Share cards: this page gets sent by message and posted in chat groups,
+     where a bare URL with no preview reads as untrustworthy. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="101 Chauffeured">
+<meta property="og:title" content="101 Chauffeured | Sydney Chauffeur Hire">
+<meta property="og:description" content="Private chauffeur hire across Sydney and New South Wales. An authorised booking service provider under the NSW Point to Point Transport Commissioner. Call 0415 550 599.">
+<meta property="og:url" content="https://101chauffeured.com.au/">
+<meta property="og:locale" content="en_AU">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:image" content="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1200&h=630&q=75">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sydney Opera House lit at night">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="101 Chauffeured | Sydney Chauffeur Hire">
+<meta name="twitter:description" content="Private chauffeur hire across Sydney and New South Wales. Authorised booking service provider. Call 0415 550 599.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1200&h=630&q=75">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0a0b'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='34' fill='%23c9a86a' text-anchor='middle'%3E101%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=2000&q=72" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0a0a0b; --ink-2:#111114; --ink-3:#17171b;
+    /* ---- colour ---- */
+    --ink:#0a0a0b; --ink-2:#111114; --ink-3:#17171b; --ink-bar:#0d0d0f;
     --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.20);
-    --text:#f3f2f0; --muted:#a09f9c; --muted-2:#787774;
-    --gold:#c9a86a; --gold-dim:#93794a;
+    --text:#f3f2f0; --muted:#a09f9c;
+    /* Lifted from #787774, which measured 4.21:1 on --ink-2 and failed AA at
+       the 11-12.5px sizes it is used at (topbar, footer headings, legal). */
+    --muted-2:#8e8d8a;
+    --gold:#c9a86a; --gold-lit:#dcbd80; --gold-dim:#93794a;
+
+    /* ---- type scale ---- */
+    --t-xs:11px; --t-sm:12.5px; --t-base:14.5px; --t-md:16px; --t-lg:18px;
+    --t-h3:19px; --t-display-sm:25px;
+
+    /* ---- spacing scale, 4px base ---- */
+    --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:20px; --s-6:24px;
+    --s-8:32px; --s-10:40px; --s-12:48px; --s-16:64px; --s-20:80px; --s-28:112px;
+
     --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
     --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
     --max:1220px;
@@ -25,19 +63,28 @@
     --serif:"Noto Sans SC","PingFang SC","Songti SC",serif;
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  html{scroll-behavior:smooth;scroll-padding-top:96px}
+  body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);font-size:var(--t-md);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
+
+  /* Single visible focus treatment for every interactive element. The default
+     ring is effectively invisible against a near-black ground. */
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+
+  .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--gold);color:#15130e;padding:var(--s-3) var(--s-5);font-weight:600;font-size:var(--t-base)}
+  .skip:focus{left:var(--s-3);top:var(--s-3)}
+
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
   h1,h2,h3{margin:0;font-weight:400;letter-spacing:-.01em}
   h1{font-family:var(--serif);font-size:clamp(44px,7.4vw,92px);line-height:1.02;font-weight:300}
   h2{font-family:var(--serif);font-size:clamp(31px,4.3vw,50px);line-height:1.1;font-weight:300}
-  h3{font-size:19px;font-weight:500;letter-spacing:0}
-  p{margin:0 0 18px;color:var(--muted);max-width:62ch}
-  section{padding:110px 0;border-top:1px solid var(--line);position:relative}
-  .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:0 0 18px}
+  h3{font-size:var(--t-h3);font-weight:500;letter-spacing:0}
+  p{margin:0 0 var(--s-5);color:var(--muted);max-width:62ch}
+  section{padding:var(--s-28) 0;border-top:1px solid var(--line);position:relative}
+  .eyebrow{font-size:var(--t-xs);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:0 0 var(--s-5)}
   html[data-lang="zh"] .eyebrow{letter-spacing:.14em}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
   /* ---------- reveal ----------
      Hidden ONLY when JS is running (html.js). Without JS, or if the
@@ -45,41 +92,55 @@
   .js .rv{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
   .js .rv.in{opacity:1;transform:none}
   .rv-d1{transition-delay:.09s}.rv-d2{transition-delay:.18s}.rv-d3{transition-delay:.27s}
-  .rv-d4{transition-delay:.36s}.rv-d5{transition-delay:.45s}.rv-d6{transition-delay:.54s}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);
+       min-height:48px;padding:var(--s-3) var(--s-6);font-size:13px;letter-spacing:.08em;
+       font-weight:500;border:1px solid var(--gold);color:var(--gold);white-space:nowrap;
+       transition:background .25s,color .25s,transform .25s,border-color .25s}
+  .btn svg{flex:0 0 16px}
+  .btn-solid{background:var(--gold);color:#15130e}
+  .btn-sm{min-height:42px;padding:var(--s-2) var(--s-5);font-size:var(--t-sm)}
+  .btn-lg{min-height:56px;padding:var(--s-4) var(--s-8);font-size:15px;letter-spacing:.1em}
+  /* Hover transforms are gated: on touch, :hover sticks after a tap and the
+     button looks jammed in its pressed state. */
+  @media(hover:hover){
+    .btn:hover{background:var(--gold);color:#15130e;transform:translateY(-2px)}
+    .btn-solid:hover{background:var(--gold-lit);border-color:var(--gold-lit)}
+  }
+  .btn:active{transform:translateY(0)}
 
   /* ---------- top bar ---------- */
-  .topbar{background:#0d0d0f;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.05em;color:var(--muted-2);position:relative;z-index:70}
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:20px}
-  .tb-right{display:flex;align-items:center;gap:18px}
-  .tb-phone{color:var(--gold);font-weight:500;letter-spacing:.06em;white-space:nowrap;transition:color .2s}
-  .tb-phone:hover{color:#e0c489}
+  .topbar{background:var(--ink-bar);border-bottom:1px solid var(--line);font-size:var(--t-sm);letter-spacing:.05em;color:var(--muted-2);position:relative;z-index:70}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:42px;gap:var(--s-5)}
+  .tb-right{display:flex;align-items:center;gap:var(--s-5)}
+  .tb-phone{display:inline-flex;align-items:center;gap:var(--s-2);color:var(--gold);font-weight:500;letter-spacing:.06em;white-space:nowrap;transition:color .2s}
+  @media(hover:hover){.tb-phone:hover{color:var(--gold-lit)}}
 
   /* ---------- header ---------- */
   header{position:sticky;top:0;z-index:60;background:rgba(10,10,11,.72);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
   header.stuck{background:rgba(10,10,11,.94);border-bottom-color:var(--line)}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:24px}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:var(--s-6)}
   .logo{display:flex;align-items:baseline;gap:9px;flex-shrink:0}
   .logo .num{font-family:var(--serif);font-size:34px;font-weight:400;color:var(--gold);line-height:1}
   .logo .word{font-size:12px;letter-spacing:.3em;text-transform:uppercase}
-  nav{display:flex;gap:32px;font-size:13.5px}
-  nav a{color:var(--muted);position:relative;padding:4px 0;transition:color .2s}
+  nav{display:flex;gap:var(--s-8);font-size:13.5px}
+  nav a{color:var(--muted);position:relative;padding:var(--s-1) 0;transition:color .2s}
   nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease)}
-  nav a:hover{color:var(--text)}
-  nav a:hover::after{width:100%}
-  .head-right{display:flex;align-items:center;gap:15px;flex-shrink:0}
+  @media(hover:hover){nav a:hover{color:var(--text)} nav a:hover::after{width:100%}}
+  /* Scrollspy: on a single page this long, the nav is the only orientation aid. */
+  nav a[aria-current="true"]{color:var(--text)}
+  nav a[aria-current="true"]::after{width:100%}
+  .head-right{display:flex;align-items:center;gap:var(--s-4);flex-shrink:0}
   .lang{display:flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden}
-  .lang button{background:none;border:0;color:var(--muted);cursor:pointer;padding:7px 13px;font-family:inherit;font-size:12px;letter-spacing:.08em;transition:background .2s,color .2s}
-  .lang button.on{background:var(--gold);color:#15130e;font-weight:600}
-  .lang button:hover:not(.on){color:var(--text)}
-  .menu-toggle{display:none;background:none;border:0;color:var(--text);font-size:22px;cursor:pointer;padding:6px}
-  .btn{display:inline-block;padding:12px 24px;font-size:13px;letter-spacing:.08em;font-weight:500;border:1px solid var(--gold);color:var(--gold);white-space:nowrap;transition:background .25s,color .25s,transform .25s}
-  .btn:hover{background:var(--gold);color:#15130e;transform:translateY(-2px)}
-  .btn-solid{background:var(--gold);color:#15130e}
-  .btn-solid:hover{background:#dcbd80;border-color:#dcbd80}
-  .btn-sm{padding:10px 18px;font-size:12.5px}
+  .lang button{background:none;border:0;color:var(--muted);cursor:pointer;min-height:40px;padding:var(--s-2) var(--s-4);font-family:inherit;font-size:12px;letter-spacing:.08em;transition:background .2s,color .2s}
+  .lang button[aria-pressed="true"]{background:var(--gold);color:#15130e;font-weight:600}
+  @media(hover:hover){.lang button:hover[aria-pressed="false"]{color:var(--text)}}
+  .menu-toggle{display:none;background:none;border:0;color:var(--text);cursor:pointer;width:48px;height:48px;align-items:center;justify-content:center;font-size:22px;line-height:1}
 
   /* ---------- hero ---------- */
-  .hero{border-top:0;padding:0;min-height:min(92vh,900px);display:flex;align-items:center;position:relative;overflow:hidden;margin-top:-80px;padding-top:80px}
+  .hero{border-top:0;padding:0;min-height:min(92vh,900px);display:flex;align-items:center;position:relative;overflow:hidden;margin-top:-80px;padding-top:80px;
+        background:#0a0a0b url('https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=2000&q=72') center/cover no-repeat}
   .slides{position:absolute;inset:0;z-index:0}
   .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideshow 21s infinite}
   .slide:nth-child(1){animation-delay:0s}
@@ -98,7 +159,7 @@
   /* .wrap is a flex child of .hero, so it needs an explicit width. Without
      one it shrink-wraps to min-content and the headline breaks a character
      at a time, which is especially brutal in Chinese. */
-  .hero .wrap{position:relative;z-index:2;width:100%;padding-top:110px;padding-bottom:120px}
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-top:var(--s-28);padding-bottom:var(--s-28)}
   /* Sized in px, not ch: the ch unit is derived from the "0" glyph and is a
      poor predictor of line length once the font stack switches to CJK. */
   .hero-copy{max-width:860px}
@@ -109,75 +170,96 @@
   html[data-lang="zh"] .hero h1 em{font-style:normal}
   html[data-lang="zh"] h2{line-height:1.35}
   html[data-lang="zh"] .hero-copy{max-width:700px}
-  .hero .lede{font-size:18.5px;line-height:1.75;margin:32px 0 0;max-width:54ch;color:#cfcecb}
-  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center}
+  .hero .lede{font-size:var(--t-lg);line-height:1.75;margin:var(--s-8) 0 0;max-width:54ch;color:#cfcecb}
+  .hero-cta{display:flex;align-items:center;gap:var(--s-6) var(--s-5);flex-wrap:wrap;margin-top:var(--s-10)}
+  .hero-cta .ready{font-size:13.5px;color:var(--muted);max-width:34ch;margin:0}
+  .scroll-hint{position:absolute;bottom:var(--s-6);left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center}
   .scroll-hint span{display:block;width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:drop 2s infinite}
   @keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
   /* ---------- marquee ---------- */
   .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2);overflow:hidden;padding:17px 0}
   .marquee-track{display:flex;width:max-content;animation:scrollx 42s linear infinite}
-  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee:hover .marquee-track,.marquee:focus-within .marquee-track{animation-play-state:paused}
   @keyframes scrollx{to{transform:translateX(-50%)}}
-  .marquee-item{display:flex;align-items:center;gap:16px;padding:0 26px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);white-space:nowrap}
+  .marquee-item{display:flex;align-items:center;gap:var(--s-4);padding:0 var(--s-6);font-size:var(--t-sm);letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);white-space:nowrap}
   html[data-lang="zh"] .marquee-item{letter-spacing:.06em;text-transform:none}
   .marquee-item i{width:4px;height:4px;background:var(--gold);border-radius:50%;flex:0 0 4px}
 
   /* ---------- credentials ---------- */
-  .creds{background:var(--ink-2);border-bottom:1px solid var(--line);padding:52px 0}
-  .creds-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:44px;align-items:start}
-  .cred-lead{border-left:2px solid var(--gold);padding-left:24px}
-  .cred-lead .badge{display:inline-flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .creds{background:var(--ink-2);border-bottom:1px solid var(--line);padding:var(--s-12) 0}
+  .creds-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:var(--s-10);align-items:start}
+  .cred-lead{border-left:2px solid var(--gold);padding-left:var(--s-6)}
+  .cred-lead .badge{display:inline-flex;align-items:center;gap:9px;font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s-3)}
   html[data-lang="zh"] .cred-lead .badge{letter-spacing:.06em;text-transform:none}
   .cred-lead .badge svg{flex:0 0 16px}
-  .cred-lead h3{font-family:var(--serif);font-size:26px;font-weight:300;margin-bottom:10px;letter-spacing:0}
-  .cred-lead p{font-size:14.5px;margin:0}
-  .cred{padding-top:6px}
-  .cred h4{font-size:14px;font-weight:500;margin:0 0 8px;color:var(--text)}
+  .cred-lead h3{font-family:var(--serif);font-size:var(--t-display-sm);font-weight:300;margin-bottom:var(--s-3);letter-spacing:0}
+  .cred-lead p{font-size:var(--t-base);margin:0}
+  .cred h3{font-size:var(--t-md);font-weight:500;margin:0 0 var(--s-2);color:var(--text)}
   .cred p{font-size:14px;margin:0}
 
   /* ---------- section head ---------- */
-  .sec-head{max-width:780px;margin-bottom:56px}
-  .sec-head p{margin-top:20px;font-size:17px;line-height:1.7}
+  .sec-head{max-width:780px;margin-bottom:var(--s-12)}
+  .sec-head p{margin-top:var(--s-5);font-size:17px;line-height:1.7}
 
   /* ---------- services ---------- */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-4)}
   /* Image, scrim and text are stacked with non-negative z-index only.
      Negative-index children sit behind their own parent's background and
      misbehave as soon as anything up the tree paints one. */
-  .card{position:relative;overflow:hidden;border:1px solid var(--line);min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;padding:32px 30px;transition:border-color .35s,transform .45s var(--ease)}
-  .card:hover{border-color:var(--gold-dim);transform:translateY(-6px)}
+  .card{position:relative;overflow:hidden;border:1px solid var(--line);min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--s-8) var(--s-8);transition:border-color .35s,transform .45s var(--ease)}
   .card .bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.34;transform:scale(1.02);transition:transform 1s var(--ease),opacity .5s}
-  .card:hover .bg{transform:scale(1.11);opacity:.5}
   .card::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(9,9,11,.97) 12%,rgba(9,9,11,.72) 52%,rgba(9,9,11,.42) 100%)}
   .card>:not(.bg){position:relative;z-index:2}
+  @media(hover:hover){
+    .card:hover{border-color:var(--gold-dim);transform:translateY(-6px)}
+    .card:hover .bg{transform:scale(1.11);opacity:.5}
+    .card.bright:hover .bg{opacity:.32}
+  }
   /* A high-key photograph (the wedding frame) sits far brighter than the rest
      of the grid at the same opacity, so it gets damped rather than lightening
      every other card to match. */
   .card.bright .bg{opacity:.2}
-  .card.bright:hover .bg{opacity:.32}
   .card.bright::before{background:linear-gradient(0deg,rgba(9,9,11,.97) 12%,rgba(9,9,11,.84) 55%,rgba(9,9,11,.66) 100%)}
-  .card .ic{color:var(--gold);margin-bottom:16px;height:26px}
-  .card h3{margin-bottom:11px}
-  .card p{font-size:14.5px;margin:0;color:#b6b5b2}
+  /* One card carries a visible lead so the eye has somewhere to start; a grid
+     of nine identical tiles has no entry point. */
+  .card.lead{border-top:2px solid var(--gold)}
+  .card.lead h3{font-size:22px}
+  .card .ic{color:var(--gold);margin-bottom:var(--s-4);height:26px}
+  .card h3{margin-bottom:var(--s-3)}
+  .card p{font-size:var(--t-base);margin:0;color:#b6b5b2}
 
   /* ---------- destinations bento ---------- */
-  .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+  .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:var(--s-4)}
   .dest{position:relative;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end}
   .dest img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform 1.3s var(--ease);filter:saturate(.92)}
-  .dest:hover img{transform:scale(1.09)}
   /* Reef, sand and desert sky are all bright, so the scrim has to carry the
      label text on its own rather than relying on the photograph being dark. */
   .dest::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(8,8,10,.95) 0%,rgba(8,8,10,.82) 30%,rgba(8,8,10,.42) 62%,rgba(8,8,10,.12) 100%);transition:background .4s}
-  .dest:hover::before{background:linear-gradient(0deg,rgba(8,8,10,.96) 0%,rgba(8,8,10,.86) 38%,rgba(8,8,10,.55) 70%,rgba(8,8,10,.25) 100%)}
-  .dest .d-body{padding:26px 26px 24px;width:100%;position:relative;z-index:2}
-  .dest h3{font-family:var(--serif);font-size:25px;font-weight:400;margin-bottom:6px}
-  .dest .meta{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+  .dest .d-body{padding:var(--s-6) var(--s-6) var(--s-6);width:100%;position:relative;z-index:2}
+  .dest h3{font-family:var(--serif);font-size:var(--t-display-sm);font-weight:400;margin-bottom:var(--s-1)}
+  .dest .meta{font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
   html[data-lang="zh"] .dest .meta{letter-spacing:.06em;text-transform:none}
-  .dest p{font-size:13.5px;margin:0;color:#b8b7b4;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .4s,margin .4s}
-  .dest:hover p{max-height:120px;opacity:1;margin-top:6px}
+  .dest p{font-size:13.5px;margin:var(--s-1) 0 0;color:#b8b7b4}
+  /* Descriptions are visible by default. They collapse behind hover ONLY on
+     devices that actually have a pointer — otherwise this copy is unreachable
+     on every phone and by keyboard. */
+  @media(hover:hover){
+    .dest p{max-height:0;opacity:0;margin-top:0;overflow:hidden;transition:max-height .5s var(--ease),opacity .4s,margin .4s}
+    .dest:hover img{transform:scale(1.09)}
+    .dest:hover::before,.dest:focus-within::before{background:linear-gradient(0deg,rgba(8,8,10,.96) 0%,rgba(8,8,10,.86) 38%,rgba(8,8,10,.55) 70%,rgba(8,8,10,.25) 100%)}
+    .dest:hover p,.dest:focus-within p{max-height:120px;opacity:1;margin-top:var(--s-1)}
+  }
   .d-wide{grid-column:span 2}
   .d-tall{grid-row:span 2}
+
+  /* ---------- call band ---------- */
+  .callband{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:var(--s-16) 0}
+  .callband-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--s-10);flex-wrap:wrap}
+  .callband h2{font-size:clamp(26px,3.2vw,36px);max-width:20ch}
+  .callband p{margin:var(--s-3) 0 0;font-size:var(--t-base);max-width:46ch}
+  .callband .cb-action{display:flex;flex-direction:column;gap:var(--s-3);align-items:flex-start}
+  .callband .hours{font-size:13px;color:var(--muted-2);margin:0}
 
   /* ---------- wildlife band ---------- */
   .wild{padding:0;border:0}
@@ -187,87 +269,103 @@
   /* .wrap is a flex child here, so it needs an explicit width; margin:0 auto
      would otherwise shrink-wrap it and centre the copy out of alignment
      with every other section on the page. */
-  .wild-inner .wrap{position:relative;z-index:2;width:100%;padding-top:90px;padding-bottom:90px}
+  .wild-inner .wrap{position:relative;z-index:2;width:100%;padding-top:var(--s-20);padding-bottom:var(--s-20)}
   .wild-copy{max-width:560px}
-  .wild-thumbs{display:flex;gap:14px;margin-top:32px}
+  .wild-thumbs{display:flex;gap:var(--s-3);margin-top:var(--s-8);flex-wrap:wrap}
   .wild-thumbs img{width:118px;height:88px;object-fit:cover;border:1px solid var(--line-2);filter:grayscale(.25);transition:filter .4s,transform .4s var(--ease)}
-  .wild-thumbs img:hover{filter:none;transform:translateY(-5px)}
+  @media(hover:hover){.wild-thumbs img:hover{filter:none;transform:translateY(-5px)}}
 
   /* ---------- why / split ---------- */
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-  .tick-list{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
-  .tick-list li{display:flex;gap:14px;font-size:15px;color:var(--muted);line-height:1.6}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-16);align-items:start}
+  .tick-list{list-style:none;padding:0;margin:var(--s-6) 0 0;display:grid;gap:var(--s-3)}
+  .tick-list li{display:flex;gap:var(--s-3);font-size:15px;color:var(--muted);line-height:1.6}
   .tick-list li::before{content:"";flex:0 0 6px;height:6px;background:var(--gold);margin-top:10px}
-  .why-visual{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .why-visual{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-3)}
   .why-visual figure{margin:0;overflow:hidden;border:1px solid var(--line)}
   .why-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
-  .why-visual figure:hover img{transform:scale(1.07)}
+  @media(hover:hover){.why-visual figure:hover img{transform:scale(1.07)}}
   .why-visual .tall{grid-row:span 2;aspect-ratio:3/5.1}
   .why-visual .sq{aspect-ratio:1/1}
-  .reasons{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:14px}
-  .reason{background:var(--ink);padding:24px 26px;transition:background .3s}
-  .reason:hover{background:var(--ink-3)}
-  .reason h3{font-size:16px;margin-bottom:7px}
-  .reason p{font-size:14.5px;margin:0}
+  .reasons{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:var(--s-3)}
+  .reason{background:var(--ink);padding:var(--s-6) var(--s-6);transition:background .3s}
+  @media(hover:hover){.reason:hover{background:var(--ink-3)}}
+  .reason h3{font-size:var(--t-md);margin-bottom:7px}
+  .reason p{font-size:var(--t-base);margin:0}
 
   /* ---------- areas ---------- */
-  .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 40px}
-  .area{border-left:1px solid var(--line);padding-left:22px;transition:border-color .35s}
-  .area:hover{border-left-color:var(--gold)}
-  .area h3{font-size:16px;margin-bottom:10px}
-  .area p{font-size:14.5px;margin:0}
+  .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-8) var(--s-10)}
+  .area{border-left:1px solid var(--line);padding-left:var(--s-6);transition:border-color .35s}
+  @media(hover:hover){.area:hover{border-left-color:var(--gold)}}
+  .area h3{font-size:var(--t-md);margin-bottom:var(--s-3)}
+  .area p{font-size:var(--t-base);margin:0}
 
   /* ---------- faq ---------- */
   .faq{max-width:840px}
   details{border-bottom:1px solid var(--line)}
-  summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;position:relative;font-size:16.5px;transition:color .2s}
-  summary:hover{color:var(--gold)}
+  summary{cursor:pointer;list-style:none;padding:var(--s-6) var(--s-10) var(--s-6) 0;position:relative;font-size:16.5px;transition:color .2s;min-height:48px}
+  @media(hover:hover){summary:hover{color:var(--gold)}}
   summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";position:absolute;right:6px;top:19px;color:var(--gold);font-size:22px;font-weight:300}
+  summary::after{content:"+";position:absolute;right:6px;top:var(--s-6);color:var(--gold);font-size:22px;font-weight:300;line-height:1}
   details[open] summary::after{content:"\2212"}
-  details p{font-size:15px;padding:0 44px 24px 0;margin:0;max-width:none}
+  details p{font-size:15px;padding:0 var(--s-10) var(--s-6) 0;margin:0;max-width:none}
 
   /* ---------- footer ---------- */
-  footer{background:var(--ink-2);border-top:1px solid var(--line);padding:74px 0 32px}
-  .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;gap:44px;margin-bottom:52px}
-  .f-phone{font-size:17px;color:var(--gold)!important;letter-spacing:.03em}
-  .f-grid h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin:0 0 18px;font-weight:500}
-  html[data-lang="zh"] .f-grid h4{letter-spacing:.06em;text-transform:none}
-  .f-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:11px;font-size:14px}
+  footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-20) 0 var(--s-8)}
+  .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr .9fr;gap:var(--s-10);margin-bottom:var(--s-12)}
+  .f-phone{display:inline-flex;align-items:center;gap:var(--s-2);font-size:17px;color:var(--gold)!important;letter-spacing:.03em}
+  .f-grid h3{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin:0 0 var(--s-5);font-weight:500}
+  html[data-lang="zh"] .f-grid h3{letter-spacing:.06em;text-transform:none}
+  .f-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:var(--s-1);font-size:14px}
+  .f-grid ul a,.f-grid ul span{display:inline-block;padding:var(--s-2) 0}
   .f-grid ul a{color:var(--muted);transition:color .2s,padding-left .2s}
-  .f-grid ul a:hover{color:var(--gold);padding-left:4px}
+  @media(hover:hover){.f-grid ul a:hover{color:var(--gold);padding-left:4px}}
   .f-about p{font-size:14px;max-width:40ch;margin:0}
-  .f-bottom{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;font-size:12.5px;color:var(--muted-2)}
-  .f-bottom .legal{max-width:74ch;line-height:1.8}
+  .f-bottom{border-top:1px solid var(--line);padding-top:var(--s-6);font-size:var(--t-sm);color:var(--muted-2)}
+  .f-bottom .legal{max-width:74ch;line-height:1.8;margin:0}
   .f-bottom .legal .lic{display:block;color:var(--muted)}
 
   /* ---------- acknowledgement of country ---------- */
-  .acknowledge{border:1px solid var(--line);border-left:2px solid var(--gold);background:var(--ink-3);padding:30px 32px;margin-bottom:44px}
-  .acknowledge h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;font-weight:500}
-  html[data-lang="zh"] .acknowledge h4{letter-spacing:.06em;text-transform:none}
-  .acknowledge p{font-size:14.5px;line-height:1.8;color:var(--muted);max-width:104ch;margin:0}
-  .acknowledge p + p{margin-top:12px}
-  .socials{display:flex;gap:18px}
-  .socials a:hover{color:var(--gold)}
+  .acknowledge{border:1px solid var(--line);border-left:2px solid var(--gold);background:var(--ink-3);padding:var(--s-8) var(--s-8);margin-bottom:var(--s-10)}
+  .acknowledge h3{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 var(--s-3);font-weight:500}
+  html[data-lang="zh"] .acknowledge h3{letter-spacing:.06em;text-transform:none}
+  .acknowledge p{font-size:var(--t-base);line-height:1.8;color:var(--muted);max-width:104ch;margin:0}
+  .acknowledge p + p{margin-top:var(--s-3)}
+
+  /* ---------- mobile call bar ----------
+     The header CTA is hidden on small screens, and the top bar scrolls away.
+     Without this, a phone visitor has no tappable number between the first
+     screen and the footer — on a business whose only action is a call. */
+  .callbar{display:none}
+  @media(max-width:760px){
+    .callbar{display:flex;align-items:center;justify-content:center;gap:var(--s-2);
+      position:fixed;left:0;right:0;bottom:0;z-index:90;
+      background:var(--gold);color:#15130e;font-weight:600;font-size:16px;letter-spacing:.04em;
+      padding:var(--s-4) var(--s-5);padding-bottom:calc(var(--s-4) + env(safe-area-inset-bottom));
+      box-shadow:0 -8px 28px rgba(0,0,0,.45)}
+    .callbar:active{background:var(--gold-lit)}
+    body{padding-bottom:76px}
+  }
 
   /* ---------- responsive ---------- */
   @media(max-width:1040px){
-    .creds-grid{grid-template-columns:1fr 1fr;gap:34px}
+    .creds-grid{grid-template-columns:1fr 1fr;gap:var(--s-8)}
     .cred-lead{grid-column:span 2}
     .cards{grid-template-columns:repeat(2,1fr)}
-    .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
-    .d-wide{grid-column:span 2}.d-tall{grid-row:span 1}
-    .split{grid-template-columns:1fr;gap:44px}
+    .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:230px}
+    /* Keep the flagship tile dominant instead of demoting it to a short band. */
+    .d-wide{grid-column:span 2}.d-tall{grid-row:span 2}
+    .split{grid-template-columns:1fr;gap:var(--s-10)}
     .areas{grid-template-columns:repeat(2,1fr)}
-    .f-grid{grid-template-columns:1fr 1fr;gap:36px}
+    .f-grid{grid-template-columns:1fr 1fr;gap:var(--s-8)}
+    .callband-inner{gap:var(--s-8)}
   }
   @media(max-width:760px){
     .wrap{padding:0 20px}
-    section{padding:74px 0}
-    nav{display:none;position:absolute;top:80px;left:0;right:0;background:#0d0d0f;border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:8px 20px 20px}
+    section{padding:var(--s-20) 0}
+    nav{display:none;position:absolute;top:80px;left:0;right:0;background:var(--ink-bar);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:var(--s-2) var(--s-5) var(--s-5)}
     nav.open{display:flex}
-    nav a{padding:14px 0;border-bottom:1px solid var(--line)}
-    .menu-toggle{display:block}
+    nav a{padding:var(--s-3) 0;min-height:48px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+    .menu-toggle{display:flex}
     .topbar .wrap{justify-content:center}
     .topbar .tb-left{display:none}
     /* On a phone the number is the point of the bar; the authorisation line
@@ -278,27 +376,39 @@
        0.3em tracking once the language toggle and menu button are alongside. */
     .logo .num{font-size:29px}
     .logo .word{letter-spacing:.16em;font-size:11px}
-    .creds{padding:44px 0}
-    .creds-grid{grid-template-columns:1fr;gap:30px}
-    .cred-lead{grid-column:span 1;padding-left:18px}
+    .creds{padding:var(--s-10) 0}
+    .creds-grid{grid-template-columns:1fr;gap:var(--s-8)}
+    .cred-lead{grid-column:span 1;padding-left:var(--s-5)}
     .cred-lead .badge{letter-spacing:.1em}
     .cards{grid-template-columns:1fr}
-    .bento{grid-template-columns:1fr;grid-auto-rows:230px}
-    .d-wide{grid-column:span 1}
+    .bento{grid-template-columns:1fr;grid-auto-rows:auto}
+    .dest{min-height:250px}
+    .d-wide{grid-column:span 1}.d-tall{grid-row:span 1}
     .areas{grid-template-columns:1fr}
     .hero{min-height:auto;margin-top:0;padding-top:0}
-    .hero .wrap{padding-top:80px;padding-bottom:90px}
+    .hero .wrap{padding-top:var(--s-20);padding-bottom:var(--s-20)}
     .hero-copy{max-width:none}
+    .hero-cta{margin-top:var(--s-8)}
     .scroll-hint{display:none}
     .why-visual .tall{grid-row:span 1;aspect-ratio:4/3}
     .wild-thumbs img{width:88px;height:68px}
     .f-grid{grid-template-columns:1fr}
-    .acknowledge{padding:24px 22px;margin-bottom:36px}
+    .acknowledge{padding:var(--s-6) var(--s-5);margin-bottom:var(--s-8)}
     .acknowledge p{font-size:14px}
+    .callband{padding:var(--s-12) 0}
+    .callband .cb-action{width:100%}
+    .callband .btn{width:100%}
   }
   @media(prefers-reduced-motion:reduce){
     *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
     .js .rv{opacity:1;transform:none}
+    /* The slideshow keyframes end at opacity:0. Collapsing their duration
+       leaves every slide invisible and the hero blank, so the animation is
+       cancelled outright and the first frame is pinned instead. */
+    .slide{animation:none!important}
+    .slide:first-child{opacity:1}
+    .marquee-track{animation:none!important}
+    .wild-bg{transform:none!important}
   }
 </style>
 </head>
@@ -309,12 +419,17 @@
 document.documentElement.classList.add('js');
 </script>
 
+<a class="skip" href="#main" data-en="Skip to content" data-zh="跳至主要内容">Skip to content</a>
+
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
   <div class="wrap">
     <span class="tb-left" data-en="Sydney &middot; South Coast &middot; Port Stephens &middot; Hunter Valley &middot; Blue Mountains" data-zh="悉尼 · 南海岸 · 史蒂芬斯港 · 猎人谷 · 蓝山">Sydney &middot; South Coast &middot; Port Stephens &middot; Hunter Valley &middot; Blue Mountains</span>
     <span class="tb-right">
-      <a class="tb-phone" href="tel:+61415550599">0415 550 599</a>
+      <a class="tb-phone" href="tel:+61415550599">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+        <span data-en="0415 550 599" data-zh="0415 550 599">0415 550 599</span>
+      </a>
       <span class="tb-auth" data-en="Authorised Booking Service Provider &middot; NSW" data-zh="新南威尔士州政府授权预订服务提供商">Authorised Booking Service Provider &middot; NSW</span>
     </span>
   </div>
@@ -324,7 +439,7 @@ document.documentElement.classList.add('js');
 <header id="hdr">
   <div class="wrap">
     <a class="logo" href="#top"><span class="num">101</span><span class="word">Chauffeured</span></a>
-    <nav id="nav">
+    <nav id="nav" aria-label="Primary">
       <a href="#services" data-en="Services" data-zh="服务项目">Services</a>
       <a href="#destinations" data-en="Destinations" data-zh="目的地">Destinations</a>
       <a href="#why" data-en="Why Us" data-zh="为何选择我们">Why Us</a>
@@ -332,15 +447,20 @@ document.documentElement.classList.add('js');
       <a href="#faq" data-en="FAQ" data-zh="常见问题">FAQ</a>
     </nav>
     <div class="head-right">
-      <div class="lang" role="group" aria-label="Language">
-        <button type="button" id="btn-en" class="on" onclick="setLang('en')">EN</button>
-        <button type="button" id="btn-zh" onclick="setLang('zh')">中文</button>
+      <div class="lang" role="group" aria-label="Language / 语言">
+        <button type="button" id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
+        <button type="button" id="btn-zh" aria-pressed="false" onclick="setLang('zh')">中文</button>
       </div>
-      <a class="btn btn-solid btn-sm" href="tel:+61415550599">0415 550 599</a>
-      <button class="menu-toggle" type="button" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+      <a class="btn btn-solid btn-sm" href="tel:+61415550599" data-en-label="Call 101 Chauffeured on 0415 550 599" data-zh-label="致电 101 Chauffeured：0415 550 599" aria-label="Call 101 Chauffeured on 0415 550 599">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+        0415 550 599
+      </a>
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button>
     </div>
   </div>
 </header>
+
+<main id="main">
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
@@ -352,16 +472,24 @@ document.documentElement.classList.add('js');
 
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow rv" data-en="Private Chauffeur Hire &middot; Sydney" data-zh="悉尼私人专车服务">Private Chauffeur Hire &middot; Sydney</p>
+      <p class="eyebrow rv" data-en="Private Chauffeur Hire &middot; Sydney &amp; New South Wales" data-zh="私人专车服务 · 悉尼及新南威尔士州">Private Chauffeur Hire &middot; Sydney &amp; New South Wales</p>
       <h1 class="rv rv-d1">
         <span data-en="The car is already there" data-zh="车已在门口等候">The car is already there</span><br>
         <em data-en="when you walk out." data-zh="您出门即可上车。">when you walk out.</em>
       </h1>
       <p class="lede rv rv-d2"
-         data-en="We know which lane out of the airport actually moves at four on a Friday, which way the traffic breaks around the Bridge, and when a passenger would rather not be spoken to at all."
-         data-zh="我们知道周五下午四点从机场出发哪条车道真正畅通，知道海港大桥周边的车流往哪边散，也知道乘客什么时候只想安静地待着。">
-        We know which lane out of the airport actually moves at four on a Friday, which way the traffic breaks around the Bridge, and when a passenger would rather not be spoken to at all.
+         data-en="Airport runs, corporate travel, weddings and full days out to Kiama, Port Stephens and the Hunter. Fixed prices agreed before you travel, and a chauffeur who knows the road."
+         data-zh="机场接送、企业商务用车、婚礼用车，以及前往基亚马、史蒂芬斯港与猎人谷的全日包车。行前议定固定价格，司机熟悉每一条路。">
+        Airport runs, corporate travel, weddings and full days out to Kiama, Port Stephens and the Hunter. Fixed prices agreed before you travel, and a chauffeur who knows the road.
       </p>
+      <div class="hero-cta rv rv-d3">
+        <a class="btn btn-solid btn-lg" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+          <span data-en="Call 0415 550 599" data-zh="致电 0415 550 599">Call 0415 550 599</span>
+        </a>
+        <p class="ready" data-en="Have your pick-up, your destination and the number of passengers ready. Flight number too, if you are landing."
+           data-zh="请备好上车地点、目的地与乘客人数；若是接机，请一并告知航班号。">Have your pick-up, your destination and the number of passengers ready. Flight number too, if you are landing.</p>
+      </div>
     </div>
   </div>
 
@@ -374,64 +502,60 @@ document.documentElement.classList.add('js');
 </div>
 
 <!-- ============ CREDENTIALS ============ -->
-<div class="creds">
+<section class="creds" aria-labelledby="creds-h">
   <div class="wrap creds-grid">
     <div class="cred-lead rv">
       <span class="badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg>
         <span data-en="Authorised Booking Service Provider &middot; BSP-466037" data-zh="政府授权预订服务提供商 · BSP-466037">Authorised Booking Service Provider &middot; BSP-466037</span>
       </span>
-      <h3 data-en="Authorised by the NSW Point to Point Transport Commissioner." data-zh="由新南威尔士州点对点运输专员授权。">Authorised by the NSW Point to Point Transport Commissioner.</h3>
-      <p data-en="Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under authorisation BSP-466037, held by 101Bikes Pty Ltd and issued under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016."
-         data-zh="在新南威尔士州承接租赁车辆预订须事先获得政府授权，无授权而安排行程者将面临处罚。我们安排的每一趟行程，均在 101Bikes Pty Ltd 持有的 BSP-466037 授权之下运作，该授权依据《2016 年点对点运输（出租车与租赁车辆）法》签发。">
-        Taking bookings for hire vehicles in New South Wales requires authorisation, and penalties apply to anyone arranging journeys without it. Every trip we arrange sits under authorisation BSP-466037, held by 101Bikes Pty Ltd and issued under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016.
+      <h2 id="creds-h" data-en="Authorised by the NSW Point to Point Transport Commissioner." data-zh="由新南威尔士州点对点运输专员授权。">Authorised by the NSW Point to Point Transport Commissioner.</h2>
+      <p data-en="We hold authorisation BSP-466037, issued to 101Bikes Pty Ltd under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016. Arranging hire vehicle journeys in New South Wales without one is an offence."
+         data-zh="我们持有授权编号 BSP-466037，由 101Bikes Pty Ltd 依据《2016 年点对点运输（出租车与租赁车辆）法》取得。在新南威尔士州无授权安排租赁车辆行程属违法行为。">
+        We hold authorisation BSP-466037, issued to 101Bikes Pty Ltd under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016. Arranging hire vehicle journeys in New South Wales without one is an offence.
       </p>
     </div>
 
     <div class="cred rv rv-d1">
-      <h4 data-en="An audited Safety Management System" data-zh="经审核的安全管理体系">An audited Safety Management System</h4>
-      <p data-en="Authorised providers carry responsibility for the safety of every journey they arrange, and the Commissioner's authorised officers audit that system rather than take it on trust."
-         data-zh="授权提供商须对其安排的每一趟行程的安全负责，专员署的授权稽查官会对该体系进行审核，而非仅凭承诺。">
-        Authorised providers carry responsibility for the safety of every journey they arrange, and the Commissioner's authorised officers audit that system rather than take it on trust.
+      <h3 data-en="An audited Safety Management System" data-zh="经审核的安全管理体系">An audited Safety Management System</h3>
+      <p data-en="The Commissioner's authorised officers audit it. Safety here is inspected, not asserted."
+         data-zh="由专员署授权稽查官实地审核。此处的安全经得起检查，而非仅凭声明。">
+        The Commissioner's authorised officers audit it. Safety here is inspected, not asserted.
       </p>
     </div>
 
     <div class="cred rv rv-d2">
-      <h4 data-en="Your journey is never handed off" data-zh="您的行程绝不转手外包">Your journey is never handed off</h4>
-      <p data-en="The arrangement stays with an authorised provider from beginning to end. Nothing is quietly passed to an unregulated third party once the details are settled."
-         data-zh="从头到尾，行程安排始终由授权提供商负责。细节敲定后，绝不会被悄悄转交给未受监管的第三方。">
-        The arrangement stays with an authorised provider from beginning to end. Nothing is quietly passed to an unregulated third party once the details are settled.
+      <h3 data-en="Your journey is never handed off" data-zh="您的行程绝不转手外包">Your journey is never handed off</h3>
+      <p data-en="Once the details are settled, nothing is quietly passed to an unregulated third party. The arrangement stays with us from beginning to end."
+         data-zh="细节敲定后，绝不会被悄悄转交给未受监管的第三方。从头到尾，行程安排始终由我们负责。">
+        Once the details are settled, nothing is quietly passed to an unregulated third party. The arrangement stays with us from beginning to end.
       </p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ============ SERVICES ============ -->
-<section id="services">
+<section id="services" aria-labelledby="services-h">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv" data-en="What we drive you to" data-zh="我们为您提供">What we drive you to</p>
-      <h2 class="rv rv-d1" data-en="Different reasons to be in the car. One standard across all of them." data-zh="乘车理由各不相同，服务标准始终如一。">Different reasons to be in the car. One standard across all of them.</h2>
-      <p class="rv rv-d2" data-en="Some passengers we see twice a year, on the way to a flight. Others have a car at the door every Tuesday morning. The service does not change depending on which one you are."
-         data-zh="有些乘客我们一年只见两次，都是在赶飞机的路上；有些则每周二清晨都有车在门口等候。无论您属于哪一类，我们的服务标准始终如一。">
-        Some passengers we see twice a year, on the way to a flight. Others have a car at the door every Tuesday morning. The service does not change depending on which one you are.
-      </p>
+      <h2 id="services-h" class="rv rv-d1" data-en="Different reasons to be in the car. One standard across all of them." data-zh="乘车理由各不相同，服务标准始终如一。">Different reasons to be in the car. One standard across all of them.</h2>
     </div>
 
     <div class="cards">
-      <div class="card rv">
+      <div class="card lead rv">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1739841562979-681735feb4e3?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></div>
         <h3 data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</h3>
-        <p data-en="We watch the flight, not the clock. Land ahead of schedule and the car is already waiting. Sit in a customs queue and the waiting time is ours to absorb, not yours to explain."
-           data-zh="我们盯的是航班，不是时钟。提前落地，车已在候；若您被困在海关队伍里，等候时间由我们承担，无需您解释。">
-          We watch the flight, not the clock. Land ahead of schedule and the car is already waiting. Sit in a customs queue and the waiting time is ours to absorb, not yours to explain.
+        <p data-en="We watch the flight, not the clock. Land ahead of schedule and the car is already waiting. Sit in a customs queue and the waiting time is ours to absorb."
+           data-zh="我们盯的是航班，不是时钟。提前落地，车已在候；若您被困在海关队伍里，等候时间由我们承担。">
+          We watch the flight, not the clock. Land ahead of schedule and the car is already waiting. Sit in a customs queue and the waiting time is ours to absorb.
         </p>
       </div>
 
       <div class="card rv rv-d1">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1710343491609-0cbc6c14b92d?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div>
         <h3 data-en="Corporate Travel" data-zh="企业商务用车">Corporate Travel</h3>
         <p data-en="Regular executive movements handled as a standing arrangement, with the same chauffeur wherever we can manage it, so nobody has to brief a stranger on the way to a board meeting."
            data-zh="高管的日常出行按固定安排处理，并尽可能派出同一位司机，免去在赶赴董事会途中还要向陌生人交代事项。">
@@ -441,7 +565,7 @@ document.documentElement.classList.add('js');
 
       <div class="card bright rv rv-d2">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1606217239582-d9f72323bcd7?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7.5-4.7-9.3-9.2A5.1 5.1 0 0 1 12 6.6a5.1 5.1 0 0 1 9.3 5.2C19.5 16.3 12 21 12 21z"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.3-9.2A5.1 5.1 0 0 1 12 6.6a5.1 5.1 0 0 1 9.3 5.2C19.5 16.3 12 21 12 21z"/></svg></div>
         <h3 data-en="Weddings" data-zh="婚礼用车">Weddings</h3>
         <p data-en="We drive the route beforehand and build in the slack nobody thinks of. On the day your only job is to get in the car. Ribbons, umbrellas and a spare tie live in the boot."
            data-zh="我们会提前把路线走一遍，并留出大多数人想不到的余量。当天您唯一要做的就是上车。后备箱里备有丝带、雨伞和一条备用领带。">
@@ -451,7 +575,7 @@ document.documentElement.classList.add('js');
 
       <div class="card rv">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1531033056439-63578c0d9f22?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17 20h5v-2a3 3 0 0 0-4.4-2.7M7 20H2v-2a3 3 0 0 1 4.4-2.7M12 13a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm0 0c-3 0-5.5 2-5.5 4.5V20h11v-2.5C17.5 15 15 13 12 13z"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M17 20h5v-2a3 3 0 0 0-4.4-2.7M7 20H2v-2a3 3 0 0 1 4.4-2.7M12 13a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm0 0c-3 0-5.5 2-5.5 4.5V20h11v-2.5C17.5 15 15 13 12 13z"/></svg></div>
         <h3 data-en="Events &amp; Conferences" data-zh="活动与会议接送">Events &amp; Conferences</h3>
         <p data-en="A small delegation or a full conference, arriving in the right order at the right door. We run a live vehicle board on the day so an event manager can see the whole movement at once."
            data-zh="无论是小型代表团还是整场会议，都能按正确顺序抵达正确入口。活动当天我们提供实时车辆调度面板，活动经理可一览全局。">
@@ -460,18 +584,18 @@ document.documentElement.classList.add('js');
       </div>
 
       <div class="card rv rv-d1">
-        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></div>
+        <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1576086135878-bd7e7c812b41?auto=format&fit=crop&w=800&q=65')"></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></div>
         <h3 data-en="Touring &amp; Day Trips" data-zh="包车观光与一日游">Touring &amp; Day Trips</h3>
-        <p data-en="The Hunter Valley, the Blue Mountains, Kiama and the South Coast, Port Stephens. Your chauffeur has driven these roads for a very long time and will happily tell you which cellar door to skip."
-           data-zh="猎人谷、蓝山、基亚马与南海岸、史蒂芬斯港。您的司机在这些路线上跑了很久，也乐于告诉您哪家酒庄可以跳过。">
-          The Hunter Valley, the Blue Mountains, Kiama and the South Coast, Port Stephens. Your chauffeur has driven these roads for a very long time and will happily tell you which cellar door to skip.
+        <p data-en="The Hunter Valley, the Blue Mountains, Kiama and the South Coast, Port Stephens. These are roads our chauffeurs drive most weeks, and they will tell you which cellar door to skip."
+           data-zh="猎人谷、蓝山、基亚马与南海岸、史蒂芬斯港。这些路线我们的司机几乎每周都跑，也会告诉您哪家酒庄可以跳过。">
+          The Hunter Valley, the Blue Mountains, Kiama and the South Coast, Port Stephens. These are roads our chauffeurs drive most weeks, and they will tell you which cellar door to skip.
         </p>
       </div>
 
       <div class="card rv rv-d2">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1596321687344-547d323f094a?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.2-7.5-9.5V6L12 3z"/><path d="M9.3 12.2l1.9 1.9 3.6-3.9"/></svg></div>
         <h3 data-en="VIP &amp; Security" data-zh="贵宾与安保护送">VIP &amp; Security</h3>
         <p data-en="Discretion is the whole service. We will not tell you who else we drive, which is exactly why those passengers keep coming back. Escorted movements and close protection arranged where needed."
            data-zh="保密本身就是这项服务的全部。我们不会透露还为谁服务，而这正是那些乘客持续选择我们的原因。可按需安排护送车队与贴身安保。">
@@ -481,31 +605,31 @@ document.documentElement.classList.add('js');
 
       <div class="card rv">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="6" width="20" height="11" rx="2"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/><path d="M2 11h20"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="2" y="6" width="20" height="11" rx="2"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/><path d="M2 11h20"/></svg></div>
         <h3 data-en="Group Transport" data-zh="团体接送">Group Transport</h3>
-        <p data-en="A family, a team, or a whole conference floor, travelling together with room for the luggage that actually came with them rather than split across a convoy of small cars."
+        <p data-en="A family, a team, or a whole conference floor, travelling together with room for everyone's luggage instead of splitting across a convoy of small cars."
            data-zh="一家人、一个团队，或整层楼的与会者，可同车出行，行李空间充足，无需拆成一队小车分头前往。">
-          A family, a team, or a whole conference floor, travelling together with room for the luggage that actually came with them rather than split across a convoy of small cars.
+          A family, a team, or a whole conference floor, travelling together with room for everyone's luggage instead of splitting across a convoy of small cars.
         </p>
       </div>
 
       <div class="card rv rv-d1">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1599357191343-2ef9dd03c119?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 11l18-7-7 18-2.5-8L3 11z"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 11l18-7-7 18-2.5-8L3 11z"/></svg></div>
         <h3 data-en="Private Jet &amp; Yacht Link" data-zh="私人飞机与游艇接驳">Private Jet &amp; Yacht Link</h3>
-        <p data-en="Kerbside at the Sydney jet base, or dockside at Rose Bay. We work directly with your operator so the car and the aircraft are ready at the same moment, not one waiting on the other."
-           data-zh="悉尼私人航站楼路边接送，或玫瑰湾码头接驳。我们直接与您的运营方对接，确保车辆与飞机同时就位，而非一方空等另一方。">
-          Kerbside at the Sydney jet base, or dockside at Rose Bay. We work directly with your operator so the car and the aircraft are ready at the same moment, not one waiting on the other.
+        <p data-en="Kerbside at the Sydney jet base, or dockside at Rose Bay. We work directly with your operator so the car and the aircraft are ready at the same moment."
+           data-zh="悉尼私人航站楼路边接送，或玫瑰湾码头接驳。我们直接与您的运营方对接，确保车辆与飞机同时就位。">
+          Kerbside at the Sydney jet base, or dockside at Rose Bay. We work directly with your operator so the car and the aircraft are ready at the same moment.
         </p>
       </div>
 
       <div class="card rv rv-d2">
         <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1584099662811-6744be099a74?auto=format&fit=crop&w=800&q=65')"></div>
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg></div>
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.9"/></svg></div>
         <h3 data-en="As-Directed Hire" data-zh="随需包车">As-Directed Hire</h3>
-        <p data-en="Keep the car and the chauffeur for the morning, the day, or the week, and change the plan as often as you like. Nothing about the arrangement moves when the itinerary does."
-           data-zh="您可包用车辆与司机半天、全天或整周，行程随时调整。行程变了，安排的条件不变。">
-          Keep the car and the chauffeur for the morning, the day, or the week, and change the plan as often as you like. Nothing about the arrangement moves when the itinerary does.
+        <p data-en="Keep the car and the chauffeur for the morning, the day, or the week, and change the plan as often as you like. We do not re-quote when the itinerary moves."
+           data-zh="您可包用车辆与司机半天、全天或整周，行程随时调整。行程变了，我们不会重新报价。">
+          Keep the car and the chauffeur for the morning, the day, or the week, and change the plan as often as you like. We do not re-quote when the itinerary moves.
         </p>
       </div>
     </div>
@@ -513,22 +637,22 @@ document.documentElement.classList.add('js');
 </section>
 
 <!-- ============ DESTINATIONS ============ -->
-<section id="destinations">
+<section id="destinations" aria-labelledby="dest-h">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv" data-en="Beyond the harbour" data-zh="海港之外">Beyond the harbour</p>
-      <h2 class="rv rv-d1" data-en="Give us the whole day and we will show you the state." data-zh="给我们一整天，我们带您看遍这个州。">Give us the whole day and we will show you the state.</h2>
-      <p class="rv rv-d2" data-en="Plenty of our work never touches the CBD. Sandstone escarpment, vineyards, blowholes and white sand bays, all of it inside New South Wales and all of it driven door to door by someone who knows the road and knows when to pull over for a photograph."
-         data-zh="我们的许多行程从不经过市中心。砂岩断崖、葡萄园、海蚀喷水口与白沙海湾，全都在新南威尔士州境内，且全程由熟悉路况、也懂得何时该靠边停车拍照的司机门到门接送。">
-        Plenty of our work never touches the CBD. Sandstone escarpment, vineyards, blowholes and white sand bays, all of it inside New South Wales and all of it driven door to door by someone who knows the road and knows when to pull over for a photograph.
+      <h2 id="dest-h" class="rv rv-d1" data-en="Give us the whole day and we will show you the state." data-zh="给我们一整天，我们带您看遍这个州。">Give us the whole day and we will show you the state.</h2>
+      <p class="rv rv-d2" data-en="Escarpment, vineyards, blowholes and white sand bays, all inside New South Wales and all driven door to door."
+         data-zh="断崖、葡萄园、海蚀喷水口与白沙海湾，全都在新南威尔士州境内，全程门到门接送。">
+        Escarpment, vineyards, blowholes and white sand bays, all inside New South Wales and all driven door to door.
       </p>
     </div>
 
     <div class="bento">
       <article class="dest d-wide d-tall rv">
-        <img loading="lazy" decoding="async" alt="Blue Mountains escarpment" src="https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=1200&q=70">
+        <img loading="lazy" decoding="async" width="1200" height="800" alt="The Three Sisters and the Blue Mountains escarpment" src="https://images.unsplash.com/photo-1665395492464-fa1da74d2e5c?auto=format&fit=crop&w=1200&q=70">
         <div class="d-body">
-          <div class="meta" data-en="West of the city" data-zh="城市以西">West of the city</div>
+          <p class="meta" data-en="West of the city" data-zh="城市以西">West of the city</p>
           <h3 data-en="Blue Mountains" data-zh="蓝山">Blue Mountains</h3>
           <p data-en="Katoomba, Leura and Jenolan Caves, comfortably done in a day, with the lookouts timed so you are not sharing them with three coach parties."
              data-zh="卡通巴、露拉与珍罗兰溶洞，一日之内从容游完。观景台的时间也经过安排，不必与几车团客挤在一起。">
@@ -538,38 +662,36 @@ document.documentElement.classList.add('js');
       </article>
 
       <article class="dest rv rv-d1">
-        <!-- Cropped low: the vine rows are the bottom two thirds of this frame,
-             and a centred crop on a short tile lands on empty sky. -->
-        <img loading="lazy" decoding="async" alt="Hunter Valley vineyard" style="object-position:center 68%" src="https://images.unsplash.com/photo-1664970925595-90402bf3fbcb?auto=format&fit=crop&w=800&q=70">
+        <img loading="lazy" decoding="async" width="800" height="600" alt="Vine rows in the Hunter Valley" style="object-position:center 68%" src="https://images.unsplash.com/photo-1664970925595-90402bf3fbcb?auto=format&fit=crop&w=800&q=70">
         <div class="d-body">
-          <div class="meta" data-en="North of the city" data-zh="城市以北">North of the city</div>
+          <p class="meta" data-en="North of the city" data-zh="城市以北">North of the city</p>
           <h3 data-en="Hunter Valley" data-zh="猎人谷">Hunter Valley</h3>
           <p data-en="Cellar doors, lunch arranged, and nobody at the table has to stay on the water." data-zh="酒庄品鉴、午餐已安排妥当，席间无人需要为开车而滴酒不沾。">Cellar doors, lunch arranged, and nobody at the table has to stay on the water.</p>
         </div>
       </article>
 
       <article class="dest rv rv-d2">
-        <img loading="lazy" decoding="async" alt="South Coast headland near Kiama" src="https://images.unsplash.com/photo-1735991565615-45a6ebefe36b?auto=format&fit=crop&w=800&q=70">
+        <img loading="lazy" decoding="async" width="800" height="600" alt="Green headland above the ocean near Kiama" src="https://images.unsplash.com/photo-1735991565615-45a6ebefe36b?auto=format&fit=crop&w=800&q=70">
         <div class="d-body">
-          <div class="meta" data-en="South Coast" data-zh="南海岸">South Coast</div>
+          <p class="meta" data-en="South Coast" data-zh="南海岸">South Coast</p>
           <h3 data-en="Kiama" data-zh="基亚马">Kiama</h3>
           <p data-en="The blowhole, the lighthouse, and the green headlands running south. An easy run down the coast road." data-zh="海蚀喷水口、灯塔，以及一路向南的翠绿海岬。沿海岸公路轻松直达。">The blowhole, the lighthouse, and the green headlands running south. An easy run down the coast road.</p>
         </div>
       </article>
 
       <article class="dest rv rv-d1">
-        <img loading="lazy" decoding="async" alt="Port Stephens bay and headland" src="https://images.unsplash.com/photo-1729936483375-e58027cfcdd2?auto=format&fit=crop&w=800&q=70">
+        <img loading="lazy" decoding="async" width="800" height="600" alt="Bay and headland at Port Stephens" src="https://images.unsplash.com/photo-1729936483375-e58027cfcdd2?auto=format&fit=crop&w=800&q=70">
         <div class="d-body">
-          <div class="meta" data-en="North of the Hunter" data-zh="猎人区以北">North of the Hunter</div>
+          <p class="meta" data-en="North of the Hunter" data-zh="猎人区以北">North of the Hunter</p>
           <h3 data-en="Port Stephens" data-zh="史蒂芬斯港">Port Stephens</h3>
           <p data-en="Nelson Bay, Tomaree Head and the dunes at Stockton. Dolphin boats leave from the marina and we are there when they get back." data-zh="纳尔逊湾、托马里角与斯托克顿沙丘。观豚船从码头出发，返航时我们已在岸边等候。">Nelson Bay, Tomaree Head and the dunes at Stockton. Dolphin boats leave from the marina and we are there when they get back.</p>
         </div>
       </article>
 
       <article class="dest rv rv-d2">
-        <img loading="lazy" decoding="async" alt="Jervis Bay cove" src="https://images.unsplash.com/photo-1664763961211-b5b5fb7caa17?auto=format&fit=crop&w=800&q=70">
+        <img loading="lazy" decoding="async" width="800" height="600" alt="White sand cove at Jervis Bay" src="https://images.unsplash.com/photo-1664763961211-b5b5fb7caa17?auto=format&fit=crop&w=800&q=70">
         <div class="d-body">
-          <div class="meta" data-en="Shoalhaven" data-zh="肖尔黑文">Shoalhaven</div>
+          <p class="meta" data-en="Shoalhaven" data-zh="肖尔黑文">Shoalhaven</p>
           <h3 data-en="Jervis Bay" data-zh="杰维斯湾">Jervis Bay</h3>
           <p data-en="Hyams Beach and the coves around Booderee, far enough south to be worth the whole day." data-zh="海姆斯海滩与布德里周边的小海湾，位置够南，值得用上一整天。">Hyams Beach and the coves around Booderee, far enough south to be worth the whole day.</p>
         </div>
@@ -578,23 +700,42 @@ document.documentElement.classList.add('js');
   </div>
 </section>
 
+<!-- ============ CALL BAND ============ -->
+<div class="callband">
+  <div class="wrap callband-inner">
+    <div class="rv">
+      <h2 data-en="Tell us where you need to be." data-zh="告诉我们您要去哪里。">Tell us where you need to be.</h2>
+      <p data-en="One call settles it: the route, the vehicle, and a fixed price before anyone gets in the car."
+         data-zh="一通电话即可敲定：路线、车型，以及上车前就已确定的固定价格。">One call settles it: the route, the vehicle, and a fixed price before anyone gets in the car.</p>
+    </div>
+    <div class="cb-action rv rv-d1">
+      <a class="btn btn-solid btn-lg" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+        <span data-en="Call 0415 550 599" data-zh="致电 0415 550 599">Call 0415 550 599</span>
+      </a>
+      <p class="hours" data-en="Answered every day, at any hour. Mandarin and Cantonese available."
+         data-zh="全天候每日接听。可提供普通话及粤语服务。">Answered every day, at any hour. Mandarin and Cantonese available.</p>
+    </div>
+  </div>
+</div>
+
 <!-- ============ WILDLIFE BAND ============ -->
-<section class="wild">
+<section class="wild" aria-labelledby="wild-h">
   <div class="wild-inner">
     <div class="wild-bg parallax" data-speed="0.16" style="background-image:url('https://images.unsplash.com/photo-1526515579900-98518e7862cc?auto=format&fit=crop&w=1900&q=70')"></div>
     <div class="wrap">
       <div class="wild-copy">
         <p class="eyebrow rv" data-en="The detour nobody regrets" data-zh="没人后悔的那段绕行">The detour nobody regrets</p>
-        <h2 class="rv rv-d1" data-en="Ask the driver to stop. We have the time built in." data-zh="尽管让司机停车，时间我们已经留好。">Ask the driver to stop. We have the time built in.</h2>
-        <p class="rv rv-d2" data-en="Visitors almost always want the same thing on their first day, and it is not a boardroom. Kangaroos in an open field near Bowral, koalas at Featherdale on the way back from the Blue Mountains, pelicans at The Entrance. Mention it when you set off and it goes into the run for the day."
-           data-zh="访客第一天想看的几乎都是同一样东西，而那绝不是会议室。鲍勒尔附近开阔草地上的袋鼠、从蓝山返程途中 Featherdale 的考拉、The Entrance 的鹈鹕。出发时说一声，我们就会把它排进当天行程。">
-          Visitors almost always want the same thing on their first day, and it is not a boardroom. Kangaroos in an open field near Bowral, koalas at Featherdale on the way back from the Blue Mountains, pelicans at The Entrance. Mention it when you set off and it goes into the run for the day.
+        <h2 id="wild-h" class="rv rv-d1" data-en="Ask the driver to stop. We have the time built in." data-zh="尽管让司机停车，时间我们已经留好。">Ask the driver to stop. We have the time built in.</h2>
+        <p class="rv rv-d2" data-en="Kangaroos in an open field near Bowral, koalas at Featherdale on the way back from the Blue Mountains, pelicans at The Entrance. Mention it when you set off and it goes into the run for the day."
+           data-zh="鲍勒尔附近开阔草地上的袋鼠、从蓝山返程途中 Featherdale 的考拉、The Entrance 的鹈鹕。出发时说一声，我们就会把它排进当天行程。">
+          Kangaroos in an open field near Bowral, koalas at Featherdale on the way back from the Blue Mountains, pelicans at The Entrance. Mention it when you set off and it goes into the run for the day.
         </p>
         <div class="wild-thumbs rv rv-d3">
-          <img loading="lazy" decoding="async" alt="Kangaroo" src="https://images.unsplash.com/photo-1600633719821-1a40e837843f?auto=format&fit=crop&w=340&q=68">
-          <img loading="lazy" decoding="async" alt="Koala" src="https://images.unsplash.com/photo-1591083896596-6b9f15f05a71?auto=format&fit=crop&w=340&q=68">
-          <img loading="lazy" decoding="async" alt="Kangaroo in the bush" src="https://images.unsplash.com/photo-1614398306313-aa5a4c465e9e?auto=format&fit=crop&w=340&q=68">
-          <img loading="lazy" decoding="async" alt="Koala in eucalyptus" src="https://images.unsplash.com/photo-1519562990232-845beca99938?auto=format&fit=crop&w=340&q=68">
+          <img loading="lazy" decoding="async" width="340" height="255" alt="Kangaroo in grassland" src="https://images.unsplash.com/photo-1600633719821-1a40e837843f?auto=format&fit=crop&w=340&q=68">
+          <img loading="lazy" decoding="async" width="340" height="255" alt="Koala resting in a tree" src="https://images.unsplash.com/photo-1591083896596-6b9f15f05a71?auto=format&fit=crop&w=340&q=68">
+          <img loading="lazy" decoding="async" width="340" height="255" alt="Kangaroo in bushland" src="https://images.unsplash.com/photo-1614398306313-aa5a4c465e9e?auto=format&fit=crop&w=340&q=68">
+          <img loading="lazy" decoding="async" width="340" height="255" alt="Koala in eucalyptus" src="https://images.unsplash.com/photo-1519562990232-845beca99938?auto=format&fit=crop&w=340&q=68">
         </div>
       </div>
     </div>
@@ -602,30 +743,30 @@ document.documentElement.classList.add('js');
 </section>
 
 <!-- ============ WHY ============ -->
-<section id="why">
+<section id="why" aria-labelledby="why-h">
   <div class="wrap split">
     <div>
       <p class="eyebrow rv" data-en="Why passengers stay with us" data-zh="乘客长期选择我们的原因">Why passengers stay with us</p>
-      <h2 class="rv rv-d1" data-en="Most of our work comes from people who never went looking again." data-zh="我们的大部分业务，来自那些不再另寻他家的乘客。">Most of our work comes from people who never went looking again.</h2>
-      <p class="rv rv-d2" data-en="There is no clever trick behind that. We know the roads, we send people who have done the job before, and we do not put a different stranger behind the wheel every time."
-         data-zh="这背后没有什么技巧：我们熟悉道路，派出的都是做过这份工作的人，也不会每次都换一位陌生司机。">
-        There is no clever trick behind that. We know the roads, we send people who have done the job before, and we do not put a different stranger behind the wheel every time.
+      <h2 id="why-h" class="rv rv-d1" data-en="Most of our work comes from people who never went looking again." data-zh="我们的大部分业务，来自那些不再另寻他家的乘客。">Most of our work comes from people who never went looking again.</h2>
+      <p class="rv rv-d2" data-en="We know the roads, we send people who have done the job before, and we do not put a different stranger behind the wheel every time."
+         data-zh="我们熟悉道路，派出的都是做过这份工作的人，也不会每次都换一位陌生司机。">
+        We know the roads, we send people who have done the job before, and we do not put a different stranger behind the wheel every time.
       </p>
       <ul class="tick-list rv rv-d3">
         <li data-en="Fixed pricing agreed in advance. No surge, no meter, no adjustment afterwards." data-zh="价格事先议定并固定。不加价，不打表，事后不调整。">Fixed pricing agreed in advance. No surge, no meter, no adjustment afterwards.</li>
         <li data-en="Live GPS on every vehicle, shared with you and with whoever is coordinating the travel." data-zh="每辆车配备实时 GPS，向您及行程协调人开放。">Live GPS on every vehicle, shared with you and with whoever is coordinating the travel.</li>
-        <li data-en="Chauffeurs vetted, licensed, uniformed and reviewed on passenger feedback, not star ratings." data-zh="司机经过背景审查、持证上岗、统一着装，考核依据乘客反馈而非星级评分。">Chauffeurs vetted, licensed, uniformed and reviewed on passenger feedback, not star ratings.</li>
+        <li data-en="Chauffeurs vetted, licensed, uniformed and reviewed on passenger feedback." data-zh="司机经过背景审查、持证上岗、统一着装，并依据乘客反馈进行考核。">Chauffeurs vetted, licensed, uniformed and reviewed on passenger feedback.</li>
         <li data-en="Mandarin and Cantonese speaking chauffeurs available." data-zh="可安排普通话及粤语司机。">Mandarin and Cantonese speaking chauffeurs available.</li>
-        <li data-en="An authorised booking service provider under the NSW Point to Point Transport Commissioner, fully insured across the state." data-zh="持有新南威尔士州点对点运输专员授权的预订服务提供商，全州范围内全额投保。">An authorised booking service provider under the NSW Point to Point Transport Commissioner, fully insured across the state.</li>
-        <li data-en="Vehicles cleaned and inspected before every journey, not at the end of a shift." data-zh="车辆在每趟行程前清洁检查，而非在轮班结束时才处理。">Vehicles cleaned and inspected before every journey, not at the end of a shift.</li>
+        <li data-en="Fully insured across New South Wales." data-zh="在新南威尔士州全额投保。">Fully insured across New South Wales.</li>
+        <li data-en="Vehicles cleaned and inspected before every journey." data-zh="车辆在每趟行程前完成清洁与检查。">Vehicles cleaned and inspected before every journey.</li>
       </ul>
     </div>
 
     <div>
       <div class="why-visual rv rv-d1">
-        <figure class="tall"><img loading="lazy" decoding="async" alt="Sydney skyline" src="https://images.unsplash.com/photo-1672210967188-3bf5e16d541d?auto=format&fit=crop&w=700&q=70"></figure>
-        <figure class="sq"><img loading="lazy" decoding="async" alt="Cabin interior" src="https://images.unsplash.com/photo-1502014335594-c026800f24ee?auto=format&fit=crop&w=560&q=70"></figure>
-        <figure class="sq"><img loading="lazy" decoding="async" alt="Sydney Harbour Bridge" src="https://images.unsplash.com/photo-1580723843692-137caf37ad17?auto=format&fit=crop&w=560&q=70"></figure>
+        <figure class="tall"><img loading="lazy" decoding="async" width="700" height="1190" alt="Sydney city skyline across the harbour" src="https://images.unsplash.com/photo-1672210967188-3bf5e16d541d?auto=format&fit=crop&w=700&q=70"></figure>
+        <figure class="sq"><img loading="lazy" decoding="async" width="560" height="560" alt="Rear cabin interior" src="https://images.unsplash.com/photo-1502014335594-c026800f24ee?auto=format&fit=crop&w=560&q=70"></figure>
+        <figure class="sq"><img loading="lazy" decoding="async" width="560" height="560" alt="Sydney Harbour Bridge" src="https://images.unsplash.com/photo-1580723843692-137caf37ad17?auto=format&fit=crop&w=560&q=70"></figure>
       </div>
 
       <div class="reasons rv rv-d2">
@@ -645,9 +786,9 @@ document.documentElement.classList.add('js');
         </div>
         <div class="reason">
           <h3 data-en="Quiet when you need quiet" data-zh="需要安静时，绝对安静">Quiet when you need quiet</h3>
-          <p data-en="Some passengers want the local news and a coffee stop. Others want to take a call and not be spoken to. Our chauffeurs read that in the first minute and get it right."
-             data-zh="有些乘客想聊聊本地新闻、顺路买杯咖啡；有些则想安静地打完一通电话。我们的司机会在上车第一分钟内判断并做对。">
-            Some passengers want the local news and a coffee stop. Others want to take a call and not be spoken to. Our chauffeurs read that in the first minute and get it right.
+          <p data-en="Some passengers want the local news and a coffee stop. Others want to take a call and be left alone. Our chauffeurs read that in the first minute."
+             data-zh="有些乘客想聊聊本地新闻、顺路买杯咖啡；有些则想安静地打完一通电话。我们的司机会在上车第一分钟内判断出来。">
+            Some passengers want the local news and a coffee stop. Others want to take a call and be left alone. Our chauffeurs read that in the first minute.
           </p>
         </div>
       </div>
@@ -656,14 +797,14 @@ document.documentElement.classList.add('js');
 </section>
 
 <!-- ============ AREAS ============ -->
-<section id="areas">
+<section id="areas" aria-labelledby="areas-h">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv" data-en="Where we drive" data-zh="服务区域">Where we drive</p>
-      <h2 class="rv rv-d1" data-en="Greater Sydney, and a long way past it." data-zh="覆盖大悉尼地区，并可远行至更远处。">Greater Sydney, and a long way past it.</h2>
-      <p class="rv rv-d2" data-en="Door to door anywhere in the metropolitan area, and full-day touring the length of New South Wales, from the South Coast up to Port Stephens. We work within the state, under our own authorisation, rather than handing a journey to someone we have never met."
-         data-zh="大悉尼地区门到门接送，并提供纵贯新南威尔士州的全日包车，南至南海岸，北至史蒂芬斯港。我们在本州范围内、以自有授权承接业务，绝不把行程转交给素未谋面的第三方。">
-        Door to door anywhere in the metropolitan area, and full-day touring the length of New South Wales, from the South Coast up to Port Stephens. We work within the state, under our own authorisation, rather than handing a journey to someone we have never met.
+      <h2 id="areas-h" class="rv rv-d1" data-en="Greater Sydney, and a long way past it." data-zh="覆盖大悉尼地区，并可远行至更远处。">Greater Sydney, and a long way past it.</h2>
+      <p class="rv rv-d2" data-en="Door to door anywhere in the metropolitan area, and full-day touring the length of New South Wales, from the South Coast up to Port Stephens."
+         data-zh="大悉尼地区门到门接送，并提供纵贯新南威尔士州的全日包车，南至南海岸，北至史蒂芬斯港。">
+        Door to door anywhere in the metropolitan area, and full-day touring the length of New South Wales, from the South Coast up to Port Stephens.
       </p>
     </div>
     <div class="areas">
@@ -717,11 +858,11 @@ document.documentElement.classList.add('js');
 </section>
 
 <!-- ============ FAQ ============ -->
-<section id="faq">
+<section id="faq" aria-labelledby="faq-h">
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv" data-en="Good to know" data-zh="您需要了解的">Good to know</p>
-      <h2 class="rv rv-d1" data-en="How the service works." data-zh="服务如何运作。">How the service works.</h2>
+      <h2 id="faq-h" class="rv rv-d1" data-en="How the service works." data-zh="服务如何运作。">How the service works.</h2>
     </div>
     <div class="faq rv rv-d2">
       <details open>
@@ -735,14 +876,14 @@ document.documentElement.classList.add('js');
            data-zh="固定价格。全部费用事先明确。不加价、不打表，下车后也不调整。若车辆遇堵，那是我们的问题，不会变成您账单上的一行。">Fixed. The full cost is known in advance. No surge, no meter, and no adjustment when you get out. If the car sits in traffic, that is our problem rather than a line on your invoice.</p>
       </details>
       <details>
+        <summary data-en="Are you an authorised booking service provider?" data-zh="你们是否为政府授权的预订服务提供商？">Are you an authorised booking service provider?</summary>
+        <p data-en="Yes, under authorisation BSP-466037, held by 101Bikes Pty Ltd. Authorisation is compulsory in New South Wales and carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit."
+           data-zh="是的，授权编号 BSP-466037，由 101Bikes Pty Ltd 持有。在新南威尔士州，该授权为强制要求，并附带建立安全管理体系的义务，须接受专员署授权稽查官的审核。">Yes, under authorisation BSP-466037, held by 101Bikes Pty Ltd. Authorisation is compulsory in New South Wales and carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit.</p>
+      </details>
+      <details>
         <summary data-en="Are there Mandarin or Cantonese speaking chauffeurs?" data-zh="有讲普通话或粤语的司机吗？">Are there Mandarin or Cantonese speaking chauffeurs?</summary>
         <p data-en="Yes, and it is worth flagging the preference in advance so the right person is assigned to the journey. Arrangements can be handled in Chinese from end to end."
            data-zh="有。建议提前说明偏好，以便为该行程安排合适的司机。整个安排过程均可使用中文完成。">Yes, and it is worth flagging the preference in advance so the right person is assigned to the journey. Arrangements can be handled in Chinese from end to end.</p>
-      </details>
-      <details>
-        <summary data-en="Are you an authorised booking service provider?" data-zh="你们是否为政府授权的预订服务提供商？">Are you an authorised booking service provider?</summary>
-        <p data-en="Yes, under authorisation number BSP-466037, held by 101Bikes Pty Ltd. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit."
-           data-zh="是的，授权编号为 BSP-466037，由 101Bikes Pty Ltd 持有。在新南威尔士州承接租赁车辆预订，必须获得点对点运输专员的授权，未获授权者将面临处罚。授权同时要求运营方建立安全管理体系，并接受专员署授权稽查官的审核。">Yes, under authorisation number BSP-466037, held by 101Bikes Pty Ltd. Anyone taking bookings for hire vehicles in New South Wales must be authorised by the Point to Point Transport Commissioner, and penalties apply to those who are not. Authorisation also carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit.</p>
       </details>
       <details>
         <summary data-en="Can you go out to Kiama, Port Stephens or the Blue Mountains for a full day?" data-zh="可以包车去基亚马、史蒂芬斯港或蓝山玩一整天吗？">Can you go out to Kiama, Port Stephens or the Blue Mountains for a full day?</summary>
@@ -768,19 +909,21 @@ document.documentElement.classList.add('js');
   </div>
 </section>
 
+</main>
+
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="f-grid">
       <div class="f-about">
         <a class="logo" href="#top" style="margin-bottom:20px"><span class="num">101</span><span class="word">Chauffeured</span></a>
-        <p data-en="Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. 101 Chauffeured is a trading name of 101Bikes Pty Ltd, an authorised booking service provider under the NSW Point to Point Transport Commissioner."
-           data-zh="服务于悉尼及新南威尔士州的私人专车，南至南海岸，北至史蒂芬斯港。101 Chauffeured 为 101Bikes Pty Ltd 旗下商号，持有新南威尔士州点对点运输专员授权的预订服务提供商资格。">
-          Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens. 101 Chauffeured is a trading name of 101Bikes Pty Ltd, an authorised booking service provider under the NSW Point to Point Transport Commissioner.
+        <p data-en="Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens."
+           data-zh="服务于悉尼及新南威尔士州的私人专车，南至南海岸，北至史蒂芬斯港。">
+          Private chauffeur hire across Sydney and New South Wales, from the South Coast to Port Stephens.
         </p>
       </div>
       <div>
-        <h4 data-en="Services" data-zh="服务项目">Services</h4>
+        <h3 data-en="Services" data-zh="服务项目">Services</h3>
         <ul>
           <li><a href="#services" data-en="Airport Transfers" data-zh="机场接送">Airport Transfers</a></li>
           <li><a href="#services" data-en="Corporate Travel" data-zh="企业商务用车">Corporate Travel</a></li>
@@ -791,7 +934,7 @@ document.documentElement.classList.add('js');
         </ul>
       </div>
       <div>
-        <h4 data-en="Destinations" data-zh="目的地">Destinations</h4>
+        <h3 data-en="Destinations" data-zh="目的地">Destinations</h3>
         <ul>
           <li><a href="#destinations" data-en="Blue Mountains" data-zh="蓝山">Blue Mountains</a></li>
           <li><a href="#destinations" data-en="Hunter Valley" data-zh="猎人谷">Hunter Valley</a></li>
@@ -802,17 +945,24 @@ document.documentElement.classList.add('js');
         </ul>
       </div>
       <div>
-        <h4 data-en="Contact" data-zh="联系方式">Contact</h4>
+        <h3 data-en="Contact" data-zh="联系方式">Contact</h3>
         <ul>
-          <li><a class="f-phone" href="tel:+61415550599">0415 550 599</a></li>
-          <li><span data-en="Every day, all hours" data-zh="全天候，每日服务">Every day, all hours</span></li>
+          <li>
+            <a class="f-phone" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+              0415 550 599
+            </a>
+          </li>
+          <li><span data-en="Answered every day, at any hour" data-zh="全天候每日接听">Answered every day, at any hour</span></li>
+          <li><span data-en="Mandarin &amp; Cantonese available" data-zh="可提供普通话及粤语服务">Mandarin &amp; Cantonese available</span></li>
         </ul>
       </div>
     </div>
+
     <!-- Acknowledgement of Country. Written for a business whose work is
          travelling across Country rather than occupying a single site. -->
     <div class="acknowledge">
-      <h4 data-en="Acknowledgement of Country" data-zh="原住民土地致敬声明">Acknowledgement of Country</h4>
+      <h3 data-en="Acknowledgement of Country" data-zh="原住民土地致敬声明">Acknowledgement of Country</h3>
       <p data-en="101 Chauffeured acknowledges the Traditional Custodians of the lands and waters we travel across every day. Our roads run over the Country of the Gadigal of the Eora Nation, the Dharug and Gundungurra of the Blue Mountains, the Dharawal and Yuin of the Illawarra and South Coast, the Wonnarua and Awabakal of the Hunter, and the Worimi of Port Stephens."
          data-zh="101 Chauffeured 谨向我们每日行经的土地与水域的传统守护者致敬。我们的路线途经伊欧拉族加迪加尔人的土地、蓝山地区达鲁格族与甘敦古拉族的土地、伊拉瓦拉与南海岸达拉瓦族与尤因族的土地、猎人区沃纳鲁阿族与阿瓦巴卡尔族的土地，以及史蒂芬斯港沃里米族的土地。">
         101 Chauffeured acknowledges the Traditional Custodians of the lands and waters we travel across every day. Our roads run over the Country of the Gadigal of the Eora Nation, the Dharug and Gundungurra of the Blue Mountains, the Dharawal and Yuin of the Illawarra and South Coast, the Wonnarua and Awabakal of the Hunter, and the Worimi of Port Stephens.
@@ -824,16 +974,73 @@ document.documentElement.classList.add('js');
     </div>
 
     <div class="f-bottom">
-      <span class="legal"
+      <p class="legal"
         data-en="&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved.<span class='lic'>Authorised Booking Service Provider BSP-466037, authorised by the NSW Point to Point Transport Commissioner under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016.</span>"
-        data-zh="© 101 Chauffeured。101Bikes Pty Ltd 旗下商号 · 澳洲商业号码 (ABN) 15 663 484 268。版权所有。<span class='lic'>政府授权预订服务提供商，授权编号 BSP-466037，由新南威尔士州点对点运输专员依据《2016 年点对点运输（出租车与租赁车辆）法》授予。</span>">&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved.<span class="lic">Authorised Booking Service Provider BSP-466037, authorised by the NSW Point to Point Transport Commissioner under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016.</span></span>
-      <div class="socials">
-        <a href="#" data-en="Privacy" data-zh="隐私政策">Privacy</a>
-        <a href="#" data-en="Terms" data-zh="条款">Terms</a>
-      </div>
+        data-zh="© 101 Chauffeured。101Bikes Pty Ltd 旗下商号 · 澳洲商业号码 (ABN) 15 663 484 268。版权所有。<span class='lic'>政府授权预订服务提供商，授权编号 BSP-466037，由新南威尔士州点对点运输专员依据《2016 年点对点运输（出租车与租赁车辆）法》授予。</span>">&copy; 101 Chauffeured. A trading name of 101Bikes Pty Ltd &middot; ABN 15 663 484 268. All rights reserved.<span class="lic">Authorised Booking Service Provider BSP-466037, authorised by the NSW Point to Point Transport Commissioner under the Point to Point Transport (Taxis and Hire Vehicles) Act 2016.</span></p>
     </div>
   </div>
 </footer>
+
+<!-- Persistent call action for phones: the header CTA is hidden below 760px
+     and the top bar scrolls away with the page. -->
+<a class="callbar" href="tel:+61415550599" aria-label="Call 101 Chauffeured on 0415 550 599">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
+  <span data-en="Call 0415 550 599" data-zh="致电 0415 550 599">Call 0415 550 599</span>
+</a>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness","LimousineService"],
+      "@id": "https://101chauffeured.com.au/#business",
+      "name": "101 Chauffeured",
+      "legalName": "101Bikes Pty Ltd",
+      "description": "Private chauffeur hire across Sydney and New South Wales. Airport transfers, corporate travel, weddings, events and full-day touring.",
+      "telephone": "+61415550599",
+      "url": "https://101chauffeured.com.au/",
+      "image": "https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1200&q=75",
+      "priceRange": "$$$",
+      "address": { "@type": "PostalAddress", "addressRegion": "NSW", "addressCountry": "AU" },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00", "closes": "23:59"
+      }],
+      "availableLanguage": ["en","zh-Hans","yue"],
+      "areaServed": [
+        {"@type":"City","name":"Sydney"},
+        {"@type":"Place","name":"Blue Mountains, New South Wales"},
+        {"@type":"Place","name":"Hunter Valley, New South Wales"},
+        {"@type":"Place","name":"Kiama, New South Wales"},
+        {"@type":"Place","name":"Jervis Bay, New South Wales"},
+        {"@type":"Place","name":"Port Stephens, New South Wales"},
+        {"@type":"Place","name":"Central Coast, New South Wales"},
+        {"@type":"Place","name":"Southern Highlands, New South Wales"}
+      ],
+      "identifier": [
+        {"@type":"PropertyValue","name":"ABN","value":"15 663 484 268"},
+        {"@type":"PropertyValue","name":"NSW Booking Service Provider Authorisation","value":"BSP-466037"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://101chauffeured.com.au/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"Can a chauffeur be hired for just a short stretch of the day?","acceptedAnswer":{"@type":"Answer","text":"Yes. A short hire is ordinary work for us. The arrangement is shaped around your schedule rather than forced into a minimum-day package, and the rate is settled before anyone gets in the car."}},
+        {"@type":"Question","name":"Is the price fixed, or does it move with traffic?","acceptedAnswer":{"@type":"Answer","text":"Fixed. The full cost is known in advance. No surge, no meter, and no adjustment when you get out. If the car sits in traffic, that is our problem rather than a line on your invoice."}},
+        {"@type":"Question","name":"Are you an authorised booking service provider?","acceptedAnswer":{"@type":"Answer","text":"Yes, under authorisation BSP-466037, held by 101Bikes Pty Ltd. Authorisation is compulsory in New South Wales and carries an obligation to run a Safety Management System, which the Commissioner's authorised officers audit."}},
+        {"@type":"Question","name":"Are there Mandarin or Cantonese speaking chauffeurs?","acceptedAnswer":{"@type":"Answer","text":"Yes, and it is worth flagging the preference in advance so the right person is assigned to the journey. Arrangements can be handled in Chinese from end to end."}},
+        {"@type":"Question","name":"Can you go out to Kiama, Port Stephens or the Blue Mountains for a full day?","acceptedAnswer":{"@type":"Answer","text":"That is a large part of what we do. Day trips are priced as a day rather than by the kilometre, so a lookout, a cellar door or a wildlife stop can be added along the way without the cost moving."}},
+        {"@type":"Question","name":"Can a large group travel together?","acceptedAnswer":{"@type":"Answer","text":"Yes, from a single family through to a full conference moving on one schedule across several vehicles. Group and event transport is a substantial part of the work."}},
+        {"@type":"Question","name":"What happens if a flight is delayed?","acceptedAnswer":{"@type":"Answer","text":"We track the flight rather than the clock. The chauffeur is rescheduled automatically and the waiting time after landing is absorbed on our side."}},
+        {"@type":"Question","name":"How is privacy handled for high-profile passengers?","acceptedAnswer":{"@type":"Answer","text":"Passenger names and itineraries stay with us. Chauffeurs assigned to that work are trained for it specifically, and non-descript vehicles or escorted movements can be arranged where the situation calls for it."}}
+      ]
+    }
+  ]
+}
+</script>
 
 <script>
 /* ---------------- marquee ---------------- */
@@ -858,18 +1065,25 @@ document.getElementById('marquee').innerHTML = (()=>{
 
 /* ---------------- language toggle ---------------- */
 function setLang(lang){
+  const zh = lang === 'zh';
   document.documentElement.setAttribute('data-lang', lang);
-  document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+  document.documentElement.setAttribute('lang', zh ? 'zh-CN' : 'en');
 
   document.querySelectorAll('[data-en]').forEach(el=>{
     const v = el.getAttribute('data-' + lang);
     if (v !== null) el.innerHTML = v;
   });
+  /* aria-label carries the accessible name of the call buttons and is not
+     covered by the innerHTML swap above. */
+  document.querySelectorAll('[data-en-label]').forEach(el=>{
+    const v = el.getAttribute('data-' + lang + '-label');
+    if (v !== null) el.setAttribute('aria-label', v);
+  });
 
-  document.getElementById('btn-en').classList.toggle('on', lang === 'en');
-  document.getElementById('btn-zh').classList.toggle('on', lang === 'zh');
+  document.getElementById('btn-en').setAttribute('aria-pressed', String(!zh));
+  document.getElementById('btn-zh').setAttribute('aria-pressed', String(zh));
 
-  document.title = lang === 'zh'
+  document.title = zh
     ? '101 Chauffeured | 悉尼豪华专车 · 机场接送与商务用车'
     : '101 Chauffeured | Sydney Chauffeur Hire, Airport & Corporate Transfers';
 
@@ -895,9 +1109,7 @@ if (!('IntersectionObserver' in window)) {
 
   /* Failsafe. Nothing on this page may stay invisible because an observer
      did not fire: hidden or prerendered tabs, throttled background tabs and
-     some crawlers never generate intersection records. The hero element is
-     on screen for every real visitor at load, so if it is still hidden after
-     three seconds the animation is dropped in favour of showing the page. */
+     some crawlers never generate intersection records. */
   const sentinel = document.querySelector('.hero .rv');
   setTimeout(()=>{
     if (!sentinel || !sentinel.classList.contains('in')) revealAll();
@@ -906,6 +1118,25 @@ if (!('IntersectionObserver' in window)) {
   document.addEventListener('visibilitychange', ()=>{
     if (document.visibilityState === 'visible' && sentinel && !sentinel.classList.contains('in')) revealAll();
   });
+}
+
+/* ---------------- scrollspy ---------------- */
+const navLinks = [...document.querySelectorAll('#nav a')];
+const spyTargets = navLinks
+  .map(a=>({link:a, section:document.querySelector(a.getAttribute('href'))}))
+  .filter(t=>t.section);
+if ('IntersectionObserver' in window && spyTargets.length){
+  const spy = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      const t = spyTargets.find(t=>t.section === e.target);
+      if (!t) return;
+      if (e.isIntersecting){
+        navLinks.forEach(a=>a.removeAttribute('aria-current'));
+        t.link.setAttribute('aria-current','true');
+      }
+    });
+  },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+  spyTargets.forEach(t=>spy.observe(t.section));
 }
 
 /* ---------------- parallax ---------------- */
@@ -925,7 +1156,8 @@ function onScroll(){
   if(!ticking){ requestAnimationFrame(parallax); ticking = true; }
   document.getElementById('hdr').classList.toggle('stuck', window.scrollY > 60);
 }
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduced){
   window.addEventListener('scroll', onScroll, {passive:true});
   window.addEventListener('resize', parallax);
   parallax();
@@ -936,8 +1168,19 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
 }
 
 /* ---------------- mobile nav ---------------- */
-document.querySelectorAll('#nav a').forEach(a=>{
-  a.addEventListener('click', ()=> document.getElementById('nav').classList.remove('open'));
+const nav = document.getElementById('nav');
+const toggle = document.getElementById('menu-toggle');
+function setNav(open){
+  nav.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+}
+toggle.addEventListener('click', ()=> setNav(!nav.classList.contains('open')));
+nav.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> setNav(false)));
+document.addEventListener('keydown', (e)=>{
+  if (e.key === 'Escape' && nav.classList.contains('open')){
+    setNav(false);
+    toggle.focus();
+  }
 });
 </script>
 </body>
