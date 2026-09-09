@@ -15,7 +15,7 @@ to install. Publishing it means putting that single file somewhere on the intern
 first mentioned was `101chauffeur.com`. Pick one and stay with it.
 
 **2. Then update four lines in `index.html`.** They currently contain a placeholder
-domain (`101chauffeured.com.au`) and will send the wrong signal to Google and to
+domain (`101chauffeur.com`) and will send the wrong signal to Google and to
 link previews if left as-is:
 
 | Line | What it is |
@@ -35,7 +35,7 @@ GitHub already hosts and serves the site. You are only changing the address.
 
 **Step 1 — tell GitHub the domain**
 1. Go to https://github.com/HaitzuPP/101chauffeur/settings/pages
-2. Under **Custom domain**, type the domain, e.g. `101chauffeured.com.au`
+2. Under **Custom domain**, type the domain, e.g. `101chauffeur.com`
 3. Click **Save**. This writes a `CNAME` file into the repo automatically.
 
 **Step 2 — point the domain at GitHub**
@@ -43,7 +43,7 @@ GitHub already hosts and serves the site. You are only changing the address.
 Log in wherever the domain is registered (GoDaddy, Namecheap, Crazy Domains,
 Cloudflare) and open the DNS settings.
 
-For the bare domain (`101chauffeured.com.au`), create four **A** records, all with
+For the bare domain (`101chauffeur.com`), create four **A** records, all with
 name `@`:
 
 ```
